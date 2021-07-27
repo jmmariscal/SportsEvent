@@ -9,36 +9,42 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
 
+    var eventController = EventsController()
+    var events: Event?
+    
     @IBOutlet weak var searchBar: UISearchBar!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.reloadData()
+        searchBar.delegate = self
     
     }
+    
+    
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return eventController.eventList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventTableViewCell else {
+            fatalError("Can't deque cell of type 'EventCell' ")
+        }
 
-        // Configure the cell...
-
+        let event = eventController.eventList[indexPath.row]
+        cell.eventTitleLabel.text = event.title.capitalized
+        cell.eventLocationLabel.text = "\(event.venue.city.capitalized), \(event.venue.state.capitalized)"
+        cell.eventDateTimeLabel.text = event.datetimeLocal
+        
         return cell
     }
-    */
+    
 
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
@@ -46,13 +52,38 @@ class EventsTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "eventDetail" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let detailVC = segue.destination as! EventDetailViewController
+            //detailVC.event = self.events[indexPath.row]
+        }
     }
-    */
+    
 
 }
+
+extension EventsTableViewController: UISearchBarDelegate {
+    func searchBarButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text, searchTerm != "" else { return }
+        print("Search bar clicked")
+        eventController.searchEvent(searchTerm: searchTerm) { (result) in
+            do {
+                let events = try result.get()
+                DispatchQueue.main.async {
+                    self.events = events
+                    
+                }
+            } catch {
+                print("\(error)")
+                return
+            }
+        }
+    }
+    
+    
+}
+

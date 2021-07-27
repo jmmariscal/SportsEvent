@@ -8,9 +8,6 @@
 import Foundation
 import UIKit
 
-protocol EventResultDelegate: AnyObject {
-    func didGetData(results: Result<Event, NetworkError>)
-}
 
 enum NetworkError: Error {
     case unauthorized
@@ -21,7 +18,10 @@ enum NetworkError: Error {
 
 class EventsController {
     var event: Event?
-    weak var delegate: EventResultDelegate?
+    var eventList: [Event] = []
+    
+    private let clientID = "MTAzNzU2MTJ8MTYyNzExMzM4OS4xMDM3Mjk"
+    private let baseURL = URL(string: "https://api.seatgeek.com/2/events?")!
     
     enum HTTPMethod: String {
         case get = "GET"
@@ -30,26 +30,34 @@ class EventsController {
         case delete = "DELETE"
     }
     
-    func searchEvent(searchTerm: String) {
-        let baseURL = "https://api.seatgeek.com/2/events"
-        var request = URLRequest(url: URL(string: baseURL)!)
+    func searchEvent(searchTerm: String, completion: @escaping (Result<Event, NetworkError>) -> Void) {
+        
+        var urlComponets = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        let parameters = ["q=": searchTerm]
+        let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
+            urlComponets?.queryItems = queryItems
+        
+        guard let requestURL = urlComponets?.url else { return }
+        var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
+        
+        request.setValue(clientID, forHTTPHeaderField: "&client_id=")
         
         // Request data
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
                response.statusCode == 401 {
-                self.delegate?.didGetData(results: .failure(.unauthorized))
+                completion(.failure(.unauthorized))
                 return
             }
             
             guard error == nil else {
-                self.delegate?.didGetData(results: .failure(.otherError(error!)))
+                completion(.failure(.otherError(error!)))
                 return
             }
         
             guard let data = data else {
-                self.delegate?.didGetData(results: .failure(.noData))
+                completion(.failure(.noData))
                 return
             }
             
@@ -57,9 +65,9 @@ class EventsController {
             let decoder = JSONDecoder()
             do {
                 let event = try decoder.decode(Event.self, from: data)
-                self.delegate?.didGetData(results: .success(event))
+                completion(.success(event))
             } catch {
-                self.delegate?.didGetData(results: .failure(.decodeFailed))
+                completion(.failure(.decodeFailed))
                 return
             }
         }.resume()

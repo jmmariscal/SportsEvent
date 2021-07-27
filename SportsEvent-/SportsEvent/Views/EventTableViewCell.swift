@@ -8,6 +8,13 @@
 import UIKit
 
 class EventTableViewCell: UITableViewCell {
+    
+    var eventController = EventsController()
+//    var event: Event? {
+//        didSet {
+//            updateViews()
+//        }
+//    }
 
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
@@ -25,5 +32,11 @@ class EventTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+//    private func updateViews() {
+//        eventTitleLabel.text = event?.title
+//        eventLocationLabel.text = event?.datetimeLocal
+//        eventDateTimeLabel.text = event?.datetimeLocal
+//    }
 
 }
