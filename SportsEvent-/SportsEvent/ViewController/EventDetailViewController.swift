@@ -15,22 +15,22 @@ class EventDetailViewController: UIViewController {
     
     let eventController = EventsController()
     
-    var event: Event?
+    var event: Events?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        updateViews()
+        //updateViews()
     }
     
-    func updateViews() {
-        guard let event = event else { return }
-        
-        eventDateTimeLabel.text = event.title
-        eventLocationLabel.text = event.datetimeLocal
-        
-        
-    }
+//    func updateViews() {
+//        guard let event = event else { return }
+//
+//        eventDateTimeLabel.text = event.events.
+//        eventLocationLabel.text = event.datetimeLocal
+//
+//
+//    }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         

@@ -10,7 +10,7 @@ import UIKit
 class EventsTableViewController: UITableViewController {
 
     var eventController = EventsController()
-    var events: Event?
+    var events: Events?
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -38,10 +38,7 @@ class EventsTableViewController: UITableViewController {
         }
 
         let event = eventController.eventList[indexPath.row]
-        cell.eventTitleLabel.text = event.title.capitalized
-        cell.eventLocationLabel.text = "\(event.venue.city.capitalized), \(event.venue.state.capitalized)"
-        cell.eventDateTimeLabel.text = event.datetimeLocal
-        
+        cell.event = event
         return cell
     }
     
@@ -67,10 +64,11 @@ class EventsTableViewController: UITableViewController {
 }
 
 extension EventsTableViewController: UISearchBarDelegate {
-    func searchBarButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchTerm = searchBar.text, searchTerm != "" else { return }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         print("Search bar clicked")
-        eventController.searchEvent(searchTerm: searchTerm) { (result) in
+        eventController.searchEvent(searchTerm: searchText) { (result) in
             do {
                 let events = try result.get()
                 DispatchQueue.main.async {
@@ -83,6 +81,23 @@ extension EventsTableViewController: UISearchBarDelegate {
             }
         }
     }
+    
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        guard let searchTerm = searchBar.text, searchTerm != "" else { return }
+//        print("Search bar clicked")
+//        eventController.searchEvent(searchTerm: searchTerm) { (result) in
+//            do {
+//                let events = try result.get()
+//                DispatchQueue.main.async {
+//                    self.events = events
+//
+//                }
+//            } catch {
+//                print("\(error)")
+//                return
+//            }
+//        }
+//    }
     
     
 }

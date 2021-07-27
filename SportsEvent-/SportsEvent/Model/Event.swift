@@ -7,13 +7,17 @@
 import Foundation
 
 // MARK: - Events
+struct Events: Codable {
+    let events: [Event]
+}
+
 struct Event: Codable {
-    let title: String
+    let shortTitle: String
     let datetimeLocal: String
     let venue: Venue
 
     enum CodingKeys: String, CodingKey {
-        case title
+        case shortTitle = "short_title"
         case datetimeLocal = "datetime_local"
         case venue
     }
@@ -41,5 +45,5 @@ struct Venue: Codable {
 }
 
 struct SearchResults: Codable {
-    let results: [Event]
+    let results: [Events]
 }

@@ -17,8 +17,10 @@ enum NetworkError: Error {
 }
 
 class EventsController {
-    var event: Event?
-    var eventList: [Event] = []
+    var event: Events?
+    var eventList: [Events] = []
+    
+    var workerItem: DispatchWorkItem?
     
     private let clientID = "MTAzNzU2MTJ8MTYyNzExMzM4OS4xMDM3Mjk"
     private let baseURL = URL(string: "https://api.seatgeek.com/2/events?")!
@@ -30,48 +32,62 @@ class EventsController {
         case delete = "DELETE"
     }
     
-    func searchEvent(searchTerm: String, completion: @escaping (Result<Event, NetworkError>) -> Void) {
-        
-        var urlComponets = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        let parameters = ["q=": searchTerm]
-        let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
-            urlComponets?.queryItems = queryItems
-        
-        guard let requestURL = urlComponets?.url else { return }
-        var request = URLRequest(url: requestURL)
-        request.httpMethod = HTTPMethod.get.rawValue
-        
-        request.setValue(clientID, forHTTPHeaderField: "&client_id=")
-        
-        // Request data
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let response = response as? HTTPURLResponse,
-               response.statusCode == 401 {
-                completion(.failure(.unauthorized))
-                return
-            }
+    func searchEvent(searchTerm: String, completion: @escaping (Result<Events, NetworkError>) -> Void) {
             
-            guard error == nil else {
-                completion(.failure(.otherError(error!)))
-                return
-            }
-        
-            guard let data = data else {
-                completion(.failure(.noData))
-                return
-            }
+            // Cancel the previous request since it is going to make another one again.
+            workerItem?.cancel()
             
-            // Decode the data
-            let decoder = JSONDecoder()
-            do {
-                let event = try decoder.decode(Event.self, from: data)
-                completion(.success(event))
-            } catch {
-                completion(.failure(.decodeFailed))
-                return
+            self.workerItem = DispatchWorkItem(block: { [weak self] in
+                
+                guard let strongSelf = self else { return }
+                
+                var urlComponets = URLComponents(url: strongSelf.baseURL, resolvingAgainstBaseURL: true)
+                let parameters = ["q": searchTerm, "client_id": strongSelf.clientID]
+                let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
+                    urlComponets?.queryItems = queryItems
+                
+                guard let requestURL = urlComponets?.url else { return }
+                var request = URLRequest(url: requestURL)
+                request.httpMethod = HTTPMethod.get.rawValue
+                
+                //request.setValue(strongSelf.clientID, forHTTPHeaderField: "client_id")
+                
+                // Request data
+                URLSession.shared.dataTask(with: request) { (data, response, error) in
+                    if let response = response as? HTTPURLResponse,
+                       response.statusCode == 401 {
+                        completion(.failure(.unauthorized))
+                        return
+                    }
+                    
+                    guard error == nil else {
+                        completion(.failure(.otherError(error!)))
+                        return
+                    }
+                
+                    guard let data = data else {
+                        completion(.failure(.noData))
+                        return
+                    }
+                    
+                    // Decode the data
+                    let decoder = JSONDecoder()
+                    do {
+                        let event = try decoder.decode(Events.self, from: data)
+                        completion(.success(event))
+                    } catch {
+                        completion(.failure(.decodeFailed))
+                        print(error)
+                        return
+                    }
+                }.resume()
+                
+            })
+            
+            // If no new text has been entered in 400 milliseconds, then it will fire off the request.
+            if let dispatchWorkerItem = workerItem {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: dispatchWorkerItem)
             }
-        }.resume()
-        
-    }
+        }
     
 }
