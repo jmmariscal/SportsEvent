@@ -10,7 +10,7 @@ import UIKit
 class EventTableViewCell: UITableViewCell {
     
     var eventController = EventsController()
-    var event: Events? {
+    var event: Event? {
         didSet {
             updateViews()
         }
@@ -31,9 +31,9 @@ class EventTableViewCell: UITableViewCell {
     }
     
     private func updateViews() {
-        eventTitleLabel.text = event?.events[0].shortTitle
-        eventLocationLabel.text = event?.events[0].venue.city
-        eventDateTimeLabel.text = event?.events[0].datetimeLocal
+        eventTitleLabel.text = event?.shortTitle
+        eventLocationLabel.text = "\(event?.venue.city), \(event?.venue.state)"
+        eventDateTimeLabel.text = event?.datetimeLocal
         eventImageView.image = UIImage(named: "")
     }
 

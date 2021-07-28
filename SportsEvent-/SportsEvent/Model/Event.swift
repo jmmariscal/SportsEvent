@@ -43,7 +43,3 @@ struct Venue: Codable {
     let city: String
     let state: String
 }
-
-struct SearchResults: Codable {
-    let results: [Events]
-}

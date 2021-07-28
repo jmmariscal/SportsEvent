@@ -18,7 +18,7 @@ enum NetworkError: Error {
 
 class EventsController {
     var event: Events?
-    var eventList: [Events] = []
+    var eventList: [Event] = []
     
     var workerItem: DispatchWorkItem?
     
@@ -73,8 +73,8 @@ class EventsController {
                     // Decode the data
                     let decoder = JSONDecoder()
                     do {
-                        let event = try decoder.decode(Events.self, from: data)
-                        completion(.success(event))
+                        self?.event = try decoder.decode(Events.self, from: data)
+                        completion(.success(self!.event!))
                     } catch {
                         completion(.failure(.decodeFailed))
                         print(error)

@@ -15,7 +15,7 @@ class EventDetailViewController: UIViewController {
     
     let eventController = EventsController()
     
-    var event: Events?
+    var event: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,7 +10,7 @@ import UIKit
 class EventsTableViewController: UITableViewController {
 
     var eventController = EventsController()
-    var events: Events?
+    var events: [Event] = []
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -28,7 +28,7 @@ class EventsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventController.eventList.count
+        return events.count
     }
 
     
@@ -72,7 +72,7 @@ extension EventsTableViewController: UISearchBarDelegate {
             do {
                 let events = try result.get()
                 DispatchQueue.main.async {
-                    self.events = events
+                    self.events = events.events
                     
                 }
             } catch {
