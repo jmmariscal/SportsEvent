@@ -31,9 +31,11 @@ class EventTableViewCell: UITableViewCell {
     }
     
     private func updateViews() {
-        eventTitleLabel.text = event?.shortTitle
-        eventLocationLabel.text = "\(event?.venue.city), \(event?.venue.state)"
-        eventDateTimeLabel.text = event?.datetimeLocal
+        guard let event = event else { return }
+        
+        eventTitleLabel.text = event.shortTitle
+        eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
+        eventDateTimeLabel.text = event.datetimeLocal
         eventImageView.image = UIImage(named: "")
     }
 

@@ -18,7 +18,11 @@ enum NetworkError: Error {
 
 class EventsController {
     var event: Events?
-    var eventList: [Event] = []
+    var eventList: [Event] {
+        get {
+            return event?.events ?? []
+        }
+    }
     
     var workerItem: DispatchWorkItem?
     
@@ -86,7 +90,7 @@ class EventsController {
             
             // If no new text has been entered in 400 milliseconds, then it will fire off the request.
             if let dispatchWorkerItem = workerItem {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: dispatchWorkerItem)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: dispatchWorkerItem)
             }
         }
     

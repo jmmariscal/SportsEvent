@@ -10,7 +10,13 @@ import UIKit
 class EventsTableViewController: UITableViewController {
 
     var eventController = EventsController()
-    var events: [Event] = []
+    var events: [Event] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     @IBOutlet weak var searchBar: UISearchBar!
     
