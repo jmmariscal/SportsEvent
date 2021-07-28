@@ -94,4 +94,27 @@ class EventsController {
             }
         }
     
+    func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        // Build URL with necessary information
+        var request = URLRequest(url: URL(string: path)!)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        // Request Image
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard error == nil else {
+                completion(.failure(.otherError(error!)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            completion(.success(data))
+            
+        }.resume()
+        
+        
+    }
+    
 }

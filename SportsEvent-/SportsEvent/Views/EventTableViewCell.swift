@@ -36,7 +36,19 @@ class EventTableViewCell: UITableViewCell {
         eventTitleLabel.text = event.shortTitle
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
         eventDateTimeLabel.text = event.datetimeLocal
-        eventImageView.image = UIImage(named: "")
+        getImage(with: event)
+         
+    }
+    
+    func getImage(with event: Event) {
+        let imagePath = event.performers[0].image
+        eventController.grabImageFromEvent(path: imagePath) { result in
+            guard let imageString = try? result.get() else { return }
+            let image = UIImage(data: imageString)
+            DispatchQueue.main.async {
+                self.eventImageView.image = image
+            }
+        }
     }
 
 }
