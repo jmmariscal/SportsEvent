@@ -36,8 +36,17 @@ class EventTableViewCell: UITableViewCell {
         
         eventTitleLabel.text = event.shortTitle
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
-        eventDateTimeLabel.text = event.datetimeLocal
         getImage(with: event)
+        
+        // Date Formatter
+        let dateString = event.datetimeLocal
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        let dateObject = formatter.date(from: dateString)
+        
+        formatter.dateFormat = "yyyy MMM dd HH:mm a"
+        eventDateTimeLabel.text = formatter.string(from: dateObject!)
         
         favoriteEventImageView.image = UIImage(systemName: "heart.fill")
         favoriteEventImageView.tintColor = .red

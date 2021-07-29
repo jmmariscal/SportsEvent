@@ -22,6 +22,13 @@ class EventsController {
         get {
             return event?.events ?? []
         }
+        set {
+            
+        }
+    }
+    
+    init() {
+        loadFromPersistentStore()
     }
     
     var workerItem: DispatchWorkItem?
@@ -111,10 +118,38 @@ class EventsController {
                 return
             }
             completion(.success(data))
-            
         }.resume()
-        
-        
     }
     
+    func loadFromPersistentStore() {
+        // Plist -> Data -> Event
+        let fileManager = FileManager.default
+        guard let url = eventURL, fileManager.fileExists(atPath: url.path) else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            self.eventList = try decoder.decode([Event].self, from: data)
+        } catch {
+            print("**** Error loading Event data: \(error)")
+        }
+    }
+    
+    func saveToPersistentStore() {
+        guard let url = eventURL else { return }
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(eventList)
+            try data.write(to: url)
+        } catch {
+            print("**** Error saving Event data: \(error)")
+        }
+    }
+    
+    private var eventURL: URL? {
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let fileName = "event.plist"
+        
+        return documentDirectory?.appendingPathComponent(fileName)
+    }
 }
