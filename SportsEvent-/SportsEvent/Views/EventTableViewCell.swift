@@ -20,6 +20,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventDateTimeLabel: UILabel!
+    @IBOutlet weak var favoriteEventImageView: UIImageView!
     
     
 
@@ -37,7 +38,9 @@ class EventTableViewCell: UITableViewCell {
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
         eventDateTimeLabel.text = event.datetimeLocal
         getImage(with: event)
-         
+        
+        favoriteEventImageView.image = UIImage(systemName: "heart.fill")
+        favoriteEventImageView.tintColor = .red
     }
     
     func getImage(with event: Event) {

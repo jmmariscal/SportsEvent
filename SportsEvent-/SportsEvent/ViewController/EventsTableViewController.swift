@@ -48,24 +48,16 @@ class EventsTableViewController: UITableViewController {
         return cell
     }
     
-
-
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        
-    }
-    
-
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "eventDetail" {
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let detailVC = segue.destination as! EventDetailViewController
-            //detailVC.event = self.events[indexPath.row]
+        if segue.identifier == "eventDetail", let detailVC = segue.destination as? EventDetailViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let event = events[indexPath.row]
+                detailVC.event = event
+            }
         }
     }
-    
 
 }
 
