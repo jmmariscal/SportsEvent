@@ -19,10 +19,10 @@ class EventDetailViewController: UIViewController {
     
     var eventFavorite: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: "eventFavorite")
+            return UserDefaults.standard.bool(forKey: event?.shortTitle ?? "event")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "eventFavorite")
+            UserDefaults.standard.set(newValue, forKey: event?.shortTitle ?? "event")
         }
     }
     
@@ -77,7 +77,7 @@ class EventDetailViewController: UIViewController {
     // Check if user tapped the favorite "heart" button
     @IBAction func favoriteButtonTapped(_ sender: Any) {
    
-        if self.eventFavorite == true  {
+        if self.eventFavorite == true {
             self.eventFavorite = false
             favoriteButton.image = UIImage(systemName: "heart.fill")
             eventController.saveToPersistentStore()

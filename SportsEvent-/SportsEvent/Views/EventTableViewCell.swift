@@ -48,8 +48,13 @@ class EventTableViewCell: UITableViewCell {
         formatter.dateFormat = "yyyy MMM dd HH:mm a"
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
         
-        favoriteEventImageView.image = UIImage(systemName: "heart.fill")
-        favoriteEventImageView.tintColor = .red
+        if UserDefaults.standard.bool(forKey: event.shortTitle) == true{
+            favoriteEventImageView.image = UIImage(systemName: "heart")
+            favoriteEventImageView.tintColor = .red
+        } else {
+            favoriteEventImageView.image = UIImage(systemName: "heart.fill")
+            favoriteEventImageView.tintColor = .red
+        }
     }
     
     func getImage(with event: Event) {
