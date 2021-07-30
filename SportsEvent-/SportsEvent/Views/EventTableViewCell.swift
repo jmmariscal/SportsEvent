@@ -21,10 +21,9 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventDateTimeLabel: UILabel!
     @IBOutlet weak var favoriteEventImageView: UIImageView!
+
     
     
-
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -47,12 +46,14 @@ class EventTableViewCell: UITableViewCell {
         
         formatter.dateFormat = "yyyy MMM dd HH:mm a"
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
-        
-        if UserDefaults.standard.bool(forKey: event.shortTitle) == true{
-            favoriteEventImageView.image = UIImage(systemName: "heart")
+    }
+    
+    func favoriteEventSelected() {
+        if UserDefaults.standard.bool(forKey: event?.shortTitle ?? "") == true{
+            favoriteEventImageView.image = UIImage(systemName: "heart.fill")
             favoriteEventImageView.tintColor = .red
         } else {
-            favoriteEventImageView.image = UIImage(systemName: "heart.fill")
+            favoriteEventImageView.image = UIImage(systemName: "")
             favoriteEventImageView.tintColor = .red
         }
     }

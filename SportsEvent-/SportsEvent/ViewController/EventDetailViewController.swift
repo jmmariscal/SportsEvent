@@ -77,13 +77,12 @@ class EventDetailViewController: UIViewController {
     // Check if user tapped the favorite "heart" button
     @IBAction func favoriteButtonTapped(_ sender: Any) {
    
-        if self.eventFavorite == true {
-            self.eventFavorite = false
-            favoriteButton.image = UIImage(systemName: "heart.fill")
-            eventController.saveToPersistentStore()
-        } else {
+        if self.eventFavorite == false {
             self.eventFavorite = true
             favoriteButton.image = UIImage(systemName: "heart")
+        } else {
+            self.eventFavorite = false
+            favoriteButton.image = UIImage(systemName: "heart.fill")
         }
     }
 
