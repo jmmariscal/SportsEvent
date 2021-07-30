@@ -17,6 +17,8 @@
 		AF3D715C26AB3FA50057E857 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715B26AB3FA50057E857 /* Event.swift */; };
 		AF3D715E26AE4E6C0057E857 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */; };
 		AF3D716026AE525E0057E857 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715F26AE525E0057E857 /* EventsController.swift */; };
+		AF3D716326B26BA40057E857 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D716226B26BA40057E857 /* String.swift */; };
+		AF3D716526B271240057E857 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D716426B271240057E857 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		AF3D715B26AB3FA50057E857 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		AF3D715F26AE525E0057E857 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		AF3D716226B26BA40057E857 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AF3D716426B271240057E857 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				AF3D715B26AB3FA50057E857 /* Event.swift */,
 				AF3D715F26AE525E0057E857 /* EventsController.swift */,
+				AF3D716226B26BA40057E857 /* String.swift */,
+				AF3D716426B271240057E857 /* Date.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 				AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */,
 				AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */,
 				AF3D716026AE525E0057E857 /* EventsController.swift in Sources */,
+				AF3D716326B26BA40057E857 /* String.swift in Sources */,
+				AF3D716526B271240057E857 /* Date.swift in Sources */,
 				AF3D715C26AB3FA50057E857 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
