@@ -15,8 +15,16 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     let eventController = EventsController()
-    
     var event: Event?
+    
+    var eventFavorite: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "eventFavorite")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "eventFavorite")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,15 +75,14 @@ class EventDetailViewController: UIViewController {
     }
     
     // Check if user tapped the favorite "heart" button
-    var check = true
     @IBAction func favoriteButtonTapped(_ sender: Any) {
    
-        if check == true {
-            check = false
+        if self.eventFavorite == true  {
+            self.eventFavorite = false
             favoriteButton.image = UIImage(systemName: "heart.fill")
             eventController.saveToPersistentStore()
         } else {
-            check = true
+            self.eventFavorite = true
             favoriteButton.image = UIImage(systemName: "heart")
         }
     }

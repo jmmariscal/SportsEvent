@@ -22,10 +22,8 @@ class EventsController {
         get {
             return event?.events ?? []
         }
-        set {
-            
-        }
     }
+    var favoriteEventList: [Event] = []
     
     init() {
         loadFromPersistentStore()
@@ -129,7 +127,7 @@ class EventsController {
         do {
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
-            self.eventList = try decoder.decode([Event].self, from: data)
+            self.favoriteEventList = try decoder.decode([Event].self, from: data)
         } catch {
             print("**** Error loading Event data: \(error)")
         }
