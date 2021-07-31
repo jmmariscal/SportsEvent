@@ -31,9 +31,7 @@ class EventDetailViewController: UIViewController {
         label.text = eventTitle
         self.navigationItem.titleView = label
     }
-    
-    // "2021-07-28T19:30:00"
-    
+        
     func updateViews() {
         guard let event = event else { return }
         
@@ -46,7 +44,7 @@ class EventDetailViewController: UIViewController {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         let dateObject = formatter.date(from: dateString)
         
-        formatter.dateFormat = "yyyy MMM dd HH:mm a"
+        formatter.dateFormat = "EEEE, dd MMM yyyy HH:mm a"
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
         
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
@@ -68,6 +66,7 @@ class EventDetailViewController: UIViewController {
             guard let imageString = try? result.get() else { return }
             let image = UIImage(data: imageString)
             DispatchQueue.main.async {
+                self.eventImageView.layer.cornerRadius = 10
                 self.eventImageView.image = image
             }
         }

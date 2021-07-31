@@ -65,7 +65,9 @@ class EventTableViewCell: UITableViewCell {
             guard let imageString = try? result.get() else { return }
             let image = UIImage(data: imageString)
             DispatchQueue.main.async {
+                self.eventImageView.layer.cornerRadius = 10
                 self.eventImageView.image = image
+                
             }
         }
     }
