@@ -27,16 +27,6 @@ struct Event: Codable {
     }
 }
 
-//
-// To read values from URLs:
-//
-//   let task = URLSession.shared.imagesTask(with: url) { images, response, error in
-//     if let images = images {
-//       ...
-//     }
-//   }
-//   task.resume()
-
 // MARK: - Images
 struct Images: Codable {
     let large, huge, small, medium: String

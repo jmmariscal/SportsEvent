@@ -17,10 +17,11 @@ class EventsTableViewController: UITableViewController {
             }
         }
     }
-    let barBackgroundColor = UIColor(red: 40/255, green: 53/255, blue: 147/255, alpha: 1.0)
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let barBackgroundColor = UIColor(red: 40/255, green: 53/255, blue: 147/255, alpha: 1.0)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
@@ -49,13 +50,6 @@ class EventsTableViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if let eventCell = cell as? EventTableViewCell {
-//            let event = eventController.eventList[indexPath.row]
-//            eventCell
-//        }
-//    }
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,14 +65,12 @@ class EventsTableViewController: UITableViewController {
 
 extension EventsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        print("Search bar clicked")
+        // Search for events while User is typing in Search Bar
         eventController.searchEvent(searchTerm: searchText) { (result) in
             do {
                 let events = try result.get()
                 DispatchQueue.main.async {
                     self.events = events.events
-                    
                 }
             } catch {
                 print("\(error)")

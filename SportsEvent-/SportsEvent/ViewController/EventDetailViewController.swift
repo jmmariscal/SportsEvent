@@ -16,6 +16,7 @@ class EventDetailViewController: UIViewController {
     
     let eventController = EventsController()
     var event: Event?
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +48,11 @@ class EventDetailViewController: UIViewController {
         formatter.dateFormat = "EEEE, dd MMM yyyy hh:mm a"
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
         
+        // event Location and Time, grab Event Image
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
         getImage(with: event)
         
-        if UserDefaults.standard.bool(forKey: event.id.description) == true{
+        if userDefaults.bool(forKey: event.id.description) == true{
             favoriteButton.image = UIImage(systemName: "heart.fill")
             favoriteButton.tintColor = .red
         } else {
@@ -77,10 +79,10 @@ class EventDetailViewController: UIViewController {
         guard let eventKey = event?.id.description else { return }
    
         if favoriteButton.image == UIImage(systemName: "heart.fill") {
-            UserDefaults.standard.set(false, forKey: eventKey)
+            userDefaults.set(false, forKey: eventKey)
             favoriteButton.image = UIImage(systemName: "heart")
         } else if favoriteButton.image == UIImage(systemName: "heart") {
-            UserDefaults.standard.set(true, forKey: eventKey)
+            userDefaults.set(true, forKey: eventKey)
             favoriteButton.image = UIImage(systemName: "heart.fill")
         }
     }

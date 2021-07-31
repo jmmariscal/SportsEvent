@@ -16,20 +16,13 @@ class EventTableViewCell: UITableViewCell {
             favoriteEventSelected()
         }
     }
+    let userDefaults = UserDefaults.standard
 
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventDateTimeLabel: UILabel!
     @IBOutlet weak var favoriteEventImageView: UIImageView!
-
-    
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     private func updateViews() {
         guard let event = event else { return }
@@ -49,8 +42,9 @@ class EventTableViewCell: UITableViewCell {
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
     }
     
+    // Check if user selected event as Favorite
     func favoriteEventSelected() {
-        if UserDefaults.standard.bool(forKey: event?.id.description ?? "") == true{
+        if userDefaults.bool(forKey: event?.id.description ?? "") == true{
             favoriteEventImageView.image = UIImage(systemName: "heart.fill")
             favoriteEventImageView.tintColor = .red
         } else {
@@ -58,7 +52,7 @@ class EventTableViewCell: UITableViewCell {
             favoriteEventImageView.tintColor = .red
         }
     }
-    
+    // Grab Image of event
     func getImage(with event: Event) {
         let imagePath = event.performers[0].image
         eventController.grabImageFromEvent(path: imagePath) { result in
