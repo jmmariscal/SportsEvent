@@ -44,7 +44,7 @@ class EventDetailViewController: UIViewController {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         let dateObject = formatter.date(from: dateString)
         
-        formatter.dateFormat = "EEEE, dd MMM yyyy HH:mm a"
+        formatter.dateFormat = "EEEE, dd MMM yyyy hh:mm a"
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
         
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"

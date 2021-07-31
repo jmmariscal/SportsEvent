@@ -45,7 +45,7 @@ class EventTableViewCell: UITableViewCell {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         let dateObject = formatter.date(from: dateString)
         
-        formatter.dateFormat = "yyyy MMM dd HH:mm a"
+        formatter.dateFormat = "yyyy MMM dd hh:mm a"
         eventDateTimeLabel.text = formatter.string(from: dateObject!)
     }
     

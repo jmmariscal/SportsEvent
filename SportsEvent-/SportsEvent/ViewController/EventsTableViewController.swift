@@ -17,6 +17,7 @@ class EventsTableViewController: UITableViewController {
             }
         }
     }
+    let barBackgroundColor = UIColor(red: 40/255, green: 53/255, blue: 147/255, alpha: 1.0)
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -24,6 +25,7 @@ class EventsTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
         searchBar.delegate = self
+        navigationController?.navigationBar.barTintColor = barBackgroundColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
