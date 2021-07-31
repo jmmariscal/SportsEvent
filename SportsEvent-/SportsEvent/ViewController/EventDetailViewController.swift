@@ -17,15 +17,6 @@ class EventDetailViewController: UIViewController {
     let eventController = EventsController()
     var event: Event?
     
-    var eventFavorite: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: event?.shortTitle ?? "event")
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: event?.shortTitle ?? "event")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
@@ -60,6 +51,14 @@ class EventDetailViewController: UIViewController {
         
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
         getImage(with: event)
+        
+        if UserDefaults.standard.bool(forKey: event.id.description) == true{
+            favoriteButton.image = UIImage(systemName: "heart.fill")
+            favoriteButton.tintColor = .red
+        } else {
+            favoriteButton.image = UIImage(systemName: "heart")
+            favoriteButton.tintColor = .red
+        }
     }
     
     // Grab Image from event
@@ -76,12 +75,13 @@ class EventDetailViewController: UIViewController {
     
     // Check if user tapped the favorite "heart" button
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        guard let eventKey = event?.id.description else { return }
    
-        if self.eventFavorite == false {
-            self.eventFavorite = true
+        if favoriteButton.image == UIImage(systemName: "heart.fill") {
+            UserDefaults.standard.set(false, forKey: eventKey)
             favoriteButton.image = UIImage(systemName: "heart")
-        } else {
-            self.eventFavorite = false
+        } else if favoriteButton.image == UIImage(systemName: "heart") {
+            UserDefaults.standard.set(true, forKey: eventKey)
             favoriteButton.image = UIImage(systemName: "heart.fill")
         }
     }

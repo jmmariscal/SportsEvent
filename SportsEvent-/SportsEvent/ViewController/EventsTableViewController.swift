@@ -25,6 +25,11 @@ class EventsTableViewController: UITableViewController {
         tableView.reloadData()
         searchBar.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -42,11 +47,12 @@ class EventsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let eventCell = cell as? EventTableViewCell {
-            eventCell.favoriteEventSelected()
-        }
-    }
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if let eventCell = cell as? EventTableViewCell {
+//            let event = eventController.eventList[indexPath.row]
+//            eventCell
+//        }
+//    }
     
     // MARK: - Navigation
 

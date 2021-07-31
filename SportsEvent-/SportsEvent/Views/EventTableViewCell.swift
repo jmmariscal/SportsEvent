@@ -13,6 +13,7 @@ class EventTableViewCell: UITableViewCell {
     var event: Event? {
         didSet {
             updateViews()
+            favoriteEventSelected()
         }
     }
 
@@ -49,7 +50,7 @@ class EventTableViewCell: UITableViewCell {
     }
     
     func favoriteEventSelected() {
-        if UserDefaults.standard.bool(forKey: event?.shortTitle ?? "") == true{
+        if UserDefaults.standard.bool(forKey: event?.id.description ?? "") == true{
             favoriteEventImageView.image = UIImage(systemName: "heart.fill")
             favoriteEventImageView.tintColor = .red
         } else {
