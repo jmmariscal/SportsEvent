@@ -17,9 +17,21 @@
 		AF3D715C26AB3FA50057E857 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715B26AB3FA50057E857 /* Event.swift */; };
 		AF3D715E26AE4E6C0057E857 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */; };
 		AF3D716026AE525E0057E857 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715F26AE525E0057E857 /* EventsController.swift */; };
-		AF3D716326B26BA40057E857 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D716226B26BA40057E857 /* String.swift */; };
 		AF3D716526B271240057E857 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D716426B271240057E857 /* Date.swift */; };
+		AFB0DFCE26C72BC500CF6541 /* SportsEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */; };
+		AFB0DFD526C72BDC00CF6541 /* EventDateUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */; };
+		AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFB0DFD026C72BC500CF6541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF3D713526AB3EFB0057E857 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3D713C26AB3EFB0057E857;
+			remoteInfo = SportsEvent;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF3D713D26AB3EFB0057E857 /* SportsEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +46,23 @@
 		AF3D715B26AB3FA50057E857 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		AF3D715F26AE525E0057E857 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		AF3D716226B26BA40057E857 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AF3D716426B271240057E857 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateUnitTest.swift; sourceTree = "<group>"; };
+		AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsEventTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsEventTests.swift; sourceTree = "<group>"; };
+		AFB0DFCF26C72BC500CF6541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ISO8601Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF3D713A26AB3EFB0057E857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB0DFC826C72BC500CF6541 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3D713F26AB3EFB0057E857 /* SportsEvent */,
+				AFB0DFCC26C72BC500CF6541 /* SportsEventTests */,
 				AF3D713E26AB3EFB0057E857 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3D713D26AB3EFB0057E857 /* SportsEvent.app */,
+				AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +102,7 @@
 				AF3D714926AB3EFC0057E857 /* Assets.xcassets */,
 				AF3D714B26AB3EFC0057E857 /* LaunchScreen.storyboard */,
 				AF3D714E26AB3EFC0057E857 /* Info.plist */,
+				AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */,
 			);
 			path = SportsEvent;
 			sourceTree = "<group>";
@@ -103,10 +129,19 @@
 			children = (
 				AF3D715B26AB3FA50057E857 /* Event.swift */,
 				AF3D715F26AE525E0057E857 /* EventsController.swift */,
-				AF3D716226B26BA40057E857 /* String.swift */,
 				AF3D716426B271240057E857 /* Date.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFB0DFCC26C72BC500CF6541 /* SportsEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */,
+				AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */,
+				AFB0DFCF26C72BC500CF6541 /* Info.plist */,
+			);
+			path = SportsEventTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +164,24 @@
 			productReference = AF3D713D26AB3EFB0057E857 /* SportsEvent.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AFB0DFCA26C72BC500CF6541 /* SportsEventTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB0DFD426C72BC500CF6541 /* Build configuration list for PBXNativeTarget "SportsEventTests" */;
+			buildPhases = (
+				AFB0DFC726C72BC500CF6541 /* Sources */,
+				AFB0DFC826C72BC500CF6541 /* Frameworks */,
+				AFB0DFC926C72BC500CF6541 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFB0DFD126C72BC500CF6541 /* PBXTargetDependency */,
+			);
+			name = SportsEventTests;
+			productName = SportsEventTests;
+			productReference = AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +193,10 @@
 				TargetAttributes = {
 					AF3D713C26AB3EFB0057E857 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					AFB0DFCA26C72BC500CF6541 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = AF3D713C26AB3EFB0057E857;
 					};
 				};
 			};
@@ -157,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				AF3D713C26AB3EFB0057E857 /* SportsEvent */,
+				AFB0DFCA26C72BC500CF6541 /* SportsEventTests */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +230,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFB0DFC926C72BC500CF6541 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -183,15 +248,32 @@
 				AF3D715A26AB3F980057E857 /* EventTableViewCell.swift in Sources */,
 				AF3D714126AB3EFB0057E857 /* AppDelegate.swift in Sources */,
 				AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */,
+				AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */,
 				AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */,
 				AF3D716026AE525E0057E857 /* EventsController.swift in Sources */,
-				AF3D716326B26BA40057E857 /* String.swift in Sources */,
 				AF3D716526B271240057E857 /* Date.swift in Sources */,
 				AF3D715C26AB3FA50057E857 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFB0DFC726C72BC500CF6541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB0DFD526C72BDC00CF6541 /* EventDateUnitTest.swift in Sources */,
+				AFB0DFCE26C72BC500CF6541 /* SportsEventTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFB0DFD126C72BC500CF6541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3D713C26AB3EFB0057E857 /* SportsEvent */;
+			targetProxy = AFB0DFD026C72BC500CF6541 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF3D714626AB3EFB0057E857 /* Main.storyboard */ = {
@@ -369,6 +451,46 @@
 			};
 			name = Release;
 		};
+		AFB0DFD226C72BC500CF6541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = SportsEventTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.SportsEventTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportsEvent.app/SportsEvent";
+			};
+			name = Debug;
+		};
+		AFB0DFD326C72BC500CF6541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
+				INFOPLIST_FILE = SportsEventTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.SportsEventTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportsEvent.app/SportsEvent";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -386,6 +508,15 @@
 			buildConfigurations = (
 				AF3D715226AB3EFC0057E857 /* Debug */,
 				AF3D715326AB3EFC0057E857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB0DFD426C72BC500CF6541 /* Build configuration list for PBXNativeTarget "SportsEventTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB0DFD226C72BC500CF6541 /* Debug */,
+				AFB0DFD326C72BC500CF6541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

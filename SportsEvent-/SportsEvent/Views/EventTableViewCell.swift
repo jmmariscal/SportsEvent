@@ -31,15 +31,7 @@ class EventTableViewCell: UITableViewCell {
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
         getImage(with: event)
         
-        // Date Formatter
-        let dateString = event.datetimeLocal
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        let dateObject = formatter.date(from: dateString)
-        
-        formatter.dateFormat = "yyyy MMM dd hh:mm a"
-        eventDateTimeLabel.text = formatter.string(from: dateObject!)
+        eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
     }
     
     // Check if user selected event as Favorite

@@ -38,17 +38,8 @@ class EventDetailViewController: UIViewController {
         
         navTitleMultiLine(eventTitle: event.shortTitle)
         
-        // DateFormatter
-        let dateString = event.datetimeLocal
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        let dateObject = formatter.date(from: dateString)
+        eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
         
-        formatter.dateFormat = "EEEE, dd MMM yyyy hh:mm a"
-        eventDateTimeLabel.text = formatter.string(from: dateObject!)
-        
-        // event Location and Time, grab Event Image
         eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
         getImage(with: event)
         
@@ -74,10 +65,11 @@ class EventDetailViewController: UIViewController {
         }
     }
     
+    
     // Check if user tapped the favorite "heart" button
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         guard let eventKey = event?.id.description else { return }
-   
+
         if favoriteButton.image == UIImage(systemName: "heart.fill") {
             userDefaults.set(false, forKey: eventKey)
             favoriteButton.image = UIImage(systemName: "heart")
