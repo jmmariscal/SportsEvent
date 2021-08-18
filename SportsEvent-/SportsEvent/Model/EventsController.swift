@@ -27,12 +27,12 @@ class EventsController {
     var workerItem: DispatchWorkItem?
     
     private let clientID = "MTAzNzU2MTJ8MTYyNzExMzM4OS4xMDM3Mjk"
-    private let baseURL = URL(string: "https://api.seatgeek.com/2/events?")!
+    private let baseURL  = URL(string: "https://api.seatgeek.com/2/events?")!
     
     enum HTTPMethod: String {
-        case get = "GET"
-        case post = "POST"
-        case pull = "PULL"
+        case get    = "GET"
+        case post   = "POST"
+        case pull   = "PULL"
         case delete = "DELETE"
     }
     
@@ -73,11 +73,10 @@ class EventsController {
                         completion(.failure(.noData))
                         return
                     }
-                    
                     // Decode the data
                     let decoder = JSONDecoder()
                     do {
-                        self?.event = try decoder.decode(Events.self, from: data)
+                        strongSelf.event = try decoder.decode(Events.self, from: data)
                         completion(.success(self!.event!))
                     } catch {
                         completion(.failure(.decodeFailed))

@@ -37,10 +37,10 @@ class EventTableViewCell: UITableViewCell {
     // Check if user selected event as Favorite
     func favoriteEventSelected() {
         if userDefaults.bool(forKey: event?.id.description ?? "") == true{
-            favoriteEventImageView.image = UIImage(systemName: "heart.fill")
+            favoriteEventImageView.image     = SFSymbols.filledHeart
             favoriteEventImageView.tintColor = .red
         } else {
-            favoriteEventImageView.image = UIImage(systemName: "")
+            favoriteEventImageView.image     = UIImage(systemName: "")
             favoriteEventImageView.tintColor = .red
         }
     }

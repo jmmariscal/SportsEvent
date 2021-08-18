@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum SFSymbols {
+    static let filledHeart = UIImage(systemName: "heart.fill")
+    static let heart       = UIImage(systemName: "heart")
+}
+
 class EventDetailViewController: UIViewController {
 
     @IBOutlet weak var eventImageView: UIImageView!
@@ -44,10 +49,10 @@ class EventDetailViewController: UIViewController {
         getImage(with: event)
         
         if userDefaults.bool(forKey: event.id.description) == true{
-            favoriteButton.image = UIImage(systemName: "heart.fill")
+            favoriteButton.image     = SFSymbols.filledHeart
             favoriteButton.tintColor = .red
         } else {
-            favoriteButton.image = UIImage(systemName: "heart")
+            favoriteButton.image     = SFSymbols.heart
             favoriteButton.tintColor = .red
         }
     }
@@ -70,12 +75,12 @@ class EventDetailViewController: UIViewController {
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         guard let eventKey = event?.id.description else { return }
 
-        if favoriteButton.image == UIImage(systemName: "heart.fill") {
+        if favoriteButton.image == SFSymbols.filledHeart {
             userDefaults.set(false, forKey: eventKey)
-            favoriteButton.image = UIImage(systemName: "heart")
-        } else if favoriteButton.image == UIImage(systemName: "heart") {
+            favoriteButton.image = SFSymbols.heart
+        } else if favoriteButton.image == SFSymbols.heart {
             userDefaults.set(true, forKey: eventKey)
-            favoriteButton.image = UIImage(systemName: "heart.fill")
+            favoriteButton.image = SFSymbols.filledHeart
         }
     }
 

@@ -17,10 +17,10 @@
 		AF3D715C26AB3FA50057E857 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715B26AB3FA50057E857 /* Event.swift */; };
 		AF3D715E26AE4E6C0057E857 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */; };
 		AF3D716026AE525E0057E857 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715F26AE525E0057E857 /* EventsController.swift */; };
-		AF3D716526B271240057E857 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D716426B271240057E857 /* Date.swift */; };
 		AFB0DFCE26C72BC500CF6541 /* SportsEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */; };
 		AFB0DFD526C72BDC00CF6541 /* EventDateUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */; };
 		AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */; };
+		AFB0DFF926CC178B00CF6541 /* UIImage+EventImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFF826CC178B00CF6541 /* UIImage+EventImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +46,12 @@
 		AF3D715B26AB3FA50057E857 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		AF3D715F26AE525E0057E857 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		AF3D716426B271240057E857 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateUnitTest.swift; sourceTree = "<group>"; };
 		AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsEventTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsEventTests.swift; sourceTree = "<group>"; };
 		AFB0DFCF26C72BC500CF6541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ISO8601Format.swift"; sourceTree = "<group>"; };
+		AFB0DFF826CC178B00CF6541 /* UIImage+EventImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+EventImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,7 @@
 				AF3D714B26AB3EFC0057E857 /* LaunchScreen.storyboard */,
 				AF3D714E26AB3EFC0057E857 /* Info.plist */,
 				AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */,
+				AFB0DFF826CC178B00CF6541 /* UIImage+EventImage.swift */,
 			);
 			path = SportsEvent;
 			sourceTree = "<group>";
@@ -129,7 +130,6 @@
 			children = (
 				AF3D715B26AB3FA50057E857 /* Event.swift */,
 				AF3D715F26AE525E0057E857 /* EventsController.swift */,
-				AF3D716426B271240057E857 /* Date.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */,
 				AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */,
 				AF3D716026AE525E0057E857 /* EventsController.swift in Sources */,
-				AF3D716526B271240057E857 /* Date.swift in Sources */,
+				AFB0DFF926CC178B00CF6541 /* UIImage+EventImage.swift in Sources */,
 				AF3D715C26AB3FA50057E857 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

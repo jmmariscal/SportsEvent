@@ -21,5 +21,31 @@ class EventDateUnitTest: XCTestCase {
     func testInvalidStringFails() throws {
         XCTAssertNil("".datePresentationFormat)
     }
+    
+    func testErrorNetworkCall() throws {
+        
+        let expectation = self.expectation(description: "Waiting for the network to return")
+        
+        let networkController = EventsController()
+        // Test corupt JSON
+        // Test server returns 500
+        // Test we have events
+        networkController.searchEvent(searchTerm: "") { result in
+            
+            switch result {
+            case .failure(let error):
+                XCTAssert(false)
+            case .success(let events):
+                break
+            }
+            // GREEN LIGHT
+            expectation.fulfill()
+        }
+        // Wait for the request to return
+        // RED LIGHT
+        waitForExpectations(timeout: 5) { possibleError in
+            // after network calls finishes
+        }
+    }
 
 }
