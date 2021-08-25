@@ -34,7 +34,7 @@ class EventDateUnitTest: XCTestCase {
             
             switch result {
             case .failure(let error):
-                XCTAssert(false)
+                XCTAssert(true)
             case .success(let events):
                 break
             }

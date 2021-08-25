@@ -1,0 +1,2629 @@
+{
+    "events": [
+        {
+            "type": "nfl",
+            "id": 5387865,
+            "datetime_utc": "2021-08-24T00:00:00",
+            "venue": {
+                "state": "LA",
+                "name_v2": "Caesars Superdome",
+                "postal_code": "70112",
+                "name": "Caesars Superdome",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/caesars-superdome/tickets",
+                "score": 0.93,
+                "location": {
+                    "lat": 29.9511,
+                    "lon": -90.0812
+                },
+                "address": "1500 Sugar Bowl Drive",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 14,
+                "city": "New Orleans",
+                "slug": "caesars-superdome",
+                "extended_address": "New Orleans, LA 70112",
+                "id": 128,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE",
+                    "created_at": "2020-09-11T18:35:45Z",
+                    "employee_only": false
+                },
+                "metro_code": 622,
+                "capacity": 73208,
+                "display_location": "New Orleans, LA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nfl",
+                    "name": "New Orleans Saints",
+                    "image": "https://seatgeek.com/images/performers-landscape/new-orleans-saints-8f1b47/2069/huge.jpg",
+                    "id": 2069,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/new-orleans-saints-8f1b47/2069/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "NFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "NFC South",
+                            "display_name": "NFC South",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "nfc-south"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 19
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "client provided",
+                    "url": "https://seatgeek.com/new-orleans-saints-tickets",
+                    "score": 0.81,
+                    "slug": "new-orleans-saints",
+                    "home_venue_id": 128,
+                    "short_name": "Saints",
+                    "num_upcoming_events": 19,
+                    "colors": {
+                        "all": [
+                            "#000000",
+                            "#D3BC8D",
+                            "#000000"
+                        ],
+                        "iconic": "#000000",
+                        "primary": [
+                            "#000000",
+                            "#D3BC8D"
+                        ]
+                    },
+                    "image_license": "client provided",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 29.9511,
+                        "lon": -90.0812
+                    }
+                },
+                {
+                    "type": "nfl",
+                    "name": "Jacksonville Jaguars",
+                    "image": "https://seatgeek.com/images/performers-landscape/jacksonville-jaguars-87b727/2064/huge.jpg",
+                    "id": 2064,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/jacksonville-jaguars-87b727/2064/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "AFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "AFC South",
+                            "display_name": "AFC South",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "afc-south"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 19
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/127906254@N06/24208424780/in/photolist-CTdvh9-ybHLUK-z8ACZc-XRj27A-z6i2Sf-XkCmpS-XJjSev-WFNPaX-XRj3ks-WFNQFn-XRj5NU-7HpeKS-7Hpeaq-7Hk91e-q7vxpf-5MXvt8-7HoZ79-7Hkh2K-cLGY59-7HqgYY-cLGTgC-7Hqhrq-7Hk6SR-8Mu6Xf-7Hp7Xm-7Hk5qR-8Mr6ZZ-qoU1kH-7HpTcy-qoUjP6-7Hk8iT-7HpbGf-7HpTGL-q7vwwo-7HkjUV-cLGU59-aqV1Kq-7HkdmD-q7w9Fh-qp5Fhp-7Hk7Bp-7HjZ4R-WENxYb-7HoYyd-q7wRRW-7Hp5hA-8Mu3ZA-7HpSCN-7HpUfG-7HqhyU",
+                    "url": "https://seatgeek.com/jacksonville-jaguars-tickets",
+                    "score": 0.77,
+                    "slug": "jacksonville-jaguars",
+                    "home_venue_id": 5178,
+                    "short_name": "Jaguars",
+                    "num_upcoming_events": 19,
+                    "colors": {
+                        "all": [
+                            "#101820",
+                            "#006778",
+                            "#006778"
+                        ],
+                        "iconic": "#006778",
+                        "primary": [
+                            "#101820",
+                            "#006778"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/publicdomain/mark/1.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 30.324,
+                        "lon": -81.6373
+                    }
+                }
+            ],
+            "is_open": true,
+            "links": [],
+            "datetime_local": "2021-08-23T19:00:00",
+            "time_tbd": false,
+            "short_title": "Preseason: Jaguars at Saints",
+            "visible_until_utc": "2021-08-24T04:00:00",
+            "stats": {
+                "listing_count": 4580,
+                "average_price": 37,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": 572,
+                "visible_listing_count": 4580,
+                "dq_bucket_counts": [
+                    551,
+                    1174,
+                    1235,
+                    454,
+                    298,
+                    382,
+                    486,
+                    0
+                ],
+                "median_price": 26,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020100,
+                    "name": "nfl",
+                    "parent_id": 1020000,
+                    "rank": 2
+                }
+            ],
+            "url": "https://seatgeek.com/preseason-jaguars-at-saints-tickets/8-23-2021-new-orleans-louisiana-caesars-superdome/nfl/5387865",
+            "score": 0.736,
+            "announce_date": "2021-04-16T00:00:00",
+            "created_at": "2021-04-16T21:21:22",
+            "date_tbd": false,
+            "title": "Preseason: Jacksonville Jaguars at New Orleans Saints",
+            "popularity": 0.871,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE",
+                "created_at": "2020-09-11T18:35:45Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "football",
+            "id": 5429815,
+            "datetime_utc": "2021-08-26T23:30:00",
+            "venue": {
+                "state": "ON",
+                "name_v2": "BMO Field",
+                "postal_code": "M6K 3C3",
+                "name": "BMO Field",
+                "links": [],
+                "timezone": "America/Toronto",
+                "url": "https://seatgeek.com/venues/bmo-field/tickets",
+                "score": 0.74,
+                "location": {
+                    "lat": 43.633,
+                    "lon": -79.4197
+                },
+                "address": "170 Princes Boulevard",
+                "country": "Canada",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 9,
+                "city": "Toronto",
+                "slug": "bmo-field",
+                "extended_address": "Toronto, Canada",
+                "id": 3013,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 0,
+                "capacity": 30000,
+                "display_location": "Toronto, Canada"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "football",
+                    "name": "Toronto Argonauts",
+                    "image": "https://seatgeek.com/images/performers-landscape/generic-football-07ce3f/677211/32399/huge.jpg",
+                    "id": 10768,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/generic-football-07ce3f/677211/32399/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 12
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "sg generic image",
+                    "url": "https://seatgeek.com/toronto-argonauts-tickets",
+                    "score": 0.51,
+                    "slug": "toronto-argonauts",
+                    "home_venue_id": null,
+                    "short_name": "Toronto Argonauts",
+                    "num_upcoming_events": 12,
+                    "colors": null,
+                    "image_license": "sg generic image",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null
+                },
+                {
+                    "type": "football",
+                    "name": "Edmonton Elks",
+                    "image": "https://seatgeek.com/images/performers-landscape/edmonton-elks-ff01c6/10759/huge.jpg",
+                    "id": 10759,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/edmonton-elks-ff01c6/10759/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 11
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/edmonton-elks-tickets",
+                    "score": 0.48,
+                    "slug": "edmonton-elks",
+                    "home_venue_id": null,
+                    "short_name": "Edmonton Elks",
+                    "num_upcoming_events": 11,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-26T19:30:00",
+            "time_tbd": false,
+            "short_title": "Edmonton Elks at Toronto Argonauts",
+            "visible_until_utc": "2021-08-27T03:30:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/edmonton-elks-at-toronto-argonauts-tickets/football/2021-08-26-7-30-pm/5429815",
+            "score": 0.494,
+            "announce_date": "2021-06-22T00:00:00",
+            "created_at": "2021-06-22T23:47:33",
+            "date_tbd": false,
+            "title": "Edmonton Elks at Toronto Argonauts",
+            "popularity": 0.731,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "football",
+            "id": 5443839,
+            "datetime_utc": "2021-08-27T00:00:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "AT&T Stadium",
+                "postal_code": "76011",
+                "name": "AT&T Stadium",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/at-t-stadium/tickets",
+                "score": 0.97,
+                "location": {
+                    "lat": 32.7473,
+                    "lon": -97.0945
+                },
+                "address": "1 AT&T Way",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 30,
+                "city": "Arlington",
+                "slug": "at-t-stadium",
+                "extended_address": "Arlington, TX 76011",
+                "id": 4965,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE",
+                    "created_at": "2019-05-06T17:03:30Z",
+                    "employee_only": false
+                },
+                "metro_code": 623,
+                "capacity": 80000,
+                "display_location": "Arlington, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "football",
+                    "name": "Highland Park HS",
+                    "image": "https://seatgeek.com/images/performers-landscape/highland-park-hs-3f0492/794114/huge.jpg",
+                    "id": 794114,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/highland-park-hs-3f0492/794114/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 1
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "SG",
+                    "url": "https://seatgeek.com/highland-park-hs-tickets",
+                    "score": 0.33,
+                    "slug": "highland-park-hs",
+                    "home_venue_id": null,
+                    "short_name": "Highland Park HS",
+                    "num_upcoming_events": 1,
+                    "colors": null,
+                    "image_license": "SG",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null
+                },
+                {
+                    "type": "football",
+                    "name": "Southlake Carroll HS",
+                    "image": "https://seatgeek.com/images/performers-landscape/generic-football-07ce3f/677211/32399/huge.jpg",
+                    "id": 794115,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/generic-football-07ce3f/677211/32399/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 1
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/southlake-carroll-hs-tickets",
+                    "score": 0.33,
+                    "slug": "southlake-carroll-hs",
+                    "home_venue_id": null,
+                    "short_name": "Southlake Carroll HS",
+                    "num_upcoming_events": 1,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": null
+                }
+            ],
+            "is_open": true,
+            "links": [],
+            "datetime_local": "2021-08-26T19:00:00",
+            "time_tbd": false,
+            "short_title": "Highland Park v Southlake Carroll",
+            "visible_until_utc": "2021-08-27T02:00:00",
+            "stats": {
+                "listing_count": 7,
+                "average_price": 19,
+                "lowest_price_good_deals": null,
+                "lowest_price": 19,
+                "highest_price": 19,
+                "visible_listing_count": 7,
+                "dq_bucket_counts": null,
+                "median_price": 19,
+                "lowest_sg_base_price": 15,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/highland-park-v-southlake-carroll-tickets/football/2021-08-26-7-pm/5443839",
+            "score": 0.279,
+            "announce_date": "2021-07-16T00:00:00",
+            "created_at": "2021-07-16T10:20:38",
+            "date_tbd": false,
+            "title": "Highland Park v Southlake Carroll",
+            "popularity": 0.561,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE",
+                "created_at": "2019-05-06T17:03:30Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": "2021-08-27T02:00:00",
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "nfl",
+            "id": 5402621,
+            "datetime_utc": "2021-08-27T23:00:00",
+            "venue": {
+                "state": "NC",
+                "name_v2": "Bank of America Stadium",
+                "postal_code": "28202",
+                "name": "Bank of America Stadium",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/bank-of-america-stadium/tickets",
+                "score": 0.91,
+                "location": {
+                    "lat": 35.2258,
+                    "lon": -80.8528
+                },
+                "address": "800 South Mint Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 18,
+                "city": "Charlotte",
+                "slug": "bank-of-america-stadium",
+                "extended_address": "Charlotte, NC 28202",
+                "id": 1122,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE_TM",
+                    "created_at": "2015-09-25T18:23:51Z",
+                    "employee_only": false
+                },
+                "metro_code": 517,
+                "capacity": 73298,
+                "display_location": "Charlotte, NC"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nfl",
+                    "name": "Carolina Panthers",
+                    "image": "https://seatgeek.com/images/performers-landscape/carolina-panthers-ec3e6e/2063/huge.jpg",
+                    "id": 2063,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/carolina-panthers-ec3e6e/2063/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "NFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "NFC South",
+                            "display_name": "NFC South",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "nfc-south"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 19
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/thescang/27677939859/in/photolist-JaNFeD-oBgDNS-ps9gCz-jVUFEQ-22o6CQw-pJoED4-pJDVPA-nuzx5z-oB6Qkq-oB2La6-oBiNak-9ffgfY-oB2YPp-ozgPrL-oMHXwY-ps75bJ-ojNF9W-oWabNi-fhXaGE-ojPoqF-pGvzFw-ps8kGi-pJhZXX-ojP21Z-bgAyUe-fhXBj3-bgAztB-2Vnn4A-oD4mKB-oB2Xev-pAybMu-ojNQLS-oBh7hU-8ACiiw-oB2Gng-2VhXgH-9knhae-2VhZdt-ojPAvy-2Vnjr1-ajP5HZ-pGwLMs-pQMPpd-5kLGQ5-bgAyyV-frwtMH-pQN4sJ-oBgJiU-ajP6Qk-oB6pKU",
+                    "url": "https://seatgeek.com/carolina-panthers-tickets",
+                    "score": 0.81,
+                    "slug": "carolina-panthers",
+                    "home_venue_id": 1122,
+                    "short_name": "Panthers",
+                    "num_upcoming_events": 19,
+                    "colors": {
+                        "all": [
+                            "#101820",
+                            "#0085CA",
+                            "#101820"
+                        ],
+                        "iconic": "#0085CA",
+                        "primary": [
+                            "#101820",
+                            "#0085CA"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/publicdomain/mark/1.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 35.2258,
+                        "lon": -80.8528
+                    }
+                },
+                {
+                    "type": "nfl",
+                    "name": "Pittsburgh Steelers",
+                    "image": "https://seatgeek.com/images/performers-landscape/pittsburgh-steelers-fc4c46/2056/huge.jpg",
+                    "id": 2056,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/pittsburgh-steelers-fc4c46/2056/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "AFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "AFC North",
+                            "display_name": "AFC North",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "afc-north"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/dougbutchy/10895660346/in/photolist-hAP7dS-54Q2V6-dtpu2o-54QVkV-aorG3H-egeaHW-96ZFSm-971mF1-96WCZ8-971nho-96WBAH-96ZGHj-5Dqh15-dJLGb5-96XoCF-6UduG5-CJr3CH-6UdyqU-96ZG6j-WeRyLg-CJqWcB-5DkY7c-31imLp-eyvWBj-aorGZD-6X6EaP-6UdsTQ-aous93-9N4f5R-83vMDD-6U9rXH-96ZH2s-6U9vNz-9UUwYx-96XkmZ-971mw7-96XrSa-6UdyCQ-6UdzFb-6Udzbj-aorGeg-6U9gk2-aorGov-aouscJ-2F3Huo-aorGyM-aorFWK-ZyiKcK-aorGhM-7oLGTK",
+                    "url": "https://seatgeek.com/pittsburgh-steelers-tickets",
+                    "score": 0.82,
+                    "slug": "pittsburgh-steelers",
+                    "home_venue_id": 1119,
+                    "short_name": "Steelers",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#181818",
+                            "#FFB612",
+                            "#181818"
+                        ],
+                        "iconic": "#181818",
+                        "primary": [
+                            "#181818",
+                            "#FFB612"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 40.4468,
+                        "lon": -80.0158
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-27T19:00:00",
+            "time_tbd": false,
+            "short_title": "Preseason: Steelers at Panthers",
+            "visible_until_utc": "2021-08-28T03:00:00",
+            "stats": {
+                "listing_count": 191,
+                "average_price": 103,
+                "lowest_price_good_deals": 24,
+                "lowest_price": 24,
+                "highest_price": 463,
+                "visible_listing_count": 191,
+                "dq_bucket_counts": [
+                    26,
+                    54,
+                    34,
+                    20,
+                    18,
+                    21,
+                    21,
+                    0
+                ],
+                "median_price": 77,
+                "lowest_sg_base_price": 19,
+                "lowest_sg_base_price_good_deals": 20
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020100,
+                    "name": "nfl",
+                    "parent_id": 1020000,
+                    "rank": 2
+                }
+            ],
+            "url": "https://seatgeek.com/preseason-steelers-at-panthers-tickets/8-27-2021-charlotte-north-carolina-bank-of-america-stadium/nfl/5402621",
+            "score": 0.776,
+            "announce_date": "2021-05-12T00:00:00",
+            "created_at": "2021-05-12T04:21:03",
+            "date_tbd": false,
+            "title": "Preseason: Pittsburgh Steelers at Carolina Panthers",
+            "popularity": 0.916,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2015-09-25T18:23:51Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "nfl",
+            "id": 5402717,
+            "datetime_utc": "2021-08-27T23:00:00",
+            "venue": {
+                "state": "MI",
+                "name_v2": "Ford Field",
+                "postal_code": "48226",
+                "name": "Ford Field",
+                "links": [],
+                "timezone": "America/Detroit",
+                "url": "https://seatgeek.com/venues/ford-field/tickets",
+                "score": 0.92,
+                "location": {
+                    "lat": 42.34,
+                    "lon": -83.0459
+                },
+                "address": "2000 Brush St.",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 14,
+                "city": "Detroit",
+                "slug": "ford-field",
+                "extended_address": "Detroit, MI 48226",
+                "id": 346,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE_TM",
+                    "created_at": "2021-08-12T21:59:29Z",
+                    "employee_only": false
+                },
+                "metro_code": 505,
+                "capacity": 80103,
+                "display_location": "Detroit, MI"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nfl",
+                    "name": "Detroit Lions",
+                    "image": "https://seatgeek.com/images/performers-landscape/detroit-lions-0f36fc/2068/huge.jpg",
+                    "id": 2068,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/detroit-lions-0f36fc/2068/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "NFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "NFC North",
+                            "display_name": "NFC North",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "nfc-north"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/davehogg/2055761936/in/photolist-48Ejpj-b98zEF-fchqCw-b97PQD-9Nz2ZH-eNoHd7-9Sfbkh-pVdwc6-8KThrK-ps7BHe-9fttRJ-gQGs2h-48Fb51-48Aiov-47EvsG-epd2BZ-eq9h8A-7hkzAw-eq91Py-epcJPr-epcNCZ-eq9bpW-eq9e9h-epcPyF-p4Fm8Z-b2KDL-9hBepS-gQG2r2-gQCXdQ-gQFa1d-pT2rQY-fdhEg6-pQMW19-dfUtdm-p4FkNv-pJ2B35-dfUb8p-q1pWST-q1fmfF-dfUuDu-efymwU-dfUta8-dfUs3n-dfUbrc-dfUviB-dfUsh2-4aod9M-dfUcbt-dfUnHx-ee4SGB",
+                    "url": "https://seatgeek.com/detroit-lions-tickets",
+                    "score": 0.83,
+                    "slug": "detroit-lions",
+                    "home_venue_id": 346,
+                    "short_name": "Lions",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#0076B6",
+                            "#B0B7BC",
+                            "#0076B6"
+                        ],
+                        "iconic": "#0076B6",
+                        "primary": [
+                            "#0076B6",
+                            "#B0B7BC"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 42.34,
+                        "lon": -83.0459
+                    }
+                },
+                {
+                    "type": "nfl",
+                    "name": "Indianapolis Colts",
+                    "image": "https://seatgeek.com/images/performers-landscape/indianapolis-colts-eb32af/2065/huge.jpg",
+                    "id": 2065,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/indianapolis-colts-eb32af/2065/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "AFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "AFC South",
+                            "display_name": "AFC South",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "afc-south"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://upload.wikimedia.org/wikipedia/commons/8/89/LucasOilStadiumTheLuke.jpg",
+                    "url": "https://seatgeek.com/indianapolis-colts-tickets",
+                    "score": 0.79,
+                    "slug": "indianapolis-colts",
+                    "home_venue_id": 1130,
+                    "short_name": "Colts",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#002C5F",
+                            "#A2AAAD",
+                            "#002C5F"
+                        ],
+                        "iconic": "#002C5F",
+                        "primary": [
+                            "#002C5F",
+                            "#A2AAAD"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 39.7601,
+                        "lon": -86.1639
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-27T19:00:00",
+            "time_tbd": false,
+            "short_title": "Preseason: Colts at Lions",
+            "visible_until_utc": "2021-08-28T03:00:00",
+            "stats": {
+                "listing_count": 750,
+                "average_price": 57,
+                "lowest_price_good_deals": 23,
+                "lowest_price": 23,
+                "highest_price": 188,
+                "visible_listing_count": 749,
+                "dq_bucket_counts": [
+                    45,
+                    232,
+                    214,
+                    72,
+                    75,
+                    61,
+                    54,
+                    0
+                ],
+                "median_price": 47,
+                "lowest_sg_base_price": 12,
+                "lowest_sg_base_price_good_deals": 12
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020100,
+                    "name": "nfl",
+                    "parent_id": 1020000,
+                    "rank": 2
+                }
+            ],
+            "url": "https://seatgeek.com/preseason-colts-at-lions-tickets/8-27-2021-detroit-michigan-ford-field/nfl/5402717",
+            "score": 0.784,
+            "announce_date": "2021-05-12T00:00:00",
+            "created_at": "2021-05-12T04:21:14",
+            "date_tbd": false,
+            "title": "Preseason: Indianapolis Colts at Detroit Lions",
+            "popularity": 0.923,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2021-08-12T21:59:29Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "nfl",
+            "id": 5402963,
+            "datetime_utc": "2021-08-27T23:30:00",
+            "venue": {
+                "state": "NJ",
+                "name_v2": "MetLife Stadium",
+                "postal_code": "07073",
+                "name": "MetLife Stadium",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/metlife-stadium/tickets",
+                "score": 0.97,
+                "location": {
+                    "lat": 40.8142,
+                    "lon": -74.0737
+                },
+                "address": "1 MetLife Stadium Drive",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 25,
+                "city": "East Rutherford",
+                "slug": "metlife-stadium",
+                "extended_address": "East Rutherford, NJ 07073",
+                "id": 1587,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE_TM",
+                    "created_at": "2015-09-12T14:14:07Z",
+                    "employee_only": false
+                },
+                "metro_code": 501,
+                "capacity": 82500,
+                "display_location": "East Rutherford, NJ"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nfl",
+                    "name": "New York Jets",
+                    "image": "https://seatgeek.com/images/performers-landscape/new-york-jets-61e65c/2070/huge.jpg",
+                    "id": 2070,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/new-york-jets-61e65c/2070/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "AFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "AFC East",
+                            "display_name": "AFC East",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "afc-east"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 17
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/97442161@N06/14716237139/in/photolist-oqqyAx-82iBWE-82iFWs-82iJnU-82iGZo-82iM1U-82fFg6-biuUzp-biuUsM-rN5p6R-rwed77-rNGseQ-rJfC6o-qPLnj4-qS2Zaa-qS32PZ-ru6pGk-rvuJpE-rwgtNA-82iAw3-c2A8MY-8Hd9Va-dEGqUQ-k969Me-i62oq7-aytxd5-ayqRAB-fSXoed-dEAPGV-dEANn4-dEB37t-dEGgyy-8Hg2J9-dEGuYq-8Hg2Rj-8HcUJp-dEGwkQ-8HcW2M-8Hg3Y1-8Hg497-dBcKxP-c2AbE3-c2Abzo-c2AaTw-aotJnz-fTTZTi-fUf1VS-jE3EGC-jE1snT-oqqkBs",
+                    "url": "https://seatgeek.com/new-york-jets-tickets",
+                    "score": 0.83,
+                    "slug": "new-york-jets",
+                    "home_venue_id": 1587,
+                    "short_name": "Jets",
+                    "num_upcoming_events": 17,
+                    "colors": {
+                        "all": [
+                            "#115740",
+                            "#ffffff",
+                            "#115740"
+                        ],
+                        "iconic": "#115740",
+                        "primary": [
+                            "#115740",
+                            "#ffffff"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-nd/2.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 40.8142,
+                        "lon": -74.0737
+                    }
+                },
+                {
+                    "type": "nfl",
+                    "name": "Philadelphia Eagles",
+                    "image": "https://seatgeek.com/images/performers-landscape/philadelphia-eagles-da8569/2062/huge.jpg",
+                    "id": 2062,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/philadelphia-eagles-da8569/2062/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "NFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "NFC East",
+                            "display_name": "NFC East",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "nfc-east"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 19
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/glokbell/4177249463/in/photolist-7n8uJt-72sYQ-22kCMHg-7FKcg1-HoYEvV-91PJ1e-g1giqA-HoYLkR-aatocX-72r4w-EcUCi5-6QeGVH-HoYKun-EcUEY5-HoYF48-g1gUWK-22kFejc-2GqhdH-CG5ruZ-g1gmb7-CG76cF-g1bKQw-wXNxYg-HoYKVx-22kFgpK-g1gkfP-g1gwRf-EcUDjd-g1bDvW-CG78t4-g1bysQ-HoYMAg-g1gktd-EcUFTG-g1vH4u-g1bNhL-iezKDt-oseg5j-iezKHB-6Lq9Tj-7a5pbP-8ZRiUq-7n8uBM-7a9e2h-iezMbM-8ZRihw-6LkZkc-7n8v8i-ieApSF-ormquy",
+                    "url": "https://seatgeek.com/philadelphia-eagles-tickets",
+                    "score": 0.83,
+                    "slug": "philadelphia-eagles",
+                    "home_venue_id": 330,
+                    "short_name": "Eagles",
+                    "num_upcoming_events": 19,
+                    "colors": {
+                        "all": [
+                            "#004C54",
+                            "#A5ACAF",
+                            "#004C54"
+                        ],
+                        "iconic": "#004C54",
+                        "primary": [
+                            "#004C54",
+                            "#A5ACAF"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 39.9008,
+                        "lon": -75.1675
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-27T19:30:00",
+            "time_tbd": false,
+            "short_title": "Preseason: Eagles at Jets",
+            "visible_until_utc": "2021-08-28T03:30:00",
+            "stats": {
+                "listing_count": 572,
+                "average_price": 55,
+                "lowest_price_good_deals": 14,
+                "lowest_price": 14,
+                "highest_price": 768,
+                "visible_listing_count": 572,
+                "dq_bucket_counts": [
+                    23,
+                    278,
+                    87,
+                    49,
+                    34,
+                    29,
+                    75,
+                    0
+                ],
+                "median_price": 25,
+                "lowest_sg_base_price": 5,
+                "lowest_sg_base_price_good_deals": 5
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020100,
+                    "name": "nfl",
+                    "parent_id": 1020000,
+                    "rank": 2
+                }
+            ],
+            "url": "https://seatgeek.com/preseason-eagles-at-jets-tickets/8-27-2021-east-rutherford-new-jersey-metlife-stadium/nfl/5402963",
+            "score": 0.76,
+            "announce_date": "2021-05-12T00:00:00",
+            "created_at": "2021-05-12T04:21:42",
+            "date_tbd": false,
+            "title": "Preseason: Philadelphia Eagles at New York Jets",
+            "popularity": 0.907,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2015-09-12T14:14:07Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "nfl",
+            "id": 5402811,
+            "datetime_utc": "2021-08-28T00:00:00",
+            "venue": {
+                "state": "MO",
+                "name_v2": "GEHA Field at Arrowhead Stadium",
+                "postal_code": "64129",
+                "name": "GEHA Field at Arrowhead Stadium",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/geha-field-at-arrowhead-stadium/tickets",
+                "score": 0.91,
+                "location": {
+                    "lat": 39.0489,
+                    "lon": -94.4839
+                },
+                "address": "1 Arrowhead Drive",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 11,
+                "city": "Kansas City",
+                "slug": "geha-field-at-arrowhead-stadium",
+                "extended_address": "Kansas City, MO 64129",
+                "id": 1128,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE_TM",
+                    "created_at": "2015-08-20T16:20:51Z",
+                    "employee_only": false
+                },
+                "metro_code": 616,
+                "capacity": 79451,
+                "display_location": "Kansas City, MO"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nfl",
+                    "name": "Kansas City Chiefs",
+                    "image": "https://seatgeek.com/images/performers-landscape/kansas-city-chiefs-e1f8c3/2060/huge.jpg",
+                    "id": 2060,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/kansas-city-chiefs-e1f8c3/2060/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "AFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "AFC West",
+                            "display_name": "AFC West",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "afc-west"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/rhonlynn/6109304691/in/photolist-aiRMrv-75MRAY-5PY7fw-pvDUTX-2TfnPN-5CdVpQ-S1nYC-o64hY9-3nd42F-5CmSf9-nJBVFY-5CmRL9-7jkmqe-5ChAei-5ChzSR-5ChyUp-5CmRGG-7jpdXw-5ChzEP-5ChAni-5CmSwE-5ChAA8-5ChAgM-5CmRCE-7jkjdV-4apfQg-3yZL9-7jkmBB-62JDoa-62JETg-7127tC-7iY4Vh-6ZYQ9P-7jpfvm-7jkjz6-bX8JB-2WDoyU-2Xj3iT-2WyXLF-2WyYB8-2WDpxN-2WyY9i-2WyXuF-2WDh81-2WDpaj-2WyYrv-pvZjdm-pNoyWH-7jpcHj-7jpd1q",
+                    "url": "https://seatgeek.com/kansas-city-chiefs-tickets",
+                    "score": 0.83,
+                    "slug": "kansas-city-chiefs",
+                    "home_venue_id": 1128,
+                    "short_name": "Chiefs",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#E31837",
+                            "#FFB81C",
+                            "#E31837"
+                        ],
+                        "iconic": "#E31837",
+                        "primary": [
+                            "#E31837",
+                            "#FFB81C"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 39.0489,
+                        "lon": -94.4839
+                    }
+                },
+                {
+                    "type": "nfl",
+                    "name": "Minnesota Vikings",
+                    "image": "https://seatgeek.com/images/performers-landscape/minnesota-vikings-6fe1d7/2072/huge.jpg",
+                    "id": 2072,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/minnesota-vikings-6fe1d7/2072/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "NFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "NFC North",
+                            "display_name": "NFC North",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "nfc-north"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://commons.wikimedia.org/wiki/Category:U.S._Bank_Stadium#/media/File:US_Bank_Stadium_interior_-_Minnesota_Vikings_orientation.jpg",
+                    "url": "https://seatgeek.com/minnesota-vikings-tickets",
+                    "score": 0.82,
+                    "slug": "minnesota-vikings",
+                    "home_venue_id": 218451,
+                    "short_name": "Vikings",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#4F2683",
+                            "#FFC62F",
+                            "#4F2683"
+                        ],
+                        "iconic": "#4F2683",
+                        "primary": [
+                            "#4F2683",
+                            "#FFC62F"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-sa/4.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 44.9751,
+                        "lon": -93.2582
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-27T19:00:00",
+            "time_tbd": false,
+            "short_title": "Preseason: Vikings at Chiefs",
+            "visible_until_utc": "2021-08-28T04:00:00",
+            "stats": {
+                "listing_count": 648,
+                "average_price": 116,
+                "lowest_price_good_deals": 29,
+                "lowest_price": 29,
+                "highest_price": 259,
+                "visible_listing_count": 648,
+                "dq_bucket_counts": [
+                    98,
+                    130,
+                    125,
+                    67,
+                    78,
+                    91,
+                    62,
+                    0
+                ],
+                "median_price": 107,
+                "lowest_sg_base_price": 16,
+                "lowest_sg_base_price_good_deals": 16
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020100,
+                    "name": "nfl",
+                    "parent_id": 1020000,
+                    "rank": 2
+                }
+            ],
+            "url": "https://seatgeek.com/preseason-vikings-at-chiefs-tickets/8-27-2021-kansas-city-missouri-geha-field-at-arrowhead-stadium/nfl/5402811",
+            "score": 0.811,
+            "announce_date": "2021-05-12T00:00:00",
+            "created_at": "2021-05-12T04:21:25",
+            "date_tbd": false,
+            "title": "Preseason: Minnesota Vikings at Kansas City Chiefs",
+            "popularity": 0.94,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2015-08-20T16:20:51Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "ncaa_football",
+            "id": 5375469,
+            "datetime_utc": "2021-08-28T10:30:00",
+            "venue": {
+                "state": "CA",
+                "name_v2": "CEFCU Stadium",
+                "postal_code": "95112",
+                "name": "CEFCU Stadium",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/cefcu-stadium/tickets",
+                "score": 0.59,
+                "location": {
+                    "lat": 37.3217,
+                    "lon": -121.867
+                },
+                "address": "1251 South 10th Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 6,
+                "city": "San Jose",
+                "slug": "cefcu-stadium",
+                "extended_address": "San Jose, CA 95112",
+                "id": 422457,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 807,
+                "capacity": 30456,
+                "display_location": "San Jose, CA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "ncaa_football",
+                    "name": "San Jose State Spartans Football",
+                    "image": "https://seatgeek.com/images/performers-landscape/san-jose-state-spartans-football-7733ef/5667/huge.jpg",
+                    "id": 5667,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/san-jose-state-spartans-football-7733ef/5667/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": null,
+                            "display_name": "Bowl Subdivision",
+                            "display_type": "Division",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": "MWC",
+                            "display_name": "Mountain West",
+                            "display_type": "Conference",
+                            "division_level": 2,
+                            "slug": "mountain-west"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 11
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020200,
+                            "name": "ncaa_football",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 5
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/san-jose-state-spartans-football-tickets",
+                    "score": 0.57,
+                    "slug": "san-jose-state-spartans-football",
+                    "home_venue_id": 422457,
+                    "short_name": "San Jose State",
+                    "num_upcoming_events": 11,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 37.3217,
+                        "lon": -121.867
+                    }
+                },
+                {
+                    "type": "ncaa_football",
+                    "name": "Southern Utah Thunderbirds Football",
+                    "image": "https://seatgeek.com/images/performers-landscape/southern-utah-thunderbirds-football-df29dd/7357/huge.jpg",
+                    "id": 7357,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/southern-utah-thunderbirds-football-df29dd/7357/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": null,
+                            "display_name": "Championship Subdivision",
+                            "display_type": "Division",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": "Big Sky",
+                            "display_name": "Big Sky",
+                            "display_type": "Conference",
+                            "division_level": 2,
+                            "slug": "big-sky"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 9
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020200,
+                            "name": "ncaa_football",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 5
+                        }
+                    ],
+                    "image_attribution": "null",
+                    "url": "https://seatgeek.com/southern-utah-thunderbirds-football-tickets",
+                    "score": 0.51,
+                    "slug": "southern-utah-thunderbirds-football",
+                    "home_venue_id": 5935,
+                    "short_name": "Southern Utah",
+                    "num_upcoming_events": 9,
+                    "colors": null,
+                    "image_license": "null",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 37.6733,
+                        "lon": -113.067
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-28T03:30:00",
+            "time_tbd": true,
+            "short_title": "Southern Utah at San Jose State",
+            "visible_until_utc": "2021-08-29T07:00:00",
+            "stats": {
+                "listing_count": 29,
+                "average_price": 52,
+                "lowest_price_good_deals": 40,
+                "lowest_price": 19,
+                "highest_price": 136,
+                "visible_listing_count": 22,
+                "dq_bucket_counts": [
+                    2,
+                    1,
+                    5,
+                    2,
+                    3,
+                    1,
+                    1,
+                    19
+                ],
+                "median_price": 36,
+                "lowest_sg_base_price": 9,
+                "lowest_sg_base_price_good_deals": 25
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020200,
+                    "name": "ncaa_football",
+                    "parent_id": 1020000,
+                    "rank": 5
+                }
+            ],
+            "url": "https://seatgeek.com/southern-utah-thunderbirds-at-san-jose-state-spartans-tickets/ncaa-football/2021-08-28-3-30-am/5375469",
+            "score": 0.472,
+            "announce_date": "2021-03-08T00:00:00",
+            "created_at": "2021-03-08T22:39:07",
+            "date_tbd": false,
+            "title": "Southern Utah Thunderbirds at San Jose State Spartans",
+            "popularity": 0.685,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "nfl",
+            "id": 5402603,
+            "datetime_utc": "2021-08-28T17:00:00",
+            "venue": {
+                "state": "NY",
+                "name_v2": "Highmark Stadium",
+                "postal_code": "14127",
+                "name": "Highmark Stadium",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/highmark-stadium-1/tickets",
+                "score": 0.88,
+                "location": {
+                    "lat": 42.7737,
+                    "lon": -78.7874
+                },
+                "address": "1 Bills Drive",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 11,
+                "city": "Orchard Park",
+                "slug": "highmark-stadium-1",
+                "extended_address": "Orchard Park, NY 14127",
+                "id": 1135,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE_TM",
+                    "created_at": "2015-08-12T16:52:53Z",
+                    "employee_only": false
+                },
+                "metro_code": 514,
+                "capacity": 71870,
+                "display_location": "Orchard Park, NY"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nfl",
+                    "name": "Buffalo Bills",
+                    "image": "https://seatgeek.com/images/performers-landscape/buffalo-bills-383ae1/2084/huge.jpg",
+                    "id": 2084,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/buffalo-bills-383ae1/2084/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "AFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "AFC East",
+                            "display_name": "AFC East",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "afc-east"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/runneralan/15239404191/in/photolist-pdDVW8-hXigTC-hXioLJ-hXix3o-hXiifV-gGoDg2-gGnUfU-gGny5V-gGnrPg-gGmqsU-oWqR5f-hdZ8XT-hdZ87K-hdXoq7-hdXhnJ-hdXis9-hdW2CX-hdXeg2-hdW1M8-hdW85s-gGkXLN-gGkuCE-gGjyp7-gGjbJ3-gGiEio-gGj8q8-gGi3Cf-gGhwti-gGgNvG-gGghRG-gGfCf1-gGfcZh-gGfprB-gFDPox-gFBU4v-gFBdL1-gFBwxJ-gFCPQg-gFBSp7-gFBP2A-gFBCxj-gFBPme-gFBWCZ-gFBsu5-gFBGnf-gFC6ag-gFBX9r-gFBDpk-gFjYpi-gFjvrm",
+                    "url": "https://seatgeek.com/buffalo-bills-tickets",
+                    "score": 0.8,
+                    "slug": "buffalo-bills",
+                    "home_venue_id": 1135,
+                    "short_name": "Bills",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#00338D",
+                            "#C60C30",
+                            "#00338D"
+                        ],
+                        "iconic": "#00338D",
+                        "primary": [
+                            "#00338D",
+                            "#C60C30"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 42.7737,
+                        "lon": -78.7874
+                    }
+                },
+                {
+                    "type": "nfl",
+                    "name": "Green Bay Packers",
+                    "image": "https://seatgeek.com/images/performers-landscape/green-bay-packers-96a2f9/2083/huge.jpg",
+                    "id": 2083,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/green-bay-packers-96a2f9/2083/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": null,
+                            "display_name": "NFC",
+                            "display_type": "Conference",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020100,
+                            "short_name": "NFC North",
+                            "display_name": "NFC North",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "nfc-north"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 18
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020100,
+                            "name": "nfl",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 2
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/tabor-roeder/15267329485/in/photolist-pg849H-pg81TF-oYCNTU-oYCMq3-pg5VXu-oYBQW4-oYCHjh-pfQUQ6-oYCzxL-oYBErr-pg5Hyb-pfQNKv-oa39rq-hRK3vM-fNMnhU-fNMa4J-fNuwG2-fNunTz-fNhwGV-fNz4bw-fNheLV-fNh9HB-fNgGUt-fNgGv4-fNhT5B-eZbmDT-eZnFQo-eZb39X-eZnnTU-eZb2t6-eZaZXa-eZaZvX-eZaZcM-drQeHZ-drQjUu-b22S5D-b21XwX-b21KJF-b1ZES4-9MtnDr-9yDfzx-9yDfyT-9gvsoW-9ffgfY-9crVgt-8MsgkG-8MpcgK-8Mseyb-8Ms9Wo-eZbmRV",
+                    "url": "https://seatgeek.com/green-bay-packers-tickets",
+                    "score": 0.83,
+                    "slug": "green-bay-packers",
+                    "home_venue_id": 1125,
+                    "short_name": "Packers",
+                    "num_upcoming_events": 18,
+                    "colors": {
+                        "all": [
+                            "#203731",
+                            "#FFB612",
+                            "#203731"
+                        ],
+                        "iconic": "#203731",
+                        "primary": [
+                            "#203731",
+                            "#FFB612"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 44.5013,
+                        "lon": -88.0622
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-28T13:00:00",
+            "time_tbd": false,
+            "short_title": "Preseason: Packers at Bills",
+            "visible_until_utc": "2021-08-28T21:00:00",
+            "stats": {
+                "listing_count": 364,
+                "average_price": 73,
+                "lowest_price_good_deals": 24,
+                "lowest_price": 24,
+                "highest_price": 365,
+                "visible_listing_count": 364,
+                "dq_bucket_counts": [
+                    54,
+                    114,
+                    72,
+                    32,
+                    22,
+                    26,
+                    45,
+                    0
+                ],
+                "median_price": 58,
+                "lowest_sg_base_price": 14,
+                "lowest_sg_base_price_good_deals": 14
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020100,
+                    "name": "nfl",
+                    "parent_id": 1020000,
+                    "rank": 2
+                }
+            ],
+            "url": "https://seatgeek.com/preseason-packers-at-bills-tickets/8-28-2021-orchard-park-new-york-highmark-stadium-1/nfl/5402603",
+            "score": 0.792,
+            "announce_date": "2021-05-12T00:00:00",
+            "created_at": "2021-05-12T04:21:01",
+            "date_tbd": false,
+            "title": "Preseason: Green Bay Packers at Buffalo Bills",
+            "popularity": 0.918,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2015-08-12T16:52:53Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {
+                "checkout_disclosures": {
+                    "messages": [
+                        {
+                            "text": "All purchases are 100% guaranteed. Prices set by the seller may be above or below face value."
+                        }
+                    ]
+                }
+            },
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "ncaa_football",
+            "id": 5369603,
+            "datetime_utc": "2021-08-28T17:00:00",
+            "venue": {
+                "state": "IL",
+                "name_v2": "Memorial Stadium",
+                "postal_code": "61820",
+                "name": "Memorial Stadium",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/memorial-stadium/tickets",
+                "score": 0.81,
+                "location": {
+                    "lat": 40.0993,
+                    "lon": -88.2359
+                },
+                "address": "1402 S 1st St",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 8,
+                "city": "Champaign",
+                "slug": "memorial-stadium",
+                "extended_address": "Champaign, IL 61820",
+                "id": 2804,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 648,
+                "capacity": 62872,
+                "display_location": "Champaign, IL"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "ncaa_football",
+                    "name": "Illinois Fighting Illini Football",
+                    "image": "https://seatgeek.com/images/performers-landscape/generic-college-football-395d13/677208/27795/huge.jpg",
+                    "id": 5545,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/generic-college-football-395d13/677208/27795/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": null,
+                            "display_name": "Bowl Subdivision",
+                            "display_type": "Division",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": "Big Ten",
+                            "display_name": "Big Ten",
+                            "display_type": "Conference",
+                            "division_level": 2,
+                            "slug": "big-ten"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 11
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020200,
+                            "name": "ncaa_football",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 5
+                        }
+                    ],
+                    "image_attribution": "https://upload.wikimedia.org/wikipedia/commons/a/a3/091507-USCNeb-MemorialStadium.jpg",
+                    "url": "https://seatgeek.com/illinois-fighting-illini-football-tickets",
+                    "score": 0.7,
+                    "slug": "illinois-fighting-illini-football",
+                    "home_venue_id": 2804,
+                    "short_name": "Illinois",
+                    "num_upcoming_events": 11,
+                    "colors": {
+                        "all": [
+                            "#13294B",
+                            "#E84A27",
+                            "#13294B"
+                        ],
+                        "iconic": "#E84A27",
+                        "primary": [
+                            "#13294B",
+                            "#E84A27"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 40.0993,
+                        "lon": -88.2359
+                    }
+                },
+                {
+                    "type": "ncaa_football",
+                    "name": "Nebraska Cornhuskers Football",
+                    "image": "https://seatgeek.com/images/performers-landscape/nebraska-cornhuskers-football-1d9ad8/5531/huge.jpg",
+                    "id": 5531,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/nebraska-cornhuskers-football-1d9ad8/5531/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": null,
+                            "display_name": "Bowl Subdivision",
+                            "display_type": "Division",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1020200,
+                            "short_name": "Big Ten",
+                            "display_name": "Big Ten",
+                            "display_type": "Conference",
+                            "division_level": 2,
+                            "slug": "big-ten"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 11
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020000,
+                            "name": "football",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1020200,
+                            "name": "ncaa_football",
+                            "parent_id": 1020000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 5
+                        }
+                    ],
+                    "image_attribution": "https://upload.wikimedia.org/wikipedia/commons/a/a3/091507-USCNeb-MemorialStadium.jpg",
+                    "url": "https://seatgeek.com/nebraska-cornhuskers-football-tickets",
+                    "score": 0.75,
+                    "slug": "nebraska-cornhuskers-football",
+                    "home_venue_id": 5162,
+                    "short_name": "Nebraska",
+                    "num_upcoming_events": 11,
+                    "colors": {
+                        "all": [
+                            "#191919",
+                            "#E41C38",
+                            "#E41C38"
+                        ],
+                        "iconic": "#E41C38",
+                        "primary": [
+                            "#191919",
+                            "#E41C38"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 40.8207,
+                        "lon": -96.7056
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-08-28T12:00:00",
+            "time_tbd": false,
+            "short_title": "Nebraska at Illinois",
+            "visible_until_utc": "2021-08-28T21:00:00",
+            "stats": {
+                "listing_count": 119,
+                "average_price": 98,
+                "lowest_price_good_deals": 41,
+                "lowest_price": 41,
+                "highest_price": 252,
+                "visible_listing_count": 116,
+                "dq_bucket_counts": [
+                    19,
+                    22,
+                    30,
+                    15,
+                    10,
+                    15,
+                    10,
+                    0
+                ],
+                "median_price": 89,
+                "lowest_sg_base_price": 26,
+                "lowest_sg_base_price_good_deals": 26
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1020000,
+                    "name": "football",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1020200,
+                    "name": "ncaa_football",
+                    "parent_id": 1020000,
+                    "rank": 5
+                }
+            ],
+            "url": "https://seatgeek.com/nebraska-cornhuskers-at-illinois-fighting-illini-football-tickets/ncaa-football/2021-08-28-12-pm/5369603",
+            "score": 0.754,
+            "announce_date": "2021-02-19T00:00:00",
+            "created_at": "2021-02-19T16:08:05",
+            "date_tbd": false,
+            "title": "Nebraska Cornhuskers at Illinois Fighting Illini Football",
+            "popularity": 0.897,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        }
+    ],
+    "meta": {
+        "total": 1777,
+        "took": 8,
+        "page": 1,
+        "per_page": 10,
+        "geolocation": null
+    }
+}

@@ -10,6 +10,8 @@ import UIKit
 enum SFSymbols {
     static let filledHeart = UIImage(systemName: "heart.fill")
     static let heart       = UIImage(systemName: "heart")
+    static let trash       = UIImage(systemName: "trash.fill")
+    static let noImage     = UIImage(systemName: "")
 }
 
 class EventDetailViewController: UIViewController {
@@ -22,9 +24,15 @@ class EventDetailViewController: UIViewController {
     let eventController = EventsController()
     var event: Event?
     let userDefaults = UserDefaults.standard
+    let favoriteEvents = FavoriteEventsViewController()
+    var favoriteButtonVissible: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         updateViews()
     }
     
@@ -40,7 +48,6 @@ class EventDetailViewController: UIViewController {
         
     func updateViews() {
         guard let event = event else { return }
-        
         navTitleMultiLine(eventTitle: event.shortTitle)
         
         eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
@@ -54,6 +61,11 @@ class EventDetailViewController: UIViewController {
         } else {
             favoriteButton.image     = SFSymbols.heart
             favoriteButton.tintColor = .red
+        }
+        
+        if favoriteButtonVissible == true {
+            favoriteButton.image     = SFSymbols.trash
+            favoriteButton.tintColor = .white
         }
     }
     
@@ -73,14 +85,23 @@ class EventDetailViewController: UIViewController {
     
     // Check if user tapped the favorite "heart" button
     @IBAction func favoriteButtonTapped(_ sender: Any) {
-        guard let eventKey = event?.id.description else { return }
+        guard let event = event else { return }
 
         if favoriteButton.image == SFSymbols.filledHeart {
-            userDefaults.set(false, forKey: eventKey)
+            userDefaults.set(false, forKey: event.id.description)
             favoriteButton.image = SFSymbols.heart
+            
         } else if favoriteButton.image == SFSymbols.heart {
-            userDefaults.set(true, forKey: eventKey)
+            userDefaults.set(true, forKey: event.id.description)
+            eventController.favoriteList.append(event)
+            eventController.saveToPersistentStore()
             favoriteButton.image = SFSymbols.filledHeart
+            
+        } else if favoriteButton.image == SFSymbols.trash {
+            userDefaults.set(false, forKey: event.id.description)
+            eventController.deleteFromPersistentStore()
+            favoriteButton.image = SFSymbols.noImage
+            favoriteButton.isEnabled = false
         }
     }
 

@@ -21,6 +21,9 @@
 		AFB0DFD526C72BDC00CF6541 /* EventDateUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */; };
 		AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */; };
 		AFB0DFF926CC178B00CF6541 /* UIImage+EventImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFF826CC178B00CF6541 /* UIImage+EventImage.swift */; };
+		AFB0DFFB26CDB24B00CF6541 /* FavoriteEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFFA26CDB24B00CF6541 /* FavoriteEventsViewController.swift */; };
+		AFB5BC7F26D458C80079C4A1 /* EventsControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB5BC7E26D458C80079C4A1 /* EventsControllerTest.swift */; };
+		AFB5BC8126D45F1A0079C4A1 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = AFB5BC8026D45F1A0079C4A1 /* Events.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		AFB0DFCF26C72BC500CF6541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ISO8601Format.swift"; sourceTree = "<group>"; };
 		AFB0DFF826CC178B00CF6541 /* UIImage+EventImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+EventImage.swift"; sourceTree = "<group>"; };
+		AFB0DFFA26CDB24B00CF6541 /* FavoriteEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEventsViewController.swift; sourceTree = "<group>"; };
+		AFB5BC7E26D458C80079C4A1 /* EventsControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsControllerTest.swift; sourceTree = "<group>"; };
+		AFB5BC8026D45F1A0079C4A1 /* Events.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 			children = (
 				AF3D715726AB3F7A0057E857 /* EventsTableViewController.swift */,
 				AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */,
+				AFB0DFFA26CDB24B00CF6541 /* FavoriteEventsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -139,7 +146,9 @@
 			children = (
 				AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */,
 				AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */,
+				AFB5BC7E26D458C80079C4A1 /* EventsControllerTest.swift */,
 				AFB0DFCF26C72BC500CF6541 /* Info.plist */,
+				AFB5BC8026D45F1A0079C4A1 /* Events.json */,
 			);
 			path = SportsEventTests;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB5BC8126D45F1A0079C4A1 /* Events.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +259,7 @@
 				AF3D714126AB3EFB0057E857 /* AppDelegate.swift in Sources */,
 				AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */,
 				AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */,
+				AFB0DFFB26CDB24B00CF6541 /* FavoriteEventsViewController.swift in Sources */,
 				AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */,
 				AF3D716026AE525E0057E857 /* EventsController.swift in Sources */,
 				AFB0DFF926CC178B00CF6541 /* UIImage+EventImage.swift in Sources */,
@@ -260,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB5BC7F26D458C80079C4A1 /* EventsControllerTest.swift in Sources */,
 				AFB0DFD526C72BDC00CF6541 /* EventDateUnitTest.swift in Sources */,
 				AFB0DFCE26C72BC500CF6541 /* SportsEventTests.swift in Sources */,
 			);

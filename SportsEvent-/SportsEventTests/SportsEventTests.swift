@@ -6,27 +6,21 @@
 //
 
 import XCTest
+@testable import SportsEvent
 
 class SportsEventTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testDecodingWorks() throws {
+        let bundle = Bundle(path: Bundle.main.bundlePath.appending("/PlugIns/SportsEventTests.xctest"))!
+        let url = bundle.url(forResource: "Events", withExtension: "json")!
+        let data = try Data(contentsOf: url)
+        
+        let decoder = JSONDecoder()
+        let events = try decoder.decode(Events.self, from: data)
+        
+        XCTAssertEqual(10, events.events.count)
+        XCTAssertNotEqual(9, events.events.count)
+        XCTAssertNotEqual(11, events.events.count)
     }
 
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
 
-    var eventController = EventsController()
+    var eventController: EventsNetworkManager = EventsController()
     var events: [Event] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -77,6 +77,10 @@ extension EventsTableViewController: UISearchBarDelegate {
                 return
             }
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
