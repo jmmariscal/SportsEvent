@@ -22,5 +22,28 @@ class SportsEventTests: XCTestCase {
         XCTAssertNotEqual(9, events.events.count)
         XCTAssertNotEqual(11, events.events.count)
     }
+    
+    func testGrabbingImage() throws {
+        let expectation = self.expectation(description: "Waiting for network to return")
+        
+        let imageStringPath = "https://seatgeek.com/images/performers-landscape/generic-football-07ce3f/677211/32399/huge.jpg"
+        let eventController = EventsController()
+        
+        eventController.grabImageFromEvent(path: imageStringPath) { result in
+            
+            switch result{
+            
+            case .success(let success):
+                XCTAssert(true)
+            case .failure(let error):
+                break
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 5) { possibleError in
+            
+        }
+    }
+
 
 }

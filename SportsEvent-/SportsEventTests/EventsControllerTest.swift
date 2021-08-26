@@ -14,7 +14,7 @@ class EventsControllerTest: XCTestCase {
         let searchTerm = "Soccer"
         let eventController = EventsController()
         
-        let request = eventController.generateSearchTermRequest(searchTerm: searchTerm)
+        let request = eventController.generateEventSearchTermRequest(searchTerm: searchTerm)
         XCTAssertTrue(((request.url?.query?.contains(searchTerm)) == true))
     }
 

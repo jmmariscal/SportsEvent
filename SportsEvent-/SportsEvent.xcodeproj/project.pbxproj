@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0BC59226D7536E004F6D54 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC59126D7536E004F6D54 /* Venue.swift */; };
 		AF3D714126AB3EFB0057E857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D714026AB3EFB0057E857 /* AppDelegate.swift */; };
 		AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D714226AB3EFB0057E857 /* SceneDelegate.swift */; };
 		AF3D714826AB3EFB0057E857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D714626AB3EFB0057E857 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0BC59126D7536E004F6D54 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		AF3D713D26AB3EFB0057E857 /* SportsEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3D714026AB3EFB0057E857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3D714226AB3EFB0057E857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				AF3D715B26AB3FA50057E857 /* Event.swift */,
 				AF3D715F26AE525E0057E857 /* EventsController.swift */,
+				AF0BC59126D7536E004F6D54 /* Venue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				AF3D715A26AB3F980057E857 /* EventTableViewCell.swift in Sources */,
 				AF3D714126AB3EFB0057E857 /* AppDelegate.swift in Sources */,
 				AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */,
+				AF0BC59226D7536E004F6D54 /* Venue.swift in Sources */,
 				AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */,
 				AFB0DFFB26CDB24B00CF6541 /* FavoriteEventsViewController.swift in Sources */,
 				AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */,
