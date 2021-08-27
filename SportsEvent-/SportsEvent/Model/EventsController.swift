@@ -10,8 +10,10 @@ import UIKit
 
 protocol EventsNetworkManager {
     func searchEvent(searchTerm: String, completion: @escaping (Result<Events, NetworkError>) -> Void)
+    func searchVenue(searchTerm: String, completion: @escaping (Result<Venues, NetworkError>) -> Void)
     func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void)
     var event: Events? { get }
+    var venue: Venues? { get }
 }
 
 enum NetworkError: Error {
@@ -22,7 +24,9 @@ enum NetworkError: Error {
 }
 
 class EventsController: EventsNetworkManager {
+    
     var event: Events?
+    var venue: Venues?
     
     var favoriteList: [Event] = []
     var workerItem: DispatchWorkItem?
@@ -117,7 +121,7 @@ class EventsController: EventsNetworkManager {
             }
     }
     
-    func searchVenue(searchTerm: String, completion: @escaping (Result<Events, NetworkError>) -> Void) {
+    func searchVenue(searchTerm: String, completion: @escaping (Result<Venues, NetworkError>) -> Void) {
         
         // Cancel the previous request since it is going to make another one again.
         workerItem?.cancel()
@@ -126,7 +130,7 @@ class EventsController: EventsNetworkManager {
             
             guard let strongSelf = self else { return }
             
-            let request = strongSelf.generateEventSearchTermRequest(searchTerm: searchTerm)
+            let request = strongSelf.generateVenueSearchTermRequest(searchTerm: searchTerm)
                             
             // Request data
             URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -148,8 +152,8 @@ class EventsController: EventsNetworkManager {
                 // Decode the data
                 let decoder = JSONDecoder()
                 do {
-                    strongSelf.event = try decoder.decode(Events.self, from: data)
-                    completion(.success(self!.event!))
+                    strongSelf.venue = try decoder.decode(Venues.self, from: data)
+                    completion(.success(self!.venue!))
                 } catch {
                     completion(.failure(.decodeFailed))
                     print(error)

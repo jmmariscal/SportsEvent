@@ -23,6 +23,8 @@ class EventDetailViewController: UIViewController {
     
     let eventController = EventsController()
     var event: Event?
+    var venue: Venue?
+    var buttonPressed: SearchType?
     let userDefaults = UserDefaults.standard
     let favoriteEvents = FavoriteEventsViewController()
     var favoriteButtonVissible: Bool = false

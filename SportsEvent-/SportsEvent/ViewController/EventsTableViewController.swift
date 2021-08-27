@@ -9,8 +9,16 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
 
+    var buttonPressed: SearchType?
     var eventController: EventsNetworkManager = EventsController()
     var events: [Event] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    var venues: [Venue] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -37,26 +45,40 @@ class EventsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        if events.count <= 0 {
+            return venues.count
+        } else {
+            return events.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventTableViewCell else {
             fatalError("Can't deque cell of type 'EventCell' ")
         }
+        if events.count <= 0 {
+            let venue = venues[indexPath.row]
+            cell.venue = venue
+        } else {
+            let event = eventController.eventList[indexPath.row]
+            cell.event = event
+        }
 
-        let event = eventController.eventList[indexPath.row]
-        cell.event = event
         return cell
     }
     
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "eventDetail", let detailVC = segue.destination as? EventDetailViewController {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let event = events[indexPath.row]
-                detailVC.event = event
+        if segue.identifier == "eventDetail", let detailVC = segue.destination as? EventDetailViewController, let indexPath = tableView.indexPathForSelectedRow {
+            if events.count <= 0 {
+                let venues = venues[indexPath.row]
+                detailVC.venue = venues
+                detailVC.buttonPressed = buttonPressed
+            } else {
+                let events = events[indexPath.row]
+                detailVC.buttonPressed = buttonPressed
+                detailVC.event = events
             }
         }
     }
@@ -66,16 +88,34 @@ class EventsTableViewController: UITableViewController {
 extension EventsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Search for events while User is typing in Search Bar
-        eventController.searchEvent(searchTerm: searchText) { (result) in
-            do {
-                let events = try result.get()
-                DispatchQueue.main.async {
-                    self.events = events.events
+        switch buttonPressed {
+        case .searchByEvent:
+            eventController.searchEvent(searchTerm: searchText) { (result) in
+                do {
+                    let events = try result.get()
+                    DispatchQueue.main.async {
+                        self.events = events.events
+                    }
+                } catch {
+                    print("\(error)")
+                    return
                 }
-            } catch {
-                print("\(error)")
-                return
             }
+        case .searchByVenue:
+            eventController.searchVenue(searchTerm: searchText) { result in
+                do {
+                    let venues = try result.get()
+                    DispatchQueue.main.async {
+                        self.venues = venues.venues
+                    }
+                } catch {
+                    print("\(error)")
+                    return
+                }
+            }
+        default:
+            return
+            
         }
     }
     

@@ -12,8 +12,13 @@ class EventTableViewCell: UITableViewCell {
     var eventController = EventsController()
     var event: Event? {
         didSet {
-            updateViews()
+            updateEventViews()
             favoriteEventSelected()
+        }
+    }
+    var venue: Venue? {
+        didSet{
+            updateVenueViews()
         }
     }
     let userDefaults = UserDefaults.standard
@@ -24,7 +29,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventDateTimeLabel: UILabel!
     @IBOutlet weak var favoriteEventImageView: UIImageView!
     
-    private func updateViews() {
+    private func updateEventViews() {
         guard let event = event else { return }
         
         eventTitleLabel.text = event.shortTitle
@@ -32,6 +37,14 @@ class EventTableViewCell: UITableViewCell {
         getImage(with: event)
         
         eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
+    }
+    
+    private func updateVenueViews() {
+        guard let venue = venue else { return }
+        
+        eventTitleLabel.text = venue.name
+        eventLocationLabel.text = "\(venue.city), \(venue.state)"
+        eventDateTimeLabel.text = venue.city
     }
     
     // Check if user selected event as Favorite

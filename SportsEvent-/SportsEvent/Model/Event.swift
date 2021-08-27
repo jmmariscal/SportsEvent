@@ -36,6 +36,7 @@ struct Images: Codable {
 struct Venue: Codable {
     let city: String
     let state: String
+    let name: String
 }
 
 struct Performers: Codable {
