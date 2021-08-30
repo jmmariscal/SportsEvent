@@ -28,11 +28,13 @@ class EventsController: EventsNetworkManager {
     var event: Events?
     var venue: Venues?
     
-    var favoriteList: [Event] = []
+    var favoriteEventList: [Event] = []
+    var favoriteVenueList: [Venue] = []
     var workerItem: DispatchWorkItem?
     
     init() {
-        loadFromPersistentStore()
+        loadEventFromPersistentStore()
+        loadVenueFromPersistentStore()
     }
     
     private let clientID      = "MTAzNzU2MTJ8MTYyNzExMzM4OS4xMDM3Mjk"
@@ -102,7 +104,8 @@ class EventsController: EventsNetworkManager {
                         return
                     }
                     // Decode the data
-                    let decoder = JSONDecoder()
+                    var decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
                     do {
                         strongSelf.event = try decoder.decode(Events.self, from: data)
                         completion(.success(self!.event!))
@@ -190,50 +193,95 @@ class EventsController: EventsNetworkManager {
     }
     
     // MARK: - Persistence
-    
-    func loadFromPersistentStore() {
+    // Load from Persistent Store the event or venue
+    func loadEventFromPersistentStore() {
         
         // Plist -> Data -> Stars
         let fileManager = FileManager.default
-        guard let url = eventURL, fileManager.fileExists(atPath: url.path) else { return }
+        guard let url = eventURL, fileManager.fileExists(atPath: url.path) else {
+            favoriteEventList = []
+            return
+        }
         
         do {
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
-            self.favoriteList = try decoder.decode([Event].self, from: data)
+            self.favoriteEventList = try decoder.decode([Event].self, from: data)
         } catch {
             print("error loading event data: \(error)")
         }
     }
     
-    func saveToPersistentStore() {
+    func loadVenueFromPersistentStore() {
+
+        let fileManager = FileManager.default
+        guard let url = venueURL, fileManager.fileExists(atPath: url.path) else {
+            favoriteVenueList = []
+            return
+        }
         
-        guard let url = eventURL else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            self.favoriteVenueList = try decoder.decode([Venue].self, from: data)
+        } catch {
+            print("error loading event data: \(error)")
+        }
+    }
+    
+    // Save to Persistent Store the event or venue
+    func saveEventToPersistentStore() {
+        
+        guard let eventUrl = eventURL else { return }
         
         do {
             let encoder = PropertyListEncoder()
-            let data = try encoder.encode(favoriteList)
-            try data.write(to: url)
+            let data = try encoder.encode(favoriteEventList)
+            try data.write(to: eventUrl)
         } catch {
             print("Error saving event data: \(error)")
         }
     }
     
-    func deleteFromPersistentStore() {
-        guard let url = eventURL, FileManager.default.fileExists(atPath: url.path) else { return }
+    func saveVenueToPersistentStore() {
+        
+        guard let venueUrl = venueURL else { return }
         
         do {
-            try FileManager.default.removeItem(atPath: url.path)
-        } catch let error {
-            print(error.localizedDescription)
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(favoriteVenueList)
+            try data.write(to: venueUrl)
+        } catch {
+            print("Error saving venue data: \(error)")
         }
     }
+    
+    // Remove from persistent store the event or venue
+    func removeEventFromFavoriteList(id: Int) {
+        guard let index = favoriteEventList.firstIndex(where: { $0.id == id }) else { return }
+        favoriteEventList.remove(at: index)
+        saveEventToPersistentStore()
+    }
+    
+    func removeVenueFromFavoriteList(id: Int) {
+        guard let index = favoriteVenueList.firstIndex(where: { $0.id == id }) else { return }
+        favoriteVenueList.remove(at: index)
+        
+    }
+    
 
     private var eventURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         let fileName = "event.plist"
         
         return documentDirectory?.appendingPathComponent(fileName)
+    }
+    
+    private var venueURL: URL? {
+        let docuemntDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let fileName = "venue.plist"
+        
+        return docuemntDirectory?.appendingPathComponent(fileName)
     }
 }
 

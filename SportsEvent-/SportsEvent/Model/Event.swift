@@ -35,8 +35,14 @@ struct Images: Codable {
 // MARK: - Venue
 struct Venue: Codable {
     let city: String
-    let state: String
+    let id: Int
+    let state: String?
     let name: String
+    var location: String {
+        if let state = state {
+            return "\(city), \(state)"
+        } else { return city }
+    }
 }
 
 struct Performers: Codable {

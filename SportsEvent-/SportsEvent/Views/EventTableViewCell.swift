@@ -33,7 +33,7 @@ class EventTableViewCell: UITableViewCell {
         guard let event = event else { return }
         
         eventTitleLabel.text = event.shortTitle
-        eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
+        eventLocationLabel.text = event.venue.location
         getImage(with: event)
         
         eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
@@ -43,7 +43,7 @@ class EventTableViewCell: UITableViewCell {
         guard let venue = venue else { return }
         
         eventTitleLabel.text = venue.name
-        eventLocationLabel.text = "\(venue.city), \(venue.state)"
+        eventLocationLabel.text = venue.location
         eventDateTimeLabel.text = venue.city
     }
     

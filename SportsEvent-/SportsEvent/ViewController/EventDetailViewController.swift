@@ -11,7 +11,7 @@ enum SFSymbols {
     static let filledHeart = UIImage(systemName: "heart.fill")
     static let heart       = UIImage(systemName: "heart")
     static let trash       = UIImage(systemName: "trash.fill")
-    static let noImage     = UIImage(systemName: "")
+    static let trashSlashed     = UIImage(systemName: "trash.slash")
 }
 
 class EventDetailViewController: UIViewController {
@@ -21,7 +21,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
-    let eventController = EventsController()
+    var eventController: EventsController!
     var event: Event?
     var venue: Venue?
     var buttonPressed: SearchType?
@@ -54,7 +54,7 @@ class EventDetailViewController: UIViewController {
         
         eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
         
-        eventLocationLabel.text = "\(event.venue.city), \(event.venue.state)"
+        eventLocationLabel.text = event.venue.location
         getImage(with: event)
         
         if userDefaults.bool(forKey: event.id.description) == true{
@@ -67,7 +67,7 @@ class EventDetailViewController: UIViewController {
         
         if favoriteButtonVissible == true {
             favoriteButton.image     = SFSymbols.trash
-            favoriteButton.tintColor = .white
+            favoriteButton.tintColor = .black
         }
     }
     
@@ -87,6 +87,20 @@ class EventDetailViewController: UIViewController {
     
     // Check if user tapped the favorite "heart" button
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        
+        switch buttonPressed {
+        
+        case .searchByEvent:
+            handleFavoriteEvent()
+        case .searchByVenue:
+            handleFavoriteVenue()
+        default:
+            return
+        }
+
+    }
+    
+    func handleFavoriteEvent() {
         guard let event = event else { return }
 
         if favoriteButton.image == SFSymbols.filledHeart {
@@ -95,14 +109,35 @@ class EventDetailViewController: UIViewController {
             
         } else if favoriteButton.image == SFSymbols.heart {
             userDefaults.set(true, forKey: event.id.description)
-            eventController.favoriteList.append(event)
-            eventController.saveToPersistentStore()
+            eventController.favoriteEventList.append(event)
+            eventController.saveEventToPersistentStore()
             favoriteButton.image = SFSymbols.filledHeart
             
         } else if favoriteButton.image == SFSymbols.trash {
             userDefaults.set(false, forKey: event.id.description)
-            eventController.deleteFromPersistentStore()
-            favoriteButton.image = SFSymbols.noImage
+            eventController.removeEventFromFavoriteList(id: event.id)
+            favoriteButton.image = SFSymbols.trashSlashed
+            favoriteButton.isEnabled = false
+        }
+    }
+    
+    func handleFavoriteVenue() {
+        guard let venue = venue else { return }
+
+        if favoriteButton.image == SFSymbols.filledHeart {
+            userDefaults.set(false, forKey: venue.id.description)
+            favoriteButton.image = SFSymbols.heart
+            
+        } else if favoriteButton.image == SFSymbols.heart {
+            userDefaults.set(true, forKey: venue.id.description)
+            eventController.favoriteVenueList.append(venue)
+            eventController.saveVenueToPersistentStore()
+            favoriteButton.image = SFSymbols.filledHeart
+            
+        } else if favoriteButton.image == SFSymbols.trash {
+            userDefaults.set(false, forKey: venue.id.description)
+            eventController.removeVenueFromFavoriteList(id: venue.id)
+            favoriteButton.image = SFSymbols.trashSlashed
             favoriteButton.isEnabled = false
         }
     }

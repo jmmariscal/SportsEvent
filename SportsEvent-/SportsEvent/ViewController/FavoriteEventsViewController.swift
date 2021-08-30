@@ -17,11 +17,13 @@ class FavoriteEventsViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        eventController.loadEventFromPersistentStore()
         tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        eventController.loadEventFromPersistentStore()
         tableView.reloadData()
     }
 }
@@ -29,7 +31,7 @@ class FavoriteEventsViewController: UIViewController {
 extension FavoriteEventsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventController.favoriteList.count
+        return eventController.favoriteEventList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,7 +39,7 @@ extension FavoriteEventsViewController: UITableViewDataSource {
             fatalError("Can't deque cell of type FavoriteEventCell")
         }
         
-        let event = eventController.favoriteList[indexPath.row]
+        let event = eventController.favoriteEventList[indexPath.row]
         cell.event = event
         return cell
     }
@@ -45,7 +47,8 @@ extension FavoriteEventsViewController: UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FavoriteEventDetailSegue", let detailVC = segue.destination as? EventDetailViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let event = eventController.favoriteList[indexPath.row]
+                let event = eventController.favoriteEventList[indexPath.row]
+                detailVC.eventController = self.eventController
                 detailVC.event = event
                 detailVC.favoriteButtonVissible = true
             }

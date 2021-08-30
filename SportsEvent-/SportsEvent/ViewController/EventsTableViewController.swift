@@ -10,7 +10,7 @@ import UIKit
 class EventsTableViewController: UITableViewController {
 
     var buttonPressed: SearchType?
-    var eventController: EventsNetworkManager = EventsController()
+    var eventController = EventsController()
     var events: [Event] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -71,6 +71,7 @@ class EventsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eventDetail", let detailVC = segue.destination as? EventDetailViewController, let indexPath = tableView.indexPathForSelectedRow {
+            detailVC.eventController = self.eventController
             if events.count <= 0 {
                 let venues = venues[indexPath.row]
                 detailVC.venue = venues
