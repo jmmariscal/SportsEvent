@@ -31,11 +31,15 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews()
+        if favoriteButtonVissible == false {
+            updateEventDetail()
+        } else {
+            updateVenueDetail()
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateViews()
+        updateEventDetail()
     }
     
     func navTitleMultiLine(eventTitle: String) {
@@ -48,7 +52,7 @@ class EventDetailViewController: UIViewController {
         self.navigationItem.titleView = label
     }
         
-    func updateViews() {
+    func updateEventDetail() {
         guard let event = event else { return }
         navTitleMultiLine(eventTitle: event.shortTitle)
         
@@ -69,6 +73,14 @@ class EventDetailViewController: UIViewController {
             favoriteButton.image     = SFSymbols.trash
             favoriteButton.tintColor = .black
         }
+    }
+    
+    func updateVenueDetail() {
+        guard let venue = venue else { return }
+        navTitleMultiLine(eventTitle: venue.name)
+        
+        eventLocationLabel.text = venue.location
+        
     }
     
     // Grab Image from event
