@@ -104,7 +104,7 @@ class EventsController: EventsNetworkManager {
                         return
                     }
                     // Decode the data
-                    var decoder = JSONDecoder()
+                    let decoder = JSONDecoder()
                     decoder.dateDecodingStrategy = .iso8601
                     do {
                         strongSelf.event = try decoder.decode(Events.self, from: data)

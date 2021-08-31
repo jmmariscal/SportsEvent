@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="4566.666666666667" y="97.767857142857139"/>
         </scene>
-        <!--Event Search-->
+        <!--Search-->
         <scene sceneID="jcP-sI-aAx">
             <objects>
                 <tableViewController id="Y9R-mp-CjA" customClass="EventsTableViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,7 +173,7 @@
                             <outlet property="delegate" destination="Y9R-mp-CjA" id="m6X-Mg-kCW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Event Search" id="o8w-f4-DoQ"/>
+                    <navigationItem key="navigationItem" title="Search" id="o8w-f4-DoQ"/>
                     <connections>
                         <outlet property="searchBar" destination="w5E-7Q-P6u" id="Kjc-mu-hgC"/>
                     </connections>
@@ -182,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="3637.68115942029" y="97.767857142857139"/>
         </scene>
-        <!--Favorite Events View Controller-->
+        <!--Favorites-->
         <scene sceneID="4ho-IF-Ny1">
             <objects>
                 <viewController id="x8g-Xr-2Ue" customClass="FavoriteEventsViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,8 +191,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-W5-Z85">
-                                <rect key="frame" x="0.0" y="180" width="414" height="682"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="171" width="414" height="691"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteEventCell" rowHeight="190" id="OIZ-A1-rDm" customClass="EventTableViewCell" customModule="SportsEvent" customModuleProvider="target">
@@ -267,44 +267,48 @@
                                             <outlet property="eventLocationLabel" destination="PRh-8o-VND" id="U02-3e-8bu"/>
                                             <outlet property="eventTitleLabel" destination="aZy-cA-5cX" id="STr-iy-nUH"/>
                                             <outlet property="favoriteEventImageView" destination="4vX-sY-p3g" id="zsg-aJ-MRB"/>
-                                            <segue destination="Hy7-eU-NgN" kind="show" identifier="FavoriteEventDetailSegue" id="YUs-Et-REC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Events" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ2-Nk-c0t">
-                                <rect key="frame" x="0.0" y="140" width="414" height="40"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-qK-Hwx">
+                                <rect key="frame" x="107" y="140" width="200" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qo4-bf-Y0x"/>
+                                    <constraint firstAttribute="width" constant="200" id="so1-jb-ePh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <segments>
+                                    <segment title="Events"/>
+                                    <segment title="Venues"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectedSegment:" destination="x8g-Xr-2Ue" eventType="valueChanged" id="ZNE-dW-e6M"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1kE-Bs-fAS"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eQ2-Nk-c0t" firstAttribute="leading" secondItem="1kE-Bs-fAS" secondAttribute="leading" id="GGk-K8-4AJ"/>
+                            <constraint firstItem="UQ1-qK-Hwx" firstAttribute="centerX" secondItem="C5y-ik-MkB" secondAttribute="centerX" id="L7E-um-9Bl"/>
                             <constraint firstItem="bjL-W5-Z85" firstAttribute="leading" secondItem="1kE-Bs-fAS" secondAttribute="leading" id="Myx-bp-tGm"/>
-                            <constraint firstItem="bjL-W5-Z85" firstAttribute="top" secondItem="eQ2-Nk-c0t" secondAttribute="bottom" id="ONP-4u-Cbc"/>
                             <constraint firstItem="1kE-Bs-fAS" firstAttribute="bottom" secondItem="bjL-W5-Z85" secondAttribute="bottom" id="RL3-41-hMP"/>
-                            <constraint firstItem="eQ2-Nk-c0t" firstAttribute="top" secondItem="1kE-Bs-fAS" secondAttribute="top" id="fjD-s7-uo4"/>
+                            <constraint firstItem="bjL-W5-Z85" firstAttribute="top" secondItem="UQ1-qK-Hwx" secondAttribute="bottom" id="bUH-aj-Rkr"/>
                             <constraint firstItem="1kE-Bs-fAS" firstAttribute="trailing" secondItem="bjL-W5-Z85" secondAttribute="trailing" id="iCo-Uf-KzW"/>
-                            <constraint firstItem="1kE-Bs-fAS" firstAttribute="trailing" secondItem="eQ2-Nk-c0t" secondAttribute="trailing" id="mjW-ly-Lur"/>
+                            <constraint firstItem="UQ1-qK-Hwx" firstAttribute="top" secondItem="1kE-Bs-fAS" secondAttribute="top" id="pDa-PS-Hhn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Gqo-J9-88q"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="Gqo-J9-88q"/>
                     <connections>
+                        <outlet property="favoritesSegmentedControl" destination="UQ1-qK-Hwx" id="c99-Lf-oMj"/>
                         <outlet property="tableView" destination="bjL-W5-Z85" id="wHo-xv-45G"/>
+                        <segue destination="Hy7-eU-NgN" kind="show" identifier="showEventDetailSegue" id="cHS-yl-kMo"/>
+                        <segue destination="Hy7-eU-NgN" kind="show" identifier="showVenueDetailSegue" id="LFR-pl-xMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZR-UX-MNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1793" y="838"/>
         </scene>
-        <!--Sports Event-->
+        <!--Home-->
         <scene sceneID="Evx-8L-Qga">
             <objects>
                 <viewController id="EN6-7J-Hks" customClass="SearchSelectionViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
@@ -346,7 +350,7 @@
                             <constraint firstItem="qqs-OK-G5f" firstAttribute="centerX" secondItem="5Tw-lN-jmh" secondAttribute="centerX" id="e6f-Dd-DCU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sports Event" id="hok-rj-CHj">
+                    <navigationItem key="navigationItem" title="Home" id="hok-rj-CHj">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="dIX-xP-qau">
                             <connections>
                                 <segue destination="x8g-Xr-2Ue" kind="show" id="ED2-eK-lYB"/>
@@ -379,15 +383,12 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="SVP-f1-08S"/>
-        <segue reference="MHx-OJ-cZx"/>
+        <segue reference="LFR-pl-xMG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
