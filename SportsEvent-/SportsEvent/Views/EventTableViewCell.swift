@@ -44,7 +44,6 @@ class EventTableViewCell: UITableViewCell {
         
         eventTitleLabel.text = venue.name
         eventLocationLabel.text = venue.location
-        eventDateTimeLabel.text = venue.city
     }
     
     // Check if user selected event as Favorite

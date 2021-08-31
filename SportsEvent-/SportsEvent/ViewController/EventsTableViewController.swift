@@ -80,6 +80,7 @@ class EventsTableViewController: UITableViewController {
                 let events = events[indexPath.row]
                 detailVC.buttonPressed = buttonPressed
                 detailVC.event = events
+                detailVC.selectedFavoriteEventSegue = true
             }
         }
     }

@@ -34,14 +34,21 @@ struct Images: Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let city: String
     let id: Int
-    let state: String?
     let name: String
+    let address: String?
+    let extendedAddress: String
     var location: String {
-        if let state = state {
-            return "\(city), \(state)"
-        } else { return city }
+        if let address = address {
+            return "\(address) \(extendedAddress)"
+        } else { return extendedAddress }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case extendedAddress = "extended_address"
+        case id
+        case name
+        case address
     }
 }
 

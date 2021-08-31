@@ -86,14 +86,17 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
                 let event = eventController.favoriteEventList[indexPath.row]
                 detailVC.eventController = self.eventController
                 detailVC.event = event
-                detailVC.favoriteButtonVissible = true
+                detailVC.trashButtonEnabled = true
+                detailVC.selectedFavoriteEventSegue = true
+                detailVC.buttonPressed = .searchByEvent
             }
         } else if segue.identifier == "showVenueDetailSegue", let detailVC = segue.destination as? EventDetailViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let venue = eventController.favoriteVenueList[indexPath.row]
                 detailVC.eventController = self.eventController
                 detailVC.venue = venue
-                detailVC.favoriteButtonVissible = true
+                detailVC.trashButtonEnabled = true
+                detailVC.buttonPressed = .searchByVenue
             }
         }
     }

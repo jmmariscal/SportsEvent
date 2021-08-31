@@ -383,7 +383,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="SVP-f1-08S"/>
-        <segue reference="LFR-pl-xMG"/>
+        <segue reference="cHS-yl-kMo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

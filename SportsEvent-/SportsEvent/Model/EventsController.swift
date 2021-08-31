@@ -266,7 +266,7 @@ class EventsController: EventsNetworkManager {
     func removeVenueFromFavoriteList(id: Int) {
         guard let index = favoriteVenueList.firstIndex(where: { $0.id == id }) else { return }
         favoriteVenueList.remove(at: index)
-        
+        saveVenueToPersistentStore()
     }
     
 

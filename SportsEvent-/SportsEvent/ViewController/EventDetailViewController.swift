@@ -8,10 +8,10 @@
 import UIKit
 
 enum SFSymbols {
-    static let filledHeart = UIImage(systemName: "heart.fill")
-    static let heart       = UIImage(systemName: "heart")
-    static let trash       = UIImage(systemName: "trash.fill")
-    static let trashSlashed     = UIImage(systemName: "trash.slash")
+    static let filledHeart  = UIImage(systemName: "heart.fill")
+    static let heart        = UIImage(systemName: "heart")
+    static let trash        = UIImage(systemName: "trash.fill")
+    static let trashSlashed = UIImage(systemName: "trash.slash")
 }
 
 class EventDetailViewController: UIViewController {
@@ -26,12 +26,12 @@ class EventDetailViewController: UIViewController {
     var venue: Venue?
     var buttonPressed: SearchType?
     let userDefaults = UserDefaults.standard
-    let favoriteEvents = FavoriteEventsViewController()
-    var favoriteButtonVissible: Bool = false
+    var trashButtonEnabled: Bool = false
+    var selectedFavoriteEventSegue: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if favoriteButtonVissible == false {
+        if selectedFavoriteEventSegue == true {
             updateEventDetail()
         } else {
             updateVenueDetail()
@@ -39,16 +39,20 @@ class EventDetailViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateEventDetail()
+        if selectedFavoriteEventSegue == true {
+            updateEventDetail()
+        } else {
+            updateVenueDetail()
+        }
     }
     
     func navTitleMultiLine(eventTitle: String) {
         let label = UILabel()
         label.backgroundColor = UIColor.clear
-        label.numberOfLines = 2
-        label.font = UIFont.boldSystemFont(ofSize: 15.0)
-        label.textAlignment = .left
-        label.text = eventTitle
+        label.numberOfLines   = 2
+        label.font            = UIFont.boldSystemFont(ofSize: 15.0)
+        label.textAlignment   = .left
+        label.text            = eventTitle
         self.navigationItem.titleView = label
     }
         
@@ -61,15 +65,15 @@ class EventDetailViewController: UIViewController {
         eventLocationLabel.text = event.venue.location
         getImage(with: event)
         
-        if userDefaults.bool(forKey: event.id.description) == true{
+        if userDefaults.bool(forKey: event.id.description) == true {
             favoriteButton.image     = SFSymbols.filledHeart
             favoriteButton.tintColor = .red
-        } else {
+        } else if userDefaults.bool(forKey: event.id.description) == true {
             favoriteButton.image     = SFSymbols.heart
             favoriteButton.tintColor = .red
         }
         
-        if favoriteButtonVissible == true {
+        if trashButtonEnabled == true {
             favoriteButton.image     = SFSymbols.trash
             favoriteButton.tintColor = .black
         }
@@ -81,6 +85,18 @@ class EventDetailViewController: UIViewController {
         
         eventLocationLabel.text = venue.location
         
+        if userDefaults.bool(forKey: venue.id.description) == true {
+            favoriteButton.image = SFSymbols.filledHeart
+            favoriteButton.tintColor = .red
+        } else if userDefaults.bool(forKey: venue.id.description) == true {
+            favoriteButton.image = SFSymbols.heart
+            favoriteButton.tintColor = .red
+        }
+        
+        if trashButtonEnabled == true {
+            favoriteButton.image     = SFSymbols.trash
+            favoriteButton.tintColor = .black
+        }
     }
     
     // Grab Image from event
