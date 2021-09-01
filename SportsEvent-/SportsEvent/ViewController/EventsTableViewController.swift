@@ -60,7 +60,7 @@ class EventsTableViewController: UITableViewController {
             let venue = venues[indexPath.row]
             cell.venue = venue
         } else {
-            let event = eventController.eventList[indexPath.row]
+            let event = events[indexPath.row]
             cell.event = event
         }
 

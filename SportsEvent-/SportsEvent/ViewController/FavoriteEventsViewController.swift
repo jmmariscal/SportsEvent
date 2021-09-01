@@ -22,6 +22,7 @@ class FavoriteEventsViewController: UIViewController {
         eventController.loadEventFromPersistentStore()
         eventController.loadVenueFromPersistentStore()
         tableView.reloadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

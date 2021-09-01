@@ -44,6 +44,8 @@ class EventTableViewCell: UITableViewCell {
         
         eventTitleLabel.text = venue.name
         eventLocationLabel.text = venue.location
+        favoriteEventImageView.image = nil
+        layoutIfNeeded()
     }
     
     // Check if user selected event as Favorite

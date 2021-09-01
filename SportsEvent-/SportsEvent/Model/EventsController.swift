@@ -268,7 +268,6 @@ class EventsController: EventsNetworkManager {
         favoriteVenueList.remove(at: index)
         saveVenueToPersistentStore()
     }
-    
 
     private var eventURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
