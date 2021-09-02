@@ -305,6 +305,7 @@
                         <outlet property="tableView" destination="bjL-W5-Z85" id="wHo-xv-45G"/>
                         <segue destination="Hy7-eU-NgN" kind="show" identifier="showEventDetailSegue" id="cHS-yl-kMo"/>
                         <segue destination="Hy7-eU-NgN" kind="show" identifier="showVenueDetailSegue" id="LFR-pl-xMG"/>
+                        <segue destination="Hy7-eU-NgN" kind="show" identifier="showPerformerDetailSegue" id="x6N-Fv-Eln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZR-UX-MNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -418,7 +419,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XU5-dR-ImV"/>
-        <segue reference="cHS-yl-kMo"/>
+        <segue reference="x6N-Fv-Eln"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

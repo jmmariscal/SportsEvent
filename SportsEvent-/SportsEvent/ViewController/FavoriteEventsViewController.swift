@@ -21,6 +21,7 @@ class FavoriteEventsViewController: UIViewController {
         tableView.delegate = self
         eventController.loadEventFromPersistentStore()
         eventController.loadVenueFromPersistentStore()
+        eventController.loadPerformerFromPersistentStore()
         tableView.reloadData()
         
     }
@@ -29,6 +30,7 @@ class FavoriteEventsViewController: UIViewController {
         super.viewWillAppear(animated)
         eventController.loadEventFromPersistentStore()
         eventController.loadVenueFromPersistentStore()
+        eventController.loadPerformerFromPersistentStore()
         tableView.reloadData()
     }
     
@@ -46,6 +48,8 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
             return eventController.favoriteEventList.count
         case 1:
             return eventController.favoriteVenueList.count
+        case 2:
+            return eventController.favoritePerformerList.count
         default:
             return 0
         }
@@ -64,7 +68,12 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
             let venue = eventController.favoriteVenueList[indexPath.row]
             cell.venue = venue
             return cell
+        case 2:
+            let performer = eventController.favoritePerformerList[indexPath.row]
+            cell.performer = performer
+            return cell
         default:
+            print("Error: Could DequeReusable Cell")
             return cell
         }
     }
@@ -75,6 +84,8 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
             self.performSegue(withIdentifier: "showEventDetailSegue", sender: self)
         case 1:
             self.performSegue(withIdentifier: "showVenueDetailSegue", sender: self)
+        case 2:
+            self.performSegue(withIdentifier: "showPerformerDetailSegue", sender: self)
         default:
             return
         }
@@ -98,6 +109,14 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
                 detailVC.venue = venue
                 detailVC.trashButtonEnabled = true
                 detailVC.buttonPressed = .searchByVenue
+            }
+        } else if segue.identifier == "showPerformerDetailSegue", let detailVC = segue.destination as? EventDetailViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let performer = eventController.favoritePerformerList[indexPath.row]
+                detailVC.eventController = self.eventController
+                detailVC.performer = performer
+                detailVC.trashButtonEnabled = true
+                detailVC.buttonPressed = .searchByPerformers
             }
         }
     }

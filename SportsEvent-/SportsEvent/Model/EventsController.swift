@@ -353,6 +353,12 @@ class EventsController: EventsNetworkManager {
         favoriteVenueList.remove(at: index)
         saveVenueToPersistentStore()
     }
+    
+    func removePerformerFromFavoriteList(id: Int) {
+        guard let index = favoritePerformerList.firstIndex(where: { $0.id == id }) else { return }
+        favoritePerformerList.remove(at: index)
+        savePerformerToPersistentStore()
+    }
 
     private var eventURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first

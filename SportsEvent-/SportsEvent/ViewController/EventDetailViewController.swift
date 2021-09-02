@@ -117,6 +117,19 @@ class EventDetailViewController: UIViewController {
         navTitleMultiLine(eventTitle: performer.name)
         eventDateTimeLabel.text = performer.type.capitalized
         getPerformerImage(with: performer)
+        
+        if userDefaults.bool(forKey: performer.id.description) == true {
+            favoriteButton.image = SFSymbols.filledHeart
+            favoriteButton.tintColor = .red
+        } else if userDefaults.bool(forKey: performer.id.description) == true {
+            favoriteButton.image = SFSymbols.heart
+            favoriteButton.tintColor = .red
+        }
+        
+        if trashButtonEnabled == true {
+            favoriteButton.image     = SFSymbols.trash
+            favoriteButton.tintColor = .black
+        }
     }
     
     // Grab Image from event
@@ -154,8 +167,10 @@ class EventDetailViewController: UIViewController {
             handleFavoriteEvent()
         case .searchByVenue:
             handleFavoriteVenue()
+        case .searchByPerformers:
+            handleFavoritePerformer()
         default:
-            return
+            print("Error: Could Not Favorite Cell")
         }
 
     }
@@ -197,6 +212,27 @@ class EventDetailViewController: UIViewController {
         } else if favoriteButton.image == SFSymbols.trash {
             userDefaults.set(false, forKey: venue.id.description)
             eventController.removeVenueFromFavoriteList(id: venue.id)
+            favoriteButton.image = SFSymbols.trashSlashed
+            favoriteButton.isEnabled = false
+        }
+    }
+    
+    func handleFavoritePerformer() {
+        guard let performer = performer else { return }
+        
+        if favoriteButton.image == SFSymbols.filledHeart {
+            userDefaults.set(false, forKey: performer.id.description)
+            favoriteButton.image = SFSymbols.heart
+            
+        } else if favoriteButton.image == SFSymbols.heart {
+            userDefaults.set(true, forKey: performer.id.description)
+            eventController.favoritePerformerList.append(performer)
+            eventController.savePerformerToPersistentStore()
+            favoriteButton.image = SFSymbols.filledHeart
+            
+        } else if favoriteButton.image == SFSymbols.trash {
+            userDefaults.set(false, forKey: performer.id.description)
+            eventController.removePerformerFromFavoriteList(id: performer.id)
             favoriteButton.image = SFSymbols.trashSlashed
             favoriteButton.isEnabled = false
         }
