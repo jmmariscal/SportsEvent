@@ -29,7 +29,7 @@ class SportsEventTests: XCTestCase {
         let imageStringPath = "https://seatgeek.com/images/performers-landscape/generic-football-07ce3f/677211/32399/huge.jpg"
         let eventController = EventsController()
         
-        eventController.grabImageFromEvent(path: imageStringPath) { result in
+        eventController.grabImageFromNetwork(path: imageStringPath) { result in
             
             switch result{
             

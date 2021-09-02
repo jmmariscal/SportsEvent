@@ -89,7 +89,6 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
                 detailVC.eventController = self.eventController
                 detailVC.event = event
                 detailVC.trashButtonEnabled = true
-                detailVC.selectedFavoriteEventSegue = true
                 detailVC.buttonPressed = .searchByEvent
             }
         } else if segue.identifier == "showVenueDetailSegue", let detailVC = segue.destination as? EventDetailViewController {

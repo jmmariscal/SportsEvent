@@ -28,22 +28,34 @@ class EventDetailViewController: UIViewController {
     var buttonPressed: SearchType?
     let userDefaults = UserDefaults.standard
     var trashButtonEnabled: Bool = false
-    var selectedFavoriteEventSegue: Bool = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if selectedFavoriteEventSegue == true {
+        
+        switch buttonPressed {
+        case .searchByEvent:
             updateEventDetail()
-        } else {
+        case .searchByVenue:
             updateVenueDetail()
+        case .searchByPerformers:
+            updatePerformerDetail()
+        default:
+            print("Error: Unable to Update Detail UI")
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if selectedFavoriteEventSegue == true {
+        
+        switch buttonPressed {
+        case .searchByEvent:
             updateEventDetail()
-        } else {
+        case .searchByVenue:
             updateVenueDetail()
+        case .searchByPerformers:
+            updatePerformerDetail()
+        default:
+            print("Error: Unable to Update Detail UI")
         }
     }
     
@@ -64,7 +76,7 @@ class EventDetailViewController: UIViewController {
         eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
         
         eventLocationLabel.text = event.venue.location
-        getImage(with: event)
+        getEventImage(with: event)
         
         if userDefaults.bool(forKey: event.id.description) == true {
             favoriteButton.image     = SFSymbols.filledHeart
@@ -100,14 +112,33 @@ class EventDetailViewController: UIViewController {
         }
     }
     
+    func updatePerformerDetail() {
+        guard let performer = performer else { return }
+        navTitleMultiLine(eventTitle: performer.name)
+        eventDateTimeLabel.text = performer.type.capitalized
+        getPerformerImage(with: performer)
+    }
+    
     // Grab Image from event
-    func getImage(with event: Event) {
+    func getEventImage(with event: Event) {
         let imagePath = event.performers[0].image
-        eventController.grabImageFromEvent(path: imagePath) { result in
+        eventController.grabImageFromNetwork(path: imagePath) { result in
             guard let imageString = try? result.get() else { return }
             let image = UIImage(data: imageString)
             DispatchQueue.main.async {
-                self.eventImageView.layer.cornerRadius = 10
+                self.eventImageView.layer.cornerRadius = 7
+                self.eventImageView.image = image
+            }
+        }
+    }
+    
+    func getPerformerImage(with performer: Performers) {
+        let imagePath = performer.image
+        eventController.grabImageFromNetwork(path: imagePath) { result in
+            guard let imageString = try? result.get() else { return }
+            let image = UIImage(data: imageString)
+            DispatchQueue.main.async {
+                self.eventImageView.layer.cornerRadius = 7
                 self.eventImageView.image = image
             }
         }

@@ -12,7 +12,7 @@ protocol EventsNetworkManager {
     func searchEvent(searchTerm: String, completion: @escaping (Result<Events, NetworkError>) -> Void)
     func searchVenue(searchTerm: String, completion: @escaping (Result<Venues, NetworkError>) -> Void)
     func searchPerformers(searchTerm: String, completion: @escaping (Result<Performer, NetworkError>) -> Void)
-    func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void)
+    func grabImageFromNetwork(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void)
     var event: Events? { get }
     var venue: Venues? { get }
     var performer: Performer? { get }
@@ -237,7 +237,7 @@ class EventsController: EventsNetworkManager {
         }
     }
     
-    func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+    func grabImageFromNetwork(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         // Build URL with necessary information
         var request = URLRequest(url: URL(string: path)!)
         request.httpMethod = HTTPMethod.get.rawValue

@@ -93,7 +93,6 @@ class SearchResultsTableViewController: UITableViewController {
                 let events = events[indexPath.row]
                 detailVC.buttonPressed = .searchByEvent
                 detailVC.event = events
-                detailVC.selectedFavoriteEventSegue = true
             case .searchByVenue:
                 let venues = venues[indexPath.row]
                 detailVC.venue = venues

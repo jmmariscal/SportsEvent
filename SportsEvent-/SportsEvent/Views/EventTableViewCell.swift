@@ -24,7 +24,7 @@ class EventTableViewCell: UITableViewCell {
     }
     var performer: Performers? {
         didSet{
-            updateVenueViews()
+            updatePerformerViews()
             favoriteEventSelected()
         }
     }
@@ -39,44 +39,69 @@ class EventTableViewCell: UITableViewCell {
     private func updateEventViews() {
         guard let event = event else { return }
         
-        eventTitleLabel.text = event.shortTitle
+        eventTitleLabel.text    = event.shortTitle
         eventLocationLabel.text = event.venue.location
-        getImage(with: event)
-        
         eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
+        getEventImage(with: event)
     }
     
     private func updateVenueViews() {
         guard let venue = venue else { return }
 
-        eventTitleLabel.text = venue.name
+        eventTitleLabel.text    = venue.name
         eventLocationLabel.text = venue.location
-        eventImageView.image = UIImage(named: "")
+        eventImageView.image    = UIImage(named: "")
+    }
+    
+    private func updatePerformerViews() {
+        guard let performer = performer else { return }
+        
+        eventTitleLabel.text    = performer.name
+        eventDateTimeLabel.text = performer.type.capitalized
+        getPerformerImage(with: performer)
     }
     
     // Check if user selected event as Favorite
     func favoriteEventSelected() {
-        if userDefaults.bool(forKey: event?.id.description ?? "") == true{
+        if userDefaults.bool(forKey: event?.id.description ?? "") == true {
+            
             favoriteEventImageView.image     = SFSymbols.filledHeart
             favoriteEventImageView.tintColor = .red
         } else if userDefaults.bool(forKey: venue?.id.description ?? "")  == true {
+            
             favoriteEventImageView.image     = SFSymbols.filledHeart
             favoriteEventImageView.tintColor = .red
         } else {
+            
             favoriteEventImageView.image     = UIImage(systemName: "")
             favoriteEventImageView.tintColor = .red
         }
     }
+    
     // Grab Image of event
-    func getImage(with event: Event) {
+    func getEventImage(with event: Event) {
+        
         let imagePath = event.performers[0].image
-        eventController.grabImageFromEvent(path: imagePath) { result in
+        
+        eventController.grabImageFromNetwork(path: imagePath) { result in
             guard let imageString = try? result.get() else { return }
             let image = UIImage(data: imageString)
             DispatchQueue.main.async {
                 self.eventImageView.layer.cornerRadius = 10
                 self.eventImageView.image = image
-                
+            }
+        }
+    }
+    
+    func getPerformerImage(with performer: Performers) {
+        let imagePath = performer.image
+        
+        eventController.grabImageFromNetwork(path: imagePath) { result in
+            guard let imageString = try? result.get() else { return }
+            let image = UIImage(data: imageString)
+            DispatchQueue.main.async {
+                self.eventImageView.layer.cornerRadius = 7
+                self.eventImageView.image = image
             }
         }
     }
