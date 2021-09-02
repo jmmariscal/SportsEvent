@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-lH-fk6">
-                                <rect key="frame" x="20" y="170" width="374" height="300"/>
+                                <rect key="frame" x="20" y="118" width="374" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="Uwd-nK-ofl"/>
                                     <constraint firstAttribute="height" constant="300" id="cLw-M4-pGV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-py-wHu">
-                                <rect key="frame" x="20" y="510" width="374" height="40"/>
+                                <rect key="frame" x="20" y="458" width="374" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XFM-sk-vYC"/>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-34-HlT">
-                                <rect key="frame" x="20" y="570" width="374" height="30"/>
+                                <rect key="frame" x="20" y="518" width="374" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2HK-gA-lbj"/>
@@ -80,7 +80,7 @@
         <!--Search-->
         <scene sceneID="jcP-sI-aAx">
             <objects>
-                <tableViewController id="Y9R-mp-CjA" customClass="EventsTableViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y9R-mp-CjA" customClass="SearchResultsTableViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kJW-Nm-obk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-W5-Z85">
-                                <rect key="frame" x="0.0" y="171" width="414" height="691"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="743"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -272,7 +272,8 @@
                                 </prototypes>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-qK-Hwx">
-                                <rect key="frame" x="107" y="140" width="200" height="32"/>
+                                <rect key="frame" x="107" y="88" width="200" height="32"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="so1-jb-ePh"/>
                                 </constraints>
@@ -280,13 +281,14 @@
                                     <segment title="Events"/>
                                     <segment title="Venues"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="selectedSegment:" destination="x8g-Xr-2Ue" eventType="valueChanged" id="ZNE-dW-e6M"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1kE-Bs-fAS"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UQ1-qK-Hwx" firstAttribute="centerX" secondItem="C5y-ik-MkB" secondAttribute="centerX" id="L7E-um-9Bl"/>
                             <constraint firstItem="bjL-W5-Z85" firstAttribute="leading" secondItem="1kE-Bs-fAS" secondAttribute="leading" id="Myx-bp-tGm"/>
@@ -308,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="1793" y="838"/>
         </scene>
-        <!--Home-->
+        <!--Discover-->
         <scene sceneID="Evx-8L-Qga">
             <objects>
                 <viewController id="EN6-7J-Hks" customClass="SearchSelectionViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
@@ -317,25 +319,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoN-DA-NUG">
-                                <rect key="frame" x="107" y="290" width="200" height="45"/>
+                                <rect key="frame" x="107" y="238" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.52941176469999995" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="sIb-qr-DQn"/>
                                     <constraint firstAttribute="height" constant="45" id="vZo-b5-Kvu"/>
                                 </constraints>
-                                <state key="normal" title="Search Events"/>
+                                <state key="normal" title="Search Events">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Y9R-mp-CjA" kind="show" identifier="searchByEventSegue" id="LC3-3p-74J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqs-OK-G5f">
-                                <rect key="frame" x="107" y="375" width="200" height="45"/>
+                                <rect key="frame" x="107" y="323" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.52941176469999995" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Mes-Jo-Mbh"/>
                                     <constraint firstAttribute="height" constant="45" id="sbj-9f-ktf"/>
                                     <constraint firstAttribute="width" constant="200" id="vy6-uK-rk4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="xBC-iu-kwq"/>
                                 </constraints>
-                                <state key="normal" title="Search Venues"/>
+                                <state key="normal" title="Search Venues">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Y9R-mp-CjA" kind="show" identifier="searchByVenueSegue" id="SVP-f1-08S"/>
                                 </connections>
@@ -350,13 +358,18 @@
                             <constraint firstItem="qqs-OK-G5f" firstAttribute="centerX" secondItem="5Tw-lN-jmh" secondAttribute="centerX" id="e6f-Dd-DCU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="hok-rj-CHj">
+                    <navigationItem key="navigationItem" title="Discover" id="hok-rj-CHj">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="dIX-xP-qau">
+                            <color key="tintColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="x8g-Xr-2Ue" kind="show" id="ED2-eK-lYB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchEventButton" destination="OoN-DA-NUG" id="ebc-27-bB1"/>
+                        <outlet property="searchVenueButton" destination="qqs-OK-G5f" id="Tic-L5-mXl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1t0-Yu-N6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,11 +380,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQe-49-Q74" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dlZ-23-daY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dlZ-23-daY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

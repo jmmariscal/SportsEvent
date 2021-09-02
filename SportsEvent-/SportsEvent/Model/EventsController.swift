@@ -14,6 +14,7 @@ protocol EventsNetworkManager {
     func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void)
     var event: Events? { get }
     var venue: Venues? { get }
+    var performer: Performers? { get }
 }
 
 enum NetworkError: Error {
@@ -27,9 +28,11 @@ class EventsController: EventsNetworkManager {
     
     var event: Events?
     var venue: Venues?
+    var performer: Performers?
     
     var favoriteEventList: [Event] = []
     var favoriteVenueList: [Venue] = []
+    var favoritePerformerList: [Performers] = []
     var workerItem: DispatchWorkItem?
     
     init() {
@@ -37,9 +40,10 @@ class EventsController: EventsNetworkManager {
         loadVenueFromPersistentStore()
     }
     
-    private let clientID      = "MTAzNzU2MTJ8MTYyNzExMzM4OS4xMDM3Mjk"
-    private let eventBaseURL  = URL(string: "https://api.seatgeek.com/2/events?")!
-    private let venueBaseURL  = URL(string: "https://api.seatgeek.com/2/venues?")!
+    private let clientID          = "MTAzNzU2MTJ8MTYyNzExMzM4OS4xMDM3Mjk"
+    private let eventBaseURL      = URL(string: "https://api.seatgeek.com/2/events?")!
+    private let venueBaseURL      = URL(string: "https://api.seatgeek.com/2/venues?")!
+    private let performersBaseURL = URL(string: "https://api.seatgeek.com/2/performers?")!
     
     enum HTTPMethod: String {
         case get    = "GET"
@@ -64,6 +68,19 @@ class EventsController: EventsNetworkManager {
     
     func generateVenueSearchTermRequest(searchTerm: String) -> URLRequest {
         var urlComponents = URLComponents(url: venueBaseURL, resolvingAgainstBaseURL: true)
+        let parameters = ["q": searchTerm, "client_id": clientID]
+        let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value)}
+        urlComponents?.queryItems = queryItems
+        
+        let requestURL = urlComponents!.url!
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        return request
+    }
+    
+    func generatePerformersSearchTermRequest(searchTerm: String) -> URLRequest {
+        var urlComponents = URLComponents(url: performersBaseURL, resolvingAgainstBaseURL: true)
         let parameters = ["q": searchTerm, "client_id": clientID]
         let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value)}
         urlComponents?.queryItems = queryItems
@@ -134,6 +151,53 @@ class EventsController: EventsNetworkManager {
             guard let strongSelf = self else { return }
             
             let request = strongSelf.generateVenueSearchTermRequest(searchTerm: searchTerm)
+                            
+            // Request data
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let response = response as? HTTPURLResponse,
+                   response.statusCode == 401 {
+                    completion(.failure(.unauthorized))
+                    return
+                }
+                
+                guard error == nil else {
+                    completion(.failure(.otherError(error!)))
+                    return
+                }
+            
+                guard let data = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                // Decode the data
+                let decoder = JSONDecoder()
+                do {
+                    strongSelf.venue = try decoder.decode(Venues.self, from: data)
+                    completion(.success(self!.venue!))
+                } catch {
+                    completion(.failure(.decodeFailed))
+                    print(error)
+                    return
+                }
+            }.resume()
+            
+        })
+        
+        // If no new text has been entered in 400 milliseconds, then it will fire off the request.
+        if let dispatchWorkerItem = workerItem {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: dispatchWorkerItem)
+        }
+    }
+    
+    func searchPerformers(searchTerm: String, completion: @escaping (Result<Performers, NetworkError>) -> Void) {
+        // Cancel the previous request since it is going to make another one again.
+        workerItem?.cancel()
+        
+        self.workerItem = DispatchWorkItem(block: { [weak self] in
+            
+            guard let strongSelf = self else { return }
+            
+            let request = strongSelf.generatePerformersSearchTermRequest(searchTerm: searchTerm)
                             
             // Request data
             URLSession.shared.dataTask(with: request) { (data, response, error) in

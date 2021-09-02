@@ -53,5 +53,8 @@ struct Venue: Codable {
 }
 
 struct Performers: Codable {
+    let name: String
     let image: String
+    let type: String
+    let id: Int
 }

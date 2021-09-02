@@ -19,6 +19,7 @@ class EventTableViewCell: UITableViewCell {
     var venue: Venue? {
         didSet{
             updateVenueViews()
+            favoriteEventSelected()
         }
     }
     let userDefaults = UserDefaults.standard
@@ -41,16 +42,18 @@ class EventTableViewCell: UITableViewCell {
     
     private func updateVenueViews() {
         guard let venue = venue else { return }
-        
+
         eventTitleLabel.text = venue.name
         eventLocationLabel.text = venue.location
-        favoriteEventImageView.image = nil
-        layoutIfNeeded()
+        eventImageView.image = UIImage(named: "")
     }
     
     // Check if user selected event as Favorite
     func favoriteEventSelected() {
         if userDefaults.bool(forKey: event?.id.description ?? "") == true{
+            favoriteEventImageView.image     = SFSymbols.filledHeart
+            favoriteEventImageView.tintColor = .red
+        } else if userDefaults.bool(forKey: venue?.id.description ?? "")  == true {
             favoriteEventImageView.image     = SFSymbols.filledHeart
             favoriteEventImageView.tintColor = .red
         } else {

@@ -14,10 +14,14 @@ class SearchSelectionViewController: UIViewController {
     var venue: Venue?
     var buttonPressed: SearchType?
 
+    @IBOutlet weak var searchEventButton: UIButton!
+    @IBOutlet weak var searchVenueButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        searchEventButton.layer.cornerRadius = 10
+        searchVenueButton.layer.cornerRadius = 10
     }
     
 
@@ -26,11 +30,11 @@ class SearchSelectionViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "searchByEventSegue", let tableVC = segue.destination as? EventsTableViewController {
+        if segue.identifier == "searchByEventSegue", let tableVC = segue.destination as? SearchResultsTableViewController {
             buttonPressed = .searchByEvent
             tableVC.buttonPressed = buttonPressed
             
-        } else if segue.identifier == "searchByVenueSegue", let tableVC = segue.destination as? EventsTableViewController {
+        } else if segue.identifier == "searchByVenueSegue", let tableVC = segue.destination as? SearchResultsTableViewController {
             buttonPressed = .searchByVenue
             tableVC.buttonPressed = buttonPressed
         }

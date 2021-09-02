@@ -1,5 +1,5 @@
 //
-//  EventsTableViewController.swift
+//  SearchResultsTableViewController.swift
 //  SportsEvent
 //
 //  Created by Juan M Mariscal on 7/23/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventsTableViewController: UITableViewController {
+class SearchResultsTableViewController: UITableViewController {
 
     var buttonPressed: SearchType?
     var eventController = EventsController()
@@ -28,13 +28,10 @@ class EventsTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let barBackgroundColor = UIColor(red: 40/255, green: 53/255, blue: 147/255, alpha: 1.0)
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
         searchBar.delegate = self
-        navigationController?.navigationBar.barTintColor = barBackgroundColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,7 +84,7 @@ class EventsTableViewController: UITableViewController {
 
 }
 
-extension EventsTableViewController: UISearchBarDelegate {
+extension SearchResultsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Search for events while User is typing in Search Bar
         switch buttonPressed {

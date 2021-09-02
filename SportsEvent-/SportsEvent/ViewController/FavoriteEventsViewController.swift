@@ -36,7 +36,6 @@ class FavoriteEventsViewController: UIViewController {
         tableView.reloadData()
     }
     
-    
 }
 
 extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegate {
@@ -80,6 +79,8 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
             return
         }
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEventDetailSegue", let detailVC = segue.destination as? EventDetailViewController {

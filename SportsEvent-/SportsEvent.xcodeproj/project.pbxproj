@@ -15,7 +15,7 @@
 		AF3D714826AB3EFB0057E857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D714626AB3EFB0057E857 /* Main.storyboard */; };
 		AF3D714A26AB3EFC0057E857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3D714926AB3EFC0057E857 /* Assets.xcassets */; };
 		AF3D714D26AB3EFC0057E857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D714B26AB3EFC0057E857 /* LaunchScreen.storyboard */; };
-		AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715726AB3F7A0057E857 /* EventsTableViewController.swift */; };
+		AF3D715826AB3F7A0057E857 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715726AB3F7A0057E857 /* SearchResultsTableViewController.swift */; };
 		AF3D715A26AB3F980057E857 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715926AB3F980057E857 /* EventTableViewCell.swift */; };
 		AF3D715C26AB3FA50057E857 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715B26AB3FA50057E857 /* Event.swift */; };
 		AF3D715E26AE4E6C0057E857 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */; };
@@ -50,7 +50,7 @@
 		AF3D714926AB3EFC0057E857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3D714C26AB3EFC0057E857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3D714E26AB3EFC0057E857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF3D715726AB3F7A0057E857 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		AF3D715726AB3F7A0057E857 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		AF3D715926AB3F980057E857 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		AF3D715B26AB3FA50057E857 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		AF3D715426AB3F4A0057E857 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF3D715726AB3F7A0057E857 /* EventsTableViewController.swift */,
+				AF3D715726AB3F7A0057E857 /* SearchResultsTableViewController.swift */,
 				AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */,
 				AFB0DFFA26CDB24B00CF6541 /* FavoriteEventsViewController.swift */,
 				AF0BC59526D81524004F6D54 /* SearchSelectionViewController.swift */,
@@ -271,7 +271,7 @@
 				AF0BC59226D7536E004F6D54 /* Venues.swift in Sources */,
 				AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */,
 				AFB0DFFB26CDB24B00CF6541 /* FavoriteEventsViewController.swift in Sources */,
-				AF3D715826AB3F7A0057E857 /* EventsTableViewController.swift in Sources */,
+				AF3D715826AB3F7A0057E857 /* SearchResultsTableViewController.swift in Sources */,
 				AF3D716026AE525E0057E857 /* EventsController.swift in Sources */,
 				AFB0DFF926CC178B00CF6541 /* UIImage+EventImage.swift in Sources */,
 				AF3D715C26AB3FA50057E857 /* Event.swift in Sources */,
