@@ -11,6 +11,7 @@ import UIKit
 protocol EventsNetworkManager {
     func searchEvent(searchTerm: String, completion: @escaping (Result<Events, NetworkError>) -> Void)
     func searchVenue(searchTerm: String, completion: @escaping (Result<Venues, NetworkError>) -> Void)
+    func searchPerformers(searchTerm: String, completion: @escaping (Result<Performer, NetworkError>) -> Void)
     func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void)
     var event: Events? { get }
     var venue: Venues? { get }
@@ -257,10 +258,8 @@ class EventsController: EventsNetworkManager {
     }
     
     // MARK: - Persistence
-    // Load from Persistent Store the event or venue
+    // Load from Persistent Store the event, venue, performer
     func loadEventFromPersistentStore() {
-        
-        // Plist -> Data -> Stars
         let fileManager = FileManager.default
         guard let url = eventURL, fileManager.fileExists(atPath: url.path) else {
             favoriteEventList = []
@@ -277,7 +276,6 @@ class EventsController: EventsNetworkManager {
     }
     
     func loadVenueFromPersistentStore() {
-
         let fileManager = FileManager.default
         guard let url = venueURL, fileManager.fileExists(atPath: url.path) else {
             favoriteVenueList = []
@@ -293,11 +291,25 @@ class EventsController: EventsNetworkManager {
         }
     }
     
-    // Save to Persistent Store the event or venue
+    func loadPerformerFromPersistentStore() {
+        let fileManager = FileManager.default
+        guard let url = performerURL, fileManager.fileExists(atPath: url.path) else {
+            favoritePerformerList = []
+            return
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            self.favoritePerformerList = try decoder.decode([Performers].self, from: data)
+        } catch {
+            print("Error loading event data: \(error)")
+        }
+    }
+    
+    // Save to Persistent Store the event, venue or performer
     func saveEventToPersistentStore() {
-        
         guard let eventUrl = eventURL else { return }
-        
         do {
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(favoriteEventList)
@@ -308,15 +320,24 @@ class EventsController: EventsNetworkManager {
     }
     
     func saveVenueToPersistentStore() {
-        
         guard let venueUrl = venueURL else { return }
-        
         do {
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(favoriteVenueList)
             try data.write(to: venueUrl)
         } catch {
             print("Error saving venue data: \(error)")
+        }
+    }
+    
+    func savePerformerToPersistentStore() {
+        guard let performerUrl = performerURL else { return }
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(favoritePerformerList)
+            try data.write(to: performerUrl)
+        } catch {
+            print("Error saving performer data: \(error)")
         }
     }
     
@@ -345,6 +366,13 @@ class EventsController: EventsNetworkManager {
         let fileName = "venue.plist"
         
         return docuemntDirectory?.appendingPathComponent(fileName)
+    }
+    
+    private var performerURL: URL? {
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let fileName = "performer.plist"
+        
+        return documentDirectory?.appendingPathComponent(fileName)
     }
 }
 
