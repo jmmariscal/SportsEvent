@@ -14,7 +14,7 @@ protocol EventsNetworkManager {
     func grabImageFromEvent(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void)
     var event: Events? { get }
     var venue: Venues? { get }
-    var performer: Performers? { get }
+    var performer: Performer? { get }
 }
 
 enum NetworkError: Error {
@@ -28,7 +28,7 @@ class EventsController: EventsNetworkManager {
     
     var event: Events?
     var venue: Venues?
-    var performer: Performers?
+    var performer: Performer?
     
     var favoriteEventList: [Event] = []
     var favoriteVenueList: [Venue] = []
@@ -55,8 +55,8 @@ class EventsController: EventsNetworkManager {
     func generateEventSearchTermRequest(searchTerm: String) -> URLRequest {
         
         var urlComponets = URLComponents(url: eventBaseURL, resolvingAgainstBaseURL: true)
-        let parameters = ["q": searchTerm, "client_id": clientID]
-        let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
+        let parameters   = ["q": searchTerm, "client_id": clientID]
+        let queryItems   = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
             urlComponets?.queryItems = queryItems
         
         let requestURL = urlComponets!.url!
@@ -68,12 +68,12 @@ class EventsController: EventsNetworkManager {
     
     func generateVenueSearchTermRequest(searchTerm: String) -> URLRequest {
         var urlComponents = URLComponents(url: venueBaseURL, resolvingAgainstBaseURL: true)
-        let parameters = ["q": searchTerm, "client_id": clientID]
-        let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value)}
+        let parameters    = ["q": searchTerm, "client_id": clientID]
+        let queryItems    = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value)}
         urlComponents?.queryItems = queryItems
         
         let requestURL = urlComponents!.url!
-        var request = URLRequest(url: requestURL)
+        var request    = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         
         return request
@@ -81,12 +81,12 @@ class EventsController: EventsNetworkManager {
     
     func generatePerformersSearchTermRequest(searchTerm: String) -> URLRequest {
         var urlComponents = URLComponents(url: performersBaseURL, resolvingAgainstBaseURL: true)
-        let parameters = ["q": searchTerm, "client_id": clientID]
-        let queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value)}
+        let parameters    = ["q": searchTerm, "client_id": clientID]
+        let queryItems    = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value)}
         urlComponents?.queryItems = queryItems
         
         let requestURL = urlComponents!.url!
-        var request = URLRequest(url: requestURL)
+        var request    = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         
         return request
@@ -189,7 +189,7 @@ class EventsController: EventsNetworkManager {
         }
     }
     
-    func searchPerformers(searchTerm: String, completion: @escaping (Result<Performers, NetworkError>) -> Void) {
+    func searchPerformers(searchTerm: String, completion: @escaping (Result<Performer, NetworkError>) -> Void) {
         // Cancel the previous request since it is going to make another one again.
         workerItem?.cancel()
         
@@ -219,8 +219,8 @@ class EventsController: EventsNetworkManager {
                 // Decode the data
                 let decoder = JSONDecoder()
                 do {
-                    strongSelf.venue = try decoder.decode(Venues.self, from: data)
-                    completion(.success(self!.venue!))
+                    strongSelf.performer = try decoder.decode(Performer.self, from: data)
+                    completion(.success(self!.performer!))
                 } catch {
                     completion(.failure(.decodeFailed))
                     print(error)
