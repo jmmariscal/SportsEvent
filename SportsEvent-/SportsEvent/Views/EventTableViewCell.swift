@@ -22,6 +22,12 @@ class EventTableViewCell: UITableViewCell {
             favoriteEventSelected()
         }
     }
+    var performer: Performers? {
+        didSet{
+            updateVenueViews()
+            favoriteEventSelected()
+        }
+    }
     let userDefaults = UserDefaults.standard
 
     @IBOutlet weak var eventImageView: UIImageView!

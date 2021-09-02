@@ -24,6 +24,7 @@ class EventDetailViewController: UIViewController {
     var eventController: EventsController!
     var event: Event?
     var venue: Venue?
+    var performer: Performers?
     var buttonPressed: SearchType?
     let userDefaults = UserDefaults.standard
     var trashButtonEnabled: Bool = false

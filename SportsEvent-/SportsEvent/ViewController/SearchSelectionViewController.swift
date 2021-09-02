@@ -16,12 +16,14 @@ class SearchSelectionViewController: UIViewController {
 
     @IBOutlet weak var searchEventButton: UIButton!
     @IBOutlet weak var searchVenueButton: UIButton!
+    @IBOutlet weak var searchPerformerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchEventButton.layer.cornerRadius = 10
-        searchVenueButton.layer.cornerRadius = 10
+        searchEventButton.layer.cornerRadius     = 8
+        searchVenueButton.layer.cornerRadius     = 8
+        searchPerformerButton.layer.cornerRadius = 8
     }
     
 
@@ -36,6 +38,9 @@ class SearchSelectionViewController: UIViewController {
             
         } else if segue.identifier == "searchByVenueSegue", let tableVC = segue.destination as? SearchResultsTableViewController {
             buttonPressed = .searchByVenue
+            tableVC.buttonPressed = buttonPressed
+        } else if segue.identifier == "searchByPerformerSegue", let tableVC = segue.destination as? SearchResultsTableViewController {
+            buttonPressed = .searchByPerformers
             tableVC.buttonPressed = buttonPressed
         }
     }

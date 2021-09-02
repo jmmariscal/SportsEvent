@@ -10,5 +10,5 @@ import Foundation
 enum SearchType {
     case searchByEvent
     case searchByVenue
-    //case searchByPerformers
+    case searchByPerformers
 }
