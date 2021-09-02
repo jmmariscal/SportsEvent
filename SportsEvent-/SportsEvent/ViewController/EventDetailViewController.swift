@@ -132,7 +132,7 @@ class EventDetailViewController: UIViewController {
         }
     }
     
-    // Grab Image from event
+    // Grab Image from network call
     func getEventImage(with event: Event) {
         let imagePath = event.performers[0].image
         eventController.grabImageFromNetwork(path: imagePath) { result in
@@ -175,11 +175,13 @@ class EventDetailViewController: UIViewController {
 
     }
     
+    // If user taps on favorite button, save and persist. If user unfavorites, remove from persistence and from favorite list
     func handleFavoriteEvent() {
         guard let event = event else { return }
 
         if favoriteButton.image == SFSymbols.filledHeart {
             userDefaults.set(false, forKey: event.id.description)
+            eventController.removeEventFromFavoriteList(id: event.id)
             favoriteButton.image = SFSymbols.heart
             
         } else if favoriteButton.image == SFSymbols.heart {
@@ -201,6 +203,7 @@ class EventDetailViewController: UIViewController {
 
         if favoriteButton.image == SFSymbols.filledHeart {
             userDefaults.set(false, forKey: venue.id.description)
+            eventController.removeVenueFromFavoriteList(id: venue.id)
             favoriteButton.image = SFSymbols.heart
             
         } else if favoriteButton.image == SFSymbols.heart {
@@ -222,6 +225,7 @@ class EventDetailViewController: UIViewController {
         
         if favoriteButton.image == SFSymbols.filledHeart {
             userDefaults.set(false, forKey: performer.id.description)
+            eventController.removePerformerFromFavoriteList(id: performer.id)
             favoriteButton.image = SFSymbols.heart
             
         } else if favoriteButton.image == SFSymbols.heart {
