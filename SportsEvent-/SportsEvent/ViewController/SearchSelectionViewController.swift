@@ -21,9 +21,9 @@ class SearchSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchEventButton.layer.cornerRadius     = 8
-        searchVenueButton.layer.cornerRadius     = 8
-        searchPerformerButton.layer.cornerRadius = 8
+        searchEventButton.layer.cornerRadius     = 7
+        searchVenueButton.layer.cornerRadius     = 7
+        searchPerformerButton.layer.cornerRadius = 7
     }
     
 
