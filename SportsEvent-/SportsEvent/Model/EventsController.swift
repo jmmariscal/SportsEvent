@@ -35,6 +35,8 @@ class EventsController: EventsNetworkManager {
     var favoriteVenueList: [Venue] = []
     var favoritePerformerList: [Performers] = []
     var workerItem: DispatchWorkItem?
+    private let queue = DispatchQueue(label: "com.Juan.eventsController")
+    private var imageCache: [String:Data] = [:]
     
     init() {
         loadEventFromPersistentStore()
@@ -237,24 +239,32 @@ class EventsController: EventsNetworkManager {
         }
     }
     
+    // MARK: Grab Image from Network
     func grabImageFromNetwork(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         // Build URL with necessary information
-        var request = URLRequest(url: URL(string: path)!)
-        request.httpMethod = HTTPMethod.get.rawValue
-        
-        // Request Image
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard error == nil else {
-                completion(.failure(.otherError(error!)))
-                return
-            }
+        if let imageData = imageCache[path] {
+            completion(.success(imageData))
+        } else {
+            var request = URLRequest(url: URL(string: path)!)
+            request.httpMethod = HTTPMethod.get.rawValue
             
-            guard let data = data else {
-                completion(.failure(.noData))
-                return
-            }
-            completion(.success(data))
-        }.resume()
+            // Request Image
+            URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+                guard error == nil else {
+                    completion(.failure(.otherError(error!)))
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                self?.queue.sync {
+                    self?.imageCache[path] = data
+                }
+                completion(.success(data))
+            }.resume()
+        }
     }
     
     // MARK: - Persistence

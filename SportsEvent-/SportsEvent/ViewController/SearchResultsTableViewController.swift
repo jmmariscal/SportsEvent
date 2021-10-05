@@ -114,11 +114,11 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
         // Search while User is typing in Search Bar
         switch buttonPressed {
         case .searchByEvent:
-            eventController.searchEvent(searchTerm: searchText) { (result) in
+            eventController.searchEvent(searchTerm: searchText) { result in
                 do {
                     let events = try result.get()
-                    DispatchQueue.main.async {
-                        self.events = events.events
+                    DispatchQueue.main.async { [weak self] in
+                        self?.events = events.events
                     }
                 } catch {
                     print("\(error)")
@@ -129,8 +129,8 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
             eventController.searchVenue(searchTerm: searchText) { result in
                 do {
                     let venues = try result.get()
-                    DispatchQueue.main.async {
-                        self.venues = venues.venues
+                    DispatchQueue.main.async { [weak self] in
+                        self?.venues = venues.venues
                     }
                 } catch {
                     print("\(error)")
@@ -141,8 +141,8 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
             eventController.searchPerformers(searchTerm: searchText) { result in
                 do {
                     let performers = try result.get()
-                    DispatchQueue.main.async {
-                        self.performers = performers.performers
+                    DispatchQueue.main.async { [weak self] in
+                        self?.performers = performers.performers
                     }
                 } catch {
                     print("\(error)")
