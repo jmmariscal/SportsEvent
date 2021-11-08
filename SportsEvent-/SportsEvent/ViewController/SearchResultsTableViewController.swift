@@ -51,12 +51,12 @@ class SearchResultsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch buttonPressed {
-        case .searchByEvent:
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
             return events.count
-        case .searchByVenue:
+        case 1:
             return venues.count
-        case .searchByPerformers:
+        case 2:
             return performers.count
         default:
             return 0
@@ -67,18 +67,31 @@ class SearchResultsTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventTableViewCell else {
             fatalError("Can't deque cell of type 'EventCell' ")
         }
-        switch buttonPressed {
-        case .searchByEvent:
+//        switch buttonPressed {
+//        case .searchByEvent:
+//            let event = events[indexPath.row]
+//            cell.event = event
+//        case .searchByVenue:
+//            let venue = venues[indexPath.row]
+//            cell.venue = venue
+//        case .searchByPerformers:
+//            let performer = performers[indexPath.row]
+//            cell.performer = performer
+//        default:
+//            print("No Button was selected, no Cell available")
+//        }
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
             let event = events[indexPath.row]
             cell.event = event
-        case .searchByVenue:
+        case 1:
             let venue = venues[indexPath.row]
             cell.venue = venue
-        case .searchByPerformers:
+        case 2:
             let performer = performers[indexPath.row]
             cell.performer = performer
         default:
-            print("No Button was selected, no Cell available")
+            print("Error occured in Segmented Controller selection")
         }
         return cell
     }
@@ -89,16 +102,16 @@ class SearchResultsTableViewController: UITableViewController {
         if segue.identifier == "eventDetail", let detailVC = segue.destination as? EventDetailViewController, let indexPath = tableView.indexPathForSelectedRow {
             detailVC.eventController = self.eventController
             
-            switch buttonPressed {
-            case .searchByEvent:
+            switch segmentedController.selectedSegmentIndex {
+            case 0:
                 let events = events[indexPath.row]
                 detailVC.buttonPressed = .searchByEvent
                 detailVC.event = events
-            case .searchByVenue:
+            case 1:
                 let venues = venues[indexPath.row]
                 detailVC.venue = venues
                 detailVC.buttonPressed = .searchByVenue
-            case .searchByPerformers:
+            case 2:
                 let performers = performers[indexPath.row]
                 detailVC.buttonPressed = .searchByPerformers
                 detailVC.performer = performers
@@ -113,8 +126,8 @@ class SearchResultsTableViewController: UITableViewController {
 extension SearchResultsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Search while User is typing in Search Bar
-        switch buttonPressed {
-        case .searchByEvent:
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
             eventController.searchEvent(searchTerm: searchText) { result in
                 do {
                     let events = try result.get()
@@ -126,7 +139,7 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
                     return
                 }
             }
-        case .searchByVenue:
+        case 1:
             eventController.searchVenue(searchTerm: searchText) { result in
                 do {
                     let venues = try result.get()
@@ -138,7 +151,7 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
                     return
                 }
             }
-        case .searchByPerformers:
+        case 2:
             eventController.searchPerformers(searchTerm: searchText) { result in
                 do {
                     let performers = try result.get()
