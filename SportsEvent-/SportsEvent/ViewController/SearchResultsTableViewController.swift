@@ -9,8 +9,8 @@ import UIKit
 
 class SearchResultsTableViewController: UITableViewController {
 
-    var buttonPressed: SearchType?
     var eventController = EventsController()
+    var buttonPressed: SearchType?
     
     var events: [Event] = [] {
         didSet {
@@ -105,8 +105,8 @@ class SearchResultsTableViewController: UITableViewController {
             switch segmentedController.selectedSegmentIndex {
             case 0:
                 let events = events[indexPath.row]
-                detailVC.buttonPressed = .searchByEvent
                 detailVC.event = events
+                detailVC.buttonPressed = .searchByEvent
             case 1:
                 let venues = venues[indexPath.row]
                 detailVC.venue = venues
