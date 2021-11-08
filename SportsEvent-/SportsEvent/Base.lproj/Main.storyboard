@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hQe-49-Q74">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="37h-NA-osJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,18 +14,18 @@
             <objects>
                 <viewController id="Hy7-eU-NgN" customClass="EventDetailViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rX9-6E-29K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-lH-fk6">
-                                <rect key="frame" x="20" y="30" width="374" height="300"/>
+                                <rect key="frame" x="20" y="118" width="374" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="Uwd-nK-ofl"/>
                                     <constraint firstAttribute="height" constant="300" id="cLw-M4-pGV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-py-wHu">
-                                <rect key="frame" x="20" y="370" width="374" height="40"/>
+                                <rect key="frame" x="20" y="458" width="374" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XFM-sk-vYC"/>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-34-HlT">
-                                <rect key="frame" x="20" y="430" width="374" height="30"/>
+                                <rect key="frame" x="20" y="518" width="374" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2HK-gA-lbj"/>
@@ -75,14 +75,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcM-YQ-5Kj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4566.666666666667" y="97.767857142857139"/>
+            <point key="canvasLocation" x="3830" y="89"/>
         </scene>
-        <!--Search-->
+        <!--Search Results Table View Controller-->
         <scene sceneID="jcP-sI-aAx">
             <objects>
                 <tableViewController id="Y9R-mp-CjA" customClass="SearchResultsTableViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kJW-Nm-obk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,25 +173,41 @@
                             <outlet property="delegate" destination="Y9R-mp-CjA" id="m6X-Mg-kCW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="o8w-f4-DoQ"/>
+                    <navigationItem key="navigationItem" id="o8w-f4-DoQ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="AeB-7a-bbq">
+                            <rect key="frame" x="84.5" y="5.5" width="245" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Event"/>
+                                <segment title="Venue"/>
+                                <segment title="Performer"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" red="0.4542825419" green="0.66666668650000005" blue="0.66200655180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="NEv-Ex-WKj">
+                            <color key="tintColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="w5E-7Q-P6u" id="Kjc-mu-hgC"/>
+                        <outlet property="segmentedController" destination="AeB-7a-bbq" id="kLZ-D3-9eD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s47-ut-iUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3637.68115942029" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2775" y="98"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="4ho-IF-Ny1">
             <objects>
                 <viewController id="x8g-Xr-2Ue" customClass="FavoriteEventsViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5y-ik-MkB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-W5-Z85">
-                                <rect key="frame" x="0.0" y="31" width="414" height="743"/>
+                                <rect key="frame" x="0.0" y="75" width="414" height="787"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -272,7 +288,7 @@
                                 </prototypes>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-qK-Hwx">
-                                <rect key="frame" x="57" y="0.0" width="300" height="32"/>
+                                <rect key="frame" x="57" y="44" width="300" height="32"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="so1-jb-ePh"/>
@@ -312,115 +328,27 @@
             </objects>
             <point key="canvasLocation" x="1793" y="838"/>
         </scene>
-        <!--Discover-->
-        <scene sceneID="Evx-8L-Qga">
-            <objects>
-                <viewController id="EN6-7J-Hks" customClass="SearchSelectionViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Tw-lN-jmh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoN-DA-NUG">
-                                <rect key="frame" x="107" y="150" width="200" height="45"/>
-                                <color key="backgroundColor" red="0.4431372549" green="0.52941176469999995" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="sIb-qr-DQn"/>
-                                    <constraint firstAttribute="height" constant="45" id="vZo-b5-Kvu"/>
-                                </constraints>
-                                <state key="normal" title="Search Events">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Y9R-mp-CjA" kind="show" identifier="searchByEventSegue" id="LC3-3p-74J"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqs-OK-G5f">
-                                <rect key="frame" x="107" y="235" width="200" height="45"/>
-                                <color key="backgroundColor" red="0.4431372549" green="0.52941176469999995" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="sbj-9f-ktf"/>
-                                    <constraint firstAttribute="width" constant="200" id="vy6-uK-rk4"/>
-                                </constraints>
-                                <state key="normal" title="Search Venues">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Y9R-mp-CjA" kind="show" identifier="searchByVenueSegue" id="SVP-f1-08S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZl-EU-Eur">
-                                <rect key="frame" x="107" y="320" width="200" height="45"/>
-                                <color key="backgroundColor" red="0.4431372549" green="0.52941176469999995" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="TnS-th-Chz"/>
-                                    <constraint firstAttribute="height" constant="45" id="ZzV-Rf-bQ0"/>
-                                </constraints>
-                                <state key="normal" title="Search Performers">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Y9R-mp-CjA" kind="show" identifier="searchByPerformerSegue" id="XU5-dR-ImV"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="STx-vK-h8b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OoN-DA-NUG" firstAttribute="centerX" secondItem="5Tw-lN-jmh" secondAttribute="centerX" id="RNx-E2-kz9"/>
-                            <constraint firstItem="qqs-OK-G5f" firstAttribute="top" secondItem="OoN-DA-NUG" secondAttribute="bottom" constant="40" id="RVq-vb-qLc"/>
-                            <constraint firstItem="WZl-EU-Eur" firstAttribute="top" secondItem="qqs-OK-G5f" secondAttribute="bottom" constant="40" id="UXU-sB-4zM"/>
-                            <constraint firstItem="WZl-EU-Eur" firstAttribute="centerX" secondItem="5Tw-lN-jmh" secondAttribute="centerX" id="bbk-Ve-e3X"/>
-                            <constraint firstItem="OoN-DA-NUG" firstAttribute="top" secondItem="STx-vK-h8b" secondAttribute="top" constant="150" id="cY4-Pb-1xI"/>
-                            <constraint firstItem="qqs-OK-G5f" firstAttribute="centerX" secondItem="5Tw-lN-jmh" secondAttribute="centerX" id="e6f-Dd-DCU"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Discover" id="hok-rj-CHj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="dIX-xP-qau">
-                            <color key="tintColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="x8g-Xr-2Ue" kind="show" id="ED2-eK-lYB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchEventButton" destination="OoN-DA-NUG" id="ebc-27-bB1"/>
-                        <outlet property="searchPerformerButton" destination="WZl-EU-Eur" id="9G1-9W-3Fd"/>
-                        <outlet property="searchVenueButton" destination="qqs-OK-G5f" id="Tic-L5-mXl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1t0-Yu-N6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2747.826086956522" y="97.767857142857139"/>
-        </scene>
         <!--Navigation Controller-->
-        <scene sceneID="b1P-is-f2U">
+        <scene sceneID="r8F-Fk-ybG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQe-49-Q74" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="37h-NA-osJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dlZ-23-daY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qVf-xv-Jqt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EN6-7J-Hks" kind="relationship" relationship="rootViewController" id="Vp5-iq-lfo"/>
+                        <segue destination="Y9R-mp-CjA" kind="relationship" relationship="rootViewController" id="eJQ-Oa-BdZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WFl-nS-ZY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MD6-Ga-nfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1942" y="98"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XU5-dR-ImV"/>
-        <segue reference="x6N-Fv-Eln"/>
+        <segue reference="MHx-OJ-cZx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

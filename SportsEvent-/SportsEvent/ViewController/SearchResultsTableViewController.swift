@@ -34,6 +34,7 @@ class SearchResultsTableViewController: UITableViewController {
         }
     }
     
+    @IBOutlet weak var segmentedController: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
