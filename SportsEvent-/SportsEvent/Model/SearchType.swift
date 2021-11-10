@@ -2,7 +2,7 @@
 //  SearchType.swift
 //  SportsEvent
 //
-//  Created by Juan M Mariscal on 8/26/21.
+//  Created by Juan M Mariscal on 11/8/21.
 //
 
 import Foundation

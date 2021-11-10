@@ -242,7 +242,7 @@ class EventsController: EventsNetworkManager {
     // MARK: Grab Image from Network
     func grabImageFromNetwork(path: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         // Build URL with necessary information
-        if let imageData = imageCache[path] {
+        if let imageData = self.queue.sync(execute: { imageCache[path] }) {
             completion(.success(imageData))
         } else {
             var request = URLRequest(url: URL(string: path)!)
