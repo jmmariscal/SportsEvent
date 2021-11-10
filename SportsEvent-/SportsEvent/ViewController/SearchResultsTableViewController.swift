@@ -41,6 +41,7 @@ class SearchResultsTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
         searchBar.delegate = self
+        searchBar.placeholder = "Search for an Event. Ex: Football"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,12 +90,18 @@ class SearchResultsTableViewController: UITableViewController {
     @IBAction func selectedSegmentedTab(_ sender: Any) {
         switch segmentedController.selectedSegmentIndex {
         case 0:
+            searchBar.text = ""
+            searchBar.placeholder = "Search for an Event. Ex: Football"
             venues = []
             performers = []
         case 1:
+            searchBar.text = ""
+            searchBar.placeholder = "Search for a Venue. Ex: Staples Center"
             events = []
             performers = []
         case 2:
+            searchBar.text = ""
+            searchBar.placeholder = "Search for a Performer. Ex: Skrillex"
             events = []
             venues = []
             
