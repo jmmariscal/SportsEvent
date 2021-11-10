@@ -67,19 +67,7 @@ class SearchResultsTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventTableViewCell else {
             fatalError("Can't deque cell of type 'EventCell' ")
         }
-//        switch buttonPressed {
-//        case .searchByEvent:
-//            let event = events[indexPath.row]
-//            cell.event = event
-//        case .searchByVenue:
-//            let venue = venues[indexPath.row]
-//            cell.venue = venue
-//        case .searchByPerformers:
-//            let performer = performers[indexPath.row]
-//            cell.performer = performer
-//        default:
-//            print("No Button was selected, no Cell available")
-//        }
+
         switch segmentedController.selectedSegmentIndex {
         case 0:
             let event = events[indexPath.row]
@@ -95,6 +83,27 @@ class SearchResultsTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    
+    // MARK: - IBActions
+    @IBAction func selectedSegmentedTab(_ sender: Any) {
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
+            venues = []
+            performers = []
+        case 1:
+            events = []
+            performers = []
+        case 2:
+            events = []
+            venues = []
+            
+        default:
+            print("Error: selecting segmented tab.")
+        }
+    }
+    
+    
     
     // MARK: - Navigation
 
