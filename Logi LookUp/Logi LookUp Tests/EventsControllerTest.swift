@@ -18,4 +18,5 @@ class EventsControllerTest: XCTestCase {
         XCTAssertTrue(((request.url?.query?.contains(searchTerm)) == true))
     }
 
+    
 }

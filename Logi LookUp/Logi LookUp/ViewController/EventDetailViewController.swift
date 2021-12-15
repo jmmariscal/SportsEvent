@@ -97,12 +97,13 @@ class EventDetailViewController: UIViewController {
         navTitleMultiLine(eventTitle: venue.name)
         
         eventLocationLabel.text = venue.location
+        eventDateTimeLabel.text = ""
         
         if userDefaults.bool(forKey: venue.id.description) == true {
-            favoriteButton.image = SFSymbols.filledHeart
+            favoriteButton.image     = SFSymbols.filledHeart
             favoriteButton.tintColor = .red
         } else if userDefaults.bool(forKey: venue.id.description) == true {
-            favoriteButton.image = SFSymbols.heart
+            favoriteButton.image     = SFSymbols.heart
             favoriteButton.tintColor = .red
         }
         
@@ -116,13 +117,14 @@ class EventDetailViewController: UIViewController {
         guard let performer = performer else { return }
         navTitleMultiLine(eventTitle: performer.name)
         eventDateTimeLabel.text = performer.type.capitalized
+        eventLocationLabel.text = ""
         getPerformerImage(with: performer)
         
         if userDefaults.bool(forKey: performer.id.description) == true {
-            favoriteButton.image = SFSymbols.filledHeart
+            favoriteButton.image    = SFSymbols.filledHeart
             favoriteButton.tintColor = .red
         } else if userDefaults.bool(forKey: performer.id.description) == true {
-            favoriteButton.image = SFSymbols.heart
+            favoriteButton.image    = SFSymbols.heart
             favoriteButton.tintColor = .red
         }
         

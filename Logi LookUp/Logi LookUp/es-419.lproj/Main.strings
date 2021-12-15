@@ -1,0 +1,45 @@
+
+/* Class = "UISegmentedControl"; AeB-7a-bbq.segmentTitles[0] = "Event"; ObjectID = "AeB-7a-bbq"; */
+"AeB-7a-bbq.segmentTitles[0]" = "Event";
+
+/* Class = "UISegmentedControl"; AeB-7a-bbq.segmentTitles[1] = "Venue"; ObjectID = "AeB-7a-bbq"; */
+"AeB-7a-bbq.segmentTitles[1]" = "Venue";
+
+/* Class = "UISegmentedControl"; AeB-7a-bbq.segmentTitles[2] = "Performer"; ObjectID = "AeB-7a-bbq"; */
+"AeB-7a-bbq.segmentTitles[2]" = "Performer";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "Gqo-J9-88q"; */
+"Gqo-J9-88q.title" = "Favorites";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "PRh-8o-VND"; */
+"PRh-8o-VND.text" = "Location";
+
+/* Class = "UILabel"; text = "Date and Time"; ObjectID = "SX2-py-wHu"; */
+"SX2-py-wHu.text" = "Date and Time";
+
+/* Class = "UISegmentedControl"; UQ1-qK-Hwx.segmentTitles[0] = "Events"; ObjectID = "UQ1-qK-Hwx"; */
+"UQ1-qK-Hwx.segmentTitles[0]" = "Events";
+
+/* Class = "UISegmentedControl"; UQ1-qK-Hwx.segmentTitles[1] = "Venues"; ObjectID = "UQ1-qK-Hwx"; */
+"UQ1-qK-Hwx.segmentTitles[1]" = "Venues";
+
+/* Class = "UISegmentedControl"; UQ1-qK-Hwx.segmentTitles[2] = "Performers"; ObjectID = "UQ1-qK-Hwx"; */
+"UQ1-qK-Hwx.segmentTitles[2]" = "Performers";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "aZy-cA-5cX"; */
+"aZy-cA-5cX.text" = "Event Title";
+
+/* Class = "UILabel"; text = "Date and Time"; ObjectID = "c6v-rf-vMu"; */
+"c6v-rf-vMu.text" = "Date and Time";
+
+/* Class = "UILabel"; text = "Date and Time"; ObjectID = "obT-aQ-jiq"; */
+"obT-aQ-jiq.text" = "Date and Time";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "pIU-O1-MVB"; */
+"pIU-O1-MVB.text" = "Event Title";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "vFB-Ew-NAA"; */
+"vFB-Ew-NAA.text" = "Location";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "xkW-34-HlT"; */
+"xkW-34-HlT.text" = "Location";

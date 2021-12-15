@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Logi LookUp/Base.lproj/Main.storyboard" source-language="en" target-language="es-419" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
+    </header>
+    <body>
+      <trans-unit id="AeB-7a-bbq.segmentTitles[0]" xml:space="preserve">
+        <source>Event</source>
+        <target>Event</target>
+        <note>Class = "UISegmentedControl"; AeB-7a-bbq.segmentTitles[0] = "Event"; ObjectID = "AeB-7a-bbq";</note>
+      </trans-unit>
+      <trans-unit id="AeB-7a-bbq.segmentTitles[1]" xml:space="preserve">
+        <source>Venue</source>
+        <target>Venue</target>
+        <note>Class = "UISegmentedControl"; AeB-7a-bbq.segmentTitles[1] = "Venue"; ObjectID = "AeB-7a-bbq";</note>
+      </trans-unit>
+      <trans-unit id="AeB-7a-bbq.segmentTitles[2]" xml:space="preserve">
+        <source>Performer</source>
+        <target>Performer</target>
+        <note>Class = "UISegmentedControl"; AeB-7a-bbq.segmentTitles[2] = "Performer"; ObjectID = "AeB-7a-bbq";</note>
+      </trans-unit>
+      <trans-unit id="Gqo-J9-88q.title" xml:space="preserve">
+        <source>Favorites</source>
+        <target>Favorites</target>
+        <note>Class = "UINavigationItem"; title = "Favorites"; ObjectID = "Gqo-J9-88q";</note>
+      </trans-unit>
+      <trans-unit id="PRh-8o-VND.text" xml:space="preserve">
+        <source>Location</source>
+        <target>Location</target>
+        <note>Class = "UILabel"; text = "Location"; ObjectID = "PRh-8o-VND";</note>
+      </trans-unit>
+      <trans-unit id="SX2-py-wHu.text" xml:space="preserve">
+        <source>Date and Time</source>
+        <target>Date and Time</target>
+        <note>Class = "UILabel"; text = "Date and Time"; ObjectID = "SX2-py-wHu";</note>
+      </trans-unit>
+      <trans-unit id="UQ1-qK-Hwx.segmentTitles[0]" xml:space="preserve">
+        <source>Events</source>
+        <target>Events</target>
+        <note>Class = "UISegmentedControl"; UQ1-qK-Hwx.segmentTitles[0] = "Events"; ObjectID = "UQ1-qK-Hwx";</note>
+      </trans-unit>
+      <trans-unit id="UQ1-qK-Hwx.segmentTitles[1]" xml:space="preserve">
+        <source>Venues</source>
+        <target>Venues</target>
+        <note>Class = "UISegmentedControl"; UQ1-qK-Hwx.segmentTitles[1] = "Venues"; ObjectID = "UQ1-qK-Hwx";</note>
+      </trans-unit>
+      <trans-unit id="UQ1-qK-Hwx.segmentTitles[2]" xml:space="preserve">
+        <source>Performers</source>
+        <target>Performers</target>
+        <note>Class = "UISegmentedControl"; UQ1-qK-Hwx.segmentTitles[2] = "Performers"; ObjectID = "UQ1-qK-Hwx";</note>
+      </trans-unit>
+      <trans-unit id="aZy-cA-5cX.text" xml:space="preserve">
+        <source>Event Title</source>
+        <target>Event Title</target>
+        <note>Class = "UILabel"; text = "Event Title"; ObjectID = "aZy-cA-5cX";</note>
+      </trans-unit>
+      <trans-unit id="c6v-rf-vMu.text" xml:space="preserve">
+        <source>Date and Time</source>
+        <target>Date and Time</target>
+        <note>Class = "UILabel"; text = "Date and Time"; ObjectID = "c6v-rf-vMu";</note>
+      </trans-unit>
+      <trans-unit id="obT-aQ-jiq.text" xml:space="preserve">
+        <source>Date and Time</source>
+        <target>Date and Time</target>
+        <note>Class = "UILabel"; text = "Date and Time"; ObjectID = "obT-aQ-jiq";</note>
+      </trans-unit>
+      <trans-unit id="pIU-O1-MVB.text" xml:space="preserve">
+        <source>Event Title</source>
+        <target>Event Title</target>
+        <note>Class = "UILabel"; text = "Event Title"; ObjectID = "pIU-O1-MVB";</note>
+      </trans-unit>
+      <trans-unit id="vFB-Ew-NAA.text" xml:space="preserve">
+        <source>Location</source>
+        <target>Location</target>
+        <note>Class = "UILabel"; text = "Location"; ObjectID = "vFB-Ew-NAA";</note>
+      </trans-unit>
+      <trans-unit id="xkW-34-HlT.text" xml:space="preserve">
+        <source>Location</source>
+        <target>Location</target>
+        <note>Class = "UILabel"; text = "Location"; ObjectID = "xkW-34-HlT";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Logi LookUp/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="es-419">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Logi LookUp</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

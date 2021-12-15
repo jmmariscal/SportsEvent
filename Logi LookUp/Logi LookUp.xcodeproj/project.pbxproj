@@ -10,6 +10,7 @@
 		AF0BC59226D7536E004F6D54 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC59126D7536E004F6D54 /* Venues.swift */; };
 		AF0BC59626D81524004F6D54 /* SearchSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC59526D81524004F6D54 /* SearchSelectionViewController.swift */; };
 		AF39A3C72739B10500464D53 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39A3C62739B10500464D53 /* SearchType.swift */; };
+		AF39A3CB274DB3D400464D53 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB0DFCF26C72BC500CF6541 /* Info.plist */; };
 		AF3D714126AB3EFB0057E857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D714026AB3EFB0057E857 /* AppDelegate.swift */; };
 		AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D714226AB3EFB0057E857 /* SceneDelegate.swift */; };
 		AF3D714826AB3EFB0057E857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D714626AB3EFB0057E857 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		AF3D715C26AB3FA50057E857 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715B26AB3FA50057E857 /* Event.swift */; };
 		AF3D715E26AE4E6C0057E857 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */; };
 		AF3D716026AE525E0057E857 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D715F26AE525E0057E857 /* EventsController.swift */; };
+		AF8730D72761D54600F4C6E2 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8730D62761D54600F4C6E2 /* LocalizableStrings.swift */; };
 		AF9DD0E126E07014003784F1 /* Performer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DD0E026E07014003784F1 /* Performer.swift */; };
 		AFB0DFCE26C72BC500CF6541 /* SportsEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */; };
 		AFB0DFD526C72BDC00CF6541 /* EventDateUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */; };
@@ -44,7 +46,7 @@
 		AF0BC59126D7536E004F6D54 /* Venues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venues.swift; sourceTree = "<group>"; };
 		AF0BC59526D81524004F6D54 /* SearchSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectionViewController.swift; sourceTree = "<group>"; };
 		AF39A3C62739B10500464D53 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
-		AF3D713D26AB3EFB0057E857 /* SportsEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3D713D26AB3EFB0057E857 /* Logi LookUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logi LookUp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3D714026AB3EFB0057E857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3D714226AB3EFB0057E857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF3D714726AB3EFB0057E857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,9 +58,12 @@
 		AF3D715B26AB3FA50057E857 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF3D715D26AE4E6C0057E857 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		AF3D715F26AE525E0057E857 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		AF8730D32761D4D800F4C6E2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		AF8730D42761D4D800F4C6E2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AF8730D62761D54600F4C6E2 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		AF9DD0E026E07014003784F1 /* Performer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performer.swift; sourceTree = "<group>"; };
 		AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateUnitTest.swift; sourceTree = "<group>"; };
-		AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsEventTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB0DFCB26C72BC500CF6541 /* Logi LookUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logi LookUpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB0DFCD26C72BC500CF6541 /* SportsEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsEventTests.swift; sourceTree = "<group>"; };
 		AFB0DFCF26C72BC500CF6541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ISO8601Format.swift"; sourceTree = "<group>"; };
@@ -89,8 +94,8 @@
 		AF3D713426AB3EFB0057E857 = {
 			isa = PBXGroup;
 			children = (
-				AF3D713F26AB3EFB0057E857 /* SportsEvent */,
-				AFB0DFCC26C72BC500CF6541 /* SportsEventTests */,
+				AF3D713F26AB3EFB0057E857 /* Logi LookUp */,
+				AFB0DFCC26C72BC500CF6541 /* Logi LookUp Tests */,
 				AF3D713E26AB3EFB0057E857 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,18 +103,19 @@
 		AF3D713E26AB3EFB0057E857 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF3D713D26AB3EFB0057E857 /* SportsEvent.app */,
-				AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */,
+				AF3D713D26AB3EFB0057E857 /* Logi LookUp.app */,
+				AFB0DFCB26C72BC500CF6541 /* Logi LookUpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF3D713F26AB3EFB0057E857 /* SportsEvent */ = {
+		AF3D713F26AB3EFB0057E857 /* Logi LookUp */ = {
 			isa = PBXGroup;
 			children = (
 				AF3D715626AB3F590057E857 /* Model */,
 				AF3D715526AB3F530057E857 /* Views */,
 				AF3D715426AB3F4A0057E857 /* ViewController */,
+				AF8730D52761D51C00F4C6E2 /* Localize */,
 				AF3D714026AB3EFB0057E857 /* AppDelegate.swift */,
 				AF3D714226AB3EFB0057E857 /* SceneDelegate.swift */,
 				AF3D714626AB3EFB0057E857 /* Main.storyboard */,
@@ -119,7 +125,7 @@
 				AFB0DFD626C72F9800CF6541 /* String+ISO8601Format.swift */,
 				AFB0DFF826CC178B00CF6541 /* UIImage+EventImage.swift */,
 			);
-			path = SportsEvent;
+			path = "Logi LookUp";
 			sourceTree = "<group>";
 		};
 		AF3D715426AB3F4A0057E857 /* ViewController */ = {
@@ -153,7 +159,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AFB0DFCC26C72BC500CF6541 /* SportsEventTests */ = {
+		AF8730D52761D51C00F4C6E2 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				AF8730D62761D54600F4C6E2 /* LocalizableStrings.swift */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		AFB0DFCC26C72BC500CF6541 /* Logi LookUp Tests */ = {
 			isa = PBXGroup;
 			children = (
 				AFB0DFC526C18DDF00CF6541 /* EventDateUnitTest.swift */,
@@ -162,15 +176,15 @@
 				AFB0DFCF26C72BC500CF6541 /* Info.plist */,
 				AFB5BC8026D45F1A0079C4A1 /* Events.json */,
 			);
-			path = SportsEventTests;
+			path = "Logi LookUp Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF3D713C26AB3EFB0057E857 /* SportsEvent */ = {
+		AF3D713C26AB3EFB0057E857 /* Logi LookUp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF3D715126AB3EFC0057E857 /* Build configuration list for PBXNativeTarget "SportsEvent" */;
+			buildConfigurationList = AF3D715126AB3EFC0057E857 /* Build configuration list for PBXNativeTarget "Logi LookUp" */;
 			buildPhases = (
 				AF3D713926AB3EFB0057E857 /* Sources */,
 				AF3D713A26AB3EFB0057E857 /* Frameworks */,
@@ -180,14 +194,14 @@
 			);
 			dependencies = (
 			);
-			name = SportsEvent;
+			name = "Logi LookUp";
 			productName = SportsEvent;
-			productReference = AF3D713D26AB3EFB0057E857 /* SportsEvent.app */;
+			productReference = AF3D713D26AB3EFB0057E857 /* Logi LookUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFB0DFCA26C72BC500CF6541 /* SportsEventTests */ = {
+		AFB0DFCA26C72BC500CF6541 /* Logi LookUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFB0DFD426C72BC500CF6541 /* Build configuration list for PBXNativeTarget "SportsEventTests" */;
+			buildConfigurationList = AFB0DFD426C72BC500CF6541 /* Build configuration list for PBXNativeTarget "Logi LookUpTests" */;
 			buildPhases = (
 				AFB0DFC726C72BC500CF6541 /* Sources */,
 				AFB0DFC826C72BC500CF6541 /* Frameworks */,
@@ -198,9 +212,9 @@
 			dependencies = (
 				AFB0DFD126C72BC500CF6541 /* PBXTargetDependency */,
 			);
-			name = SportsEventTests;
+			name = "Logi LookUpTests";
 			productName = SportsEventTests;
-			productReference = AFB0DFCB26C72BC500CF6541 /* SportsEventTests.xctest */;
+			productReference = AFB0DFCB26C72BC500CF6541 /* Logi LookUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -221,21 +235,22 @@
 					};
 				};
 			};
-			buildConfigurationList = AF3D713826AB3EFB0057E857 /* Build configuration list for PBXProject "SportsEvent" */;
+			buildConfigurationList = AF3D713826AB3EFB0057E857 /* Build configuration list for PBXProject "Logi LookUp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = AF3D713426AB3EFB0057E857;
 			productRefGroup = AF3D713E26AB3EFB0057E857 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF3D713C26AB3EFB0057E857 /* SportsEvent */,
-				AFB0DFCA26C72BC500CF6541 /* SportsEventTests */,
+				AF3D713C26AB3EFB0057E857 /* Logi LookUp */,
+				AFB0DFCA26C72BC500CF6541 /* Logi LookUpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF39A3CB274DB3D400464D53 /* Info.plist in Resources */,
 				AFB5BC8126D45F1A0079C4A1 /* Events.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +289,7 @@
 				AF3D714326AB3EFB0057E857 /* SceneDelegate.swift in Sources */,
 				AF0BC59626D81524004F6D54 /* SearchSelectionViewController.swift in Sources */,
 				AF0BC59226D7536E004F6D54 /* Venues.swift in Sources */,
+				AF8730D72761D54600F4C6E2 /* LocalizableStrings.swift in Sources */,
 				AFB0DFD726C72F9800CF6541 /* String+ISO8601Format.swift in Sources */,
 				AFB0DFFB26CDB24B00CF6541 /* FavoriteEventsViewController.swift in Sources */,
 				AF9DD0E126E07014003784F1 /* Performer.swift in Sources */,
@@ -298,7 +315,7 @@
 /* Begin PBXTargetDependency section */
 		AFB0DFD126C72BC500CF6541 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF3D713C26AB3EFB0057E857 /* SportsEvent */;
+			target = AF3D713C26AB3EFB0057E857 /* Logi LookUp */;
 			targetProxy = AFB0DFD026C72BC500CF6541 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -308,6 +325,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3D714726AB3EFB0057E857 /* Base */,
+				AF8730D32761D4D800F4C6E2 /* es-419 */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -316,6 +334,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3D714C26AB3EFC0057E857 /* Base */,
+				AF8730D42761D4D800F4C6E2 /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -327,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -388,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -445,14 +466,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 37Y3Y57488;
-				INFOPLIST_FILE = SportsEvent/Info.plist;
+				INFOPLIST_FILE = "Logi LookUp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.SportsEvent";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Mariscal-Development.SportsEvent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,14 +487,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 37Y3Y57488;
-				INFOPLIST_FILE = SportsEvent/Info.plist;
+				INFOPLIST_FILE = "Logi LookUp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.SportsEvent";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Mariscal-Development.SportsEvent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,7 +518,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportsEvent.app/SportsEvent";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Logi LookUp.app/Logi LookUp";
 			};
 			name = Debug;
 		};
@@ -515,14 +538,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportsEvent.app/SportsEvent";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Logi LookUp.app/Logi LookUp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF3D713826AB3EFB0057E857 /* Build configuration list for PBXProject "SportsEvent" */ = {
+		AF3D713826AB3EFB0057E857 /* Build configuration list for PBXProject "Logi LookUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF3D714F26AB3EFC0057E857 /* Debug */,
@@ -531,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF3D715126AB3EFC0057E857 /* Build configuration list for PBXNativeTarget "SportsEvent" */ = {
+		AF3D715126AB3EFC0057E857 /* Build configuration list for PBXNativeTarget "Logi LookUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF3D715226AB3EFC0057E857 /* Debug */,
@@ -540,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFB0DFD426C72BC500CF6541 /* Build configuration list for PBXNativeTarget "SportsEventTests" */ = {
+		AFB0DFD426C72BC500CF6541 /* Build configuration list for PBXNativeTarget "Logi LookUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFB0DFD226C72BC500CF6541 /* Debug */,
