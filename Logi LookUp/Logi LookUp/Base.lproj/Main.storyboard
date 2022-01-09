@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="37h-NA-osJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="37h-NA-osJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Event Detail View Controller-->
         <scene sceneID="rMN-sB-sAu">
             <objects>
-                <viewController id="Hy7-eU-NgN" customClass="EventDetailViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hy7-eU-NgN" customClass="EventDetailViewController" customModule="Logi_LookUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rX9-6E-29K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Search Results Table View Controller-->
         <scene sceneID="jcP-sI-aAx">
             <objects>
-                <tableViewController id="Y9R-mp-CjA" customClass="SearchResultsTableViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y9R-mp-CjA" customClass="SearchResultsTableViewController" customModule="Logi_LookUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kJW-Nm-obk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="190" id="0OZ-dz-mXx" customClass="EventTableViewCell" customModule="SportsEvent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="190" id="0OZ-dz-mXx" customClass="EventTableViewCell" customModule="Logi_LookUp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="93.5" width="374" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0OZ-dz-mXx" id="1wN-zZ-dXS">
@@ -179,9 +179,9 @@
                             <rect key="frame" x="84.5" y="5.5" width="245" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="Event"/>
-                                <segment title="Venue"/>
-                                <segment title="Performer"/>
+                                <segment title=""/>
+                                <segment title=""/>
+                                <segment title=""/>
                             </segments>
                             <color key="selectedSegmentTintColor" red="0.4542825419" green="0.66666668650000005" blue="0.66200655180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -207,7 +207,7 @@
         <!--Favorites-->
         <scene sceneID="4ho-IF-Ny1">
             <objects>
-                <viewController id="x8g-Xr-2Ue" customClass="FavoriteEventsViewController" customModule="SportsEvent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x8g-Xr-2Ue" customClass="FavoriteEventsViewController" customModule="Logi_LookUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5y-ik-MkB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +217,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteEventCell" rowHeight="190" id="OIZ-A1-rDm" customClass="EventTableViewCell" customModule="SportsEvent" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteEventCell" rowHeight="190" id="OIZ-A1-rDm" customClass="EventTableViewCell" customModule="Logi_LookUp" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49.5" width="374" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIZ-A1-rDm" id="ejR-Xj-8rd">
@@ -300,9 +300,9 @@
                                     <constraint firstAttribute="width" constant="300" id="so1-jb-ePh"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Events"/>
-                                    <segment title="Venues"/>
-                                    <segment title="Performers"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.45428254191493972" green="0.66666668653488159" blue="0.66200655182047241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -354,7 +354,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MHx-OJ-cZx"/>
+        <segue reference="x6N-Fv-Eln"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

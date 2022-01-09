@@ -41,12 +41,20 @@ class SearchResultsTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
         searchBar.delegate = self
-        searchBar.placeholder = "Search for an Event. Ex: Football"
+        setupSegmentedControllerNames()
+        searchBar.placeholder = localize.SearchBar.searchEventPlaceHolder
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    func setupSegmentedControllerNames() {
+        segmentedController.setTitle(localize.SegmentController.eventTitle, forSegmentAt: 0)
+        segmentedController.setTitle(localize.SegmentController.venueTitle, forSegmentAt: 1)
+        segmentedController.setTitle(localize.SegmentController.performerTitle, forSegmentAt: 2)
+
     }
 
     // MARK: - Table view data source
@@ -91,17 +99,17 @@ class SearchResultsTableViewController: UITableViewController {
         switch segmentedController.selectedSegmentIndex {
         case 0:
             searchBar.text = ""
-            searchBar.placeholder = "Search for an Event. Ex: Football"
+            searchBar.placeholder = localize.SearchBar.searchEventPlaceHolder
             venues = []
             performers = []
         case 1:
             searchBar.text = ""
-            searchBar.placeholder = "Search for a Venue. Ex: Staples Center"
+            searchBar.placeholder = localize.SearchBar.searchVenuePlaceHolder
             events = []
             performers = []
         case 2:
             searchBar.text = ""
-            searchBar.placeholder = "Search for a Performer. Ex: Skrillex"
+            searchBar.placeholder = localize.SearchBar.searchPerformerPlaceHolder
             events = []
             venues = []
             

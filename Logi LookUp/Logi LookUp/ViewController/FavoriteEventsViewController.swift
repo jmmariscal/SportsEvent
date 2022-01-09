@@ -19,6 +19,7 @@ class FavoriteEventsViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        setupSegmentControllerTitles()
         eventController.loadEventFromPersistentStore()
         eventController.loadVenueFromPersistentStore()
         eventController.loadPerformerFromPersistentStore()
@@ -36,6 +37,12 @@ class FavoriteEventsViewController: UIViewController {
     
     @IBAction func selectedSegment(_ sender: Any) {
         tableView.reloadData()
+    }
+    
+    func setupSegmentControllerTitles() {
+        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoriteEvents, forSegmentAt: 0)
+        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoriteVenues, forSegmentAt: 1)
+        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoritePerformers, forSegmentAt: 2)
     }
     
 }
