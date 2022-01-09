@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Logi LookUp
+
+  Created by Juan M Mariscal on 1/8/22.
+  
+*/
+
+// MARK: - SearchBar
+"SearchBar.searchPlaceHolder" = "Search for an Event. Ex: Football";
+"SearchBar.searchVenuePlaceHolder" = "Search for a Venue. Ex: Rose Bowl";
+"SearchBar.searchPerformerPlaceHolder" = "Search for a Performer. Ex: Drake";
+
+// MARK: - Segment Controller Title
+"SegmentCtrl.event" = "Event";
+"SegmentCtrl.venue" = "Venue";
+"SegmentCtrl.performer" = "Performer";
+
+// MARK: - Favorites Segment Controller Title
+"FavoriteSgmntCtrl.event" = "Events";
+"FavoriteSgmntCtrl.venue" = "Venues";
+"FavoriteSgmntCtrl.performer" = "Performers";
+
+// MARK: - Favorites
+"Favorites.name" = "FavoriteName";
+
