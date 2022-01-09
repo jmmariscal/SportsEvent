@@ -66,6 +66,10 @@ public enum LocalizedString {
     }
     
     enum Favorites {
-        
+        static let favoritesTitle = NSLocalizedString("Favorites.title",
+                                                      tableName: nil,
+                                                      bundle: Bundle.main,
+                                                      value: "Favorites",
+                                                      comment: "Title for Favorites View")
     }
 }

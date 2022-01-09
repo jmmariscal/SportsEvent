@@ -22,4 +22,4 @@
 "FavoriteSgmntCtrl.performer" = "Artistas";
 
 // MARK: - Favorites
-"Favorites.name" = "FavoriteName";
+"Favorites.title" = "Favoritos";

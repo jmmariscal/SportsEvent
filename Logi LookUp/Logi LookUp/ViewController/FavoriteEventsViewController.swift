@@ -24,6 +24,7 @@ class FavoriteEventsViewController: UIViewController {
         eventController.loadVenueFromPersistentStore()
         eventController.loadPerformerFromPersistentStore()
         tableView.reloadData()
+        navigationItem.title = localize.Favorites.favoritesTitle
         
     }
     
