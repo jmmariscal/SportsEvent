@@ -7,9 +7,9 @@
 */
 
 // MARK: - SearchBar
-"SearchBar.searchPlaceHolder" = "Busca un Evento. Ex: Football";
-"SearchBar.searchVenuePlaceHolder" = "Busca una Sede. Ex: Rose Bowl";
-"SearchBar.searchPerformerPlaceHolder" = "Busca un Artista. Ex: Drake";
+"SearchBar.searchPlaceHolder" = "Busca un Evento: 'Football'";
+"SearchBar.searchVenuePlaceHolder" = "Busca una Sede: 'Rose Bowl'";
+"SearchBar.searchPerformerPlaceHolder" = "Busca un Artista: 'Drake'";
 
 // MARK: - Segment Controller Title
 "SegmentCtrl.event" = "Evento";
@@ -23,3 +23,4 @@
 
 // MARK: - Favorites
 "Favorites.title" = "Favoritos";
+

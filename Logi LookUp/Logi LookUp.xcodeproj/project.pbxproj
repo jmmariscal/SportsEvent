@@ -10,7 +10,6 @@
 		AF0BC59226D7536E004F6D54 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC59126D7536E004F6D54 /* Venues.swift */; };
 		AF0BC59626D81524004F6D54 /* SearchSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC59526D81524004F6D54 /* SearchSelectionViewController.swift */; };
 		AF39A3C72739B10500464D53 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39A3C62739B10500464D53 /* SearchType.swift */; };
-		AF39A3CB274DB3D400464D53 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB0DFCF26C72BC500CF6541 /* Info.plist */; };
 		AF3B86E2278A98FC00CFA829 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF3B86E0278A98FC00CFA829 /* Localizable.strings */; };
 		AF3B86EA278A9AF000CFA829 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF3B86E8278A9AF000CFA829 /* Localizable.strings */; };
 		AF3D714126AB3EFB0057E857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D714026AB3EFB0057E857 /* AppDelegate.swift */; };
@@ -302,7 +301,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF39A3CB274DB3D400464D53 /* Info.plist in Resources */,
 				AFB5BC8126D45F1A0079C4A1 /* Events.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,13 +554,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37Y3Y57488;
-				INFOPLIST_FILE = SportsEventTests/Info.plist;
+				INFOPLIST_FILE = "Logi LookUp Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.SportsEventTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.Logi Lookup Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,13 +574,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37Y3Y57488;
-				INFOPLIST_FILE = SportsEventTests/Info.plist;
+				INFOPLIST_FILE = "Logi LookUp Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.SportsEventTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mariscal-Development.Logi Lookup Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
