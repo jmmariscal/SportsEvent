@@ -20,6 +20,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var eventDateTimeLabel: UILabel!
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
+    @IBOutlet weak var getTicketsBtn: UIButton!
     
     var eventController: EventsController!
     var event: Event?
@@ -117,7 +118,7 @@ class EventDetailViewController: UIViewController {
         guard let performer = performer else { return }
         navTitleMultiLine(eventTitle: performer.name)
         eventDateTimeLabel.text = performer.type.capitalized
-        eventLocationLabel.text = ""
+        eventLocationLabel.text = "# Upcoming Events: \(performer.numUpcomingEvents)"
         getPerformerImage(with: performer)
         
         if userDefaults.bool(forKey: performer.id.description) == true {
@@ -177,10 +178,23 @@ class EventDetailViewController: UIViewController {
 
     }
     @IBAction func getTicketsBtnTapped(_ sender: Any) {
-        
-        if let url = URL(string: event!.url) {
-            UIApplication.shared.open(url)
+        switch buttonPressed {
+        case .searchByEvent:
+            if let url = URL(string: event!.url) {
+                UIApplication.shared.open(url)
+            }
+        case .searchByPerformers:
+            if let url = URL(string: performer!.url) {
+                UIApplication.shared.open(url)
+            }
+        case .searchByVenue:
+            if let url = URL(string: venue!.url) {
+                UIApplication.shared.open(url)
+            }
+        case .none:
+            getTicketsBtn.titleLabel?.text = "No Tickets Available"
         }
+        
     }
     
     // If user taps on favorite button, save and persist. If user unfavorites, remove from persistence and from favorite list

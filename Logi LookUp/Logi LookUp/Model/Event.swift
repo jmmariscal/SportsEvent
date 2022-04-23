@@ -64,4 +64,14 @@ struct Performers: Codable {
     let type: String
     let id: Int
     let url: String
+    let numUpcomingEvents: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case numUpcomingEvents = "num_upcoming_events"
+        case name
+        case image
+        case type
+        case id
+        case url
+    }
 }
