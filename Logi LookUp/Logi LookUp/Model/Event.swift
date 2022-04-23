@@ -18,10 +18,12 @@ struct Event: Codable {
     let performers: [Performers]
     let id: Int
     let url: String
+    let timeTBD: Bool
 
     enum CodingKeys: String, CodingKey {
         case shortTitle = "short_title"
         case datetimeLocal = "datetime_local"
+        case timeTBD = "time_tbd"
         case venue
         case performers
         case id
