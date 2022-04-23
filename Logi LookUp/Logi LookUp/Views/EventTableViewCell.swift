@@ -41,7 +41,11 @@ class EventTableViewCell: UITableViewCell {
         
         eventTitleLabel.text    = event.shortTitle
         eventLocationLabel.text = event.venue.location
-        eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
+        if event.timeTBD == true {
+            eventDateTimeLabel.text = "TBD"
+        } else {
+            eventDateTimeLabel.text = event.datetimeLocal.datePresentationFormat
+        }
         getEventImage(with: event)
     }
     
