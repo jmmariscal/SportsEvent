@@ -6,12 +6,12 @@
 //
 
 import XCTest
-@testable import SportsEvent
+@testable import Logi_LookUp
 
 class SportsEventTests: XCTestCase {
     
     func testDecodingWorks() throws {
-        let bundle = Bundle(path: Bundle.main.bundlePath.appending("/PlugIns/SportsEventTests.xctest"))!
+        let bundle = Bundle(path: Bundle.main.bundlePath.appending("/PlugIns/LogiLookUpTests.xctest"))!
         let url = bundle.url(forResource: "Events", withExtension: "json")!
         let data = try Data(contentsOf: url)
         

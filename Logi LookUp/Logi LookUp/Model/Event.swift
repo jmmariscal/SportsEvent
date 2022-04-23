@@ -17,6 +17,7 @@ struct Event: Codable {
     let venue: Venue
     let performers: [Performers]
     let id: Int
+    let url: String
 
     enum CodingKeys: String, CodingKey {
         case shortTitle = "short_title"
@@ -24,6 +25,7 @@ struct Event: Codable {
         case venue
         case performers
         case id
+        case url
     }
 }
 
@@ -38,6 +40,7 @@ struct Venue: Codable {
     let name: String
     let address: String?
     let extendedAddress: String
+    let url: String
     var location: String {
         if let address = address {
             return "\(address) \(extendedAddress)"
@@ -49,6 +52,7 @@ struct Venue: Codable {
         case id
         case name
         case address
+        case url
     }
 }
 
@@ -57,4 +61,5 @@ struct Performers: Codable {
     let image: String
     let type: String
     let id: Int
+    let url: String
 }

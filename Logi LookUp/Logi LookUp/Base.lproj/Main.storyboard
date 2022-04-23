@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="37h-NA-osJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="37h-NA-osJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,38 +24,48 @@
                                     <constraint firstAttribute="height" constant="300" id="cLw-M4-pGV"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-py-wHu">
-                                <rect key="frame" x="20" y="458" width="374" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="XFM-sk-vYC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-34-HlT">
-                                <rect key="frame" x="20" y="518" width="374" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2HK-gA-lbj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Sr8-Eh-xwq">
+                                <rect key="frame" x="5" y="458" width="404" height="137"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-py-wHu">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XFM-sk-vYC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-34-HlT">
+                                        <rect key="frame" x="0.0" y="58" width="404" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2HK-gA-lbj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6B-sE-msL">
+                                        <rect key="frame" x="0.0" y="106" width="404" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Get Tickets"/>
+                                        <connections>
+                                            <action selector="getTicketsBtnTapped:" destination="Hy7-eU-NgN" eventType="touchUpInside" id="9Ud-gs-YJ8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="duT-TE-c0K"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SX2-py-wHu" firstAttribute="top" secondItem="wPz-lH-fk6" secondAttribute="bottom" constant="40" id="7UP-TI-Gs7"/>
-                            <constraint firstItem="xkW-34-HlT" firstAttribute="leading" secondItem="duT-TE-c0K" secondAttribute="leading" constant="20" id="Q3j-eV-3xU"/>
+                            <constraint firstItem="Sr8-Eh-xwq" firstAttribute="top" secondItem="wPz-lH-fk6" secondAttribute="bottom" constant="40" id="HgY-IV-Xyx"/>
+                            <constraint firstItem="duT-TE-c0K" firstAttribute="trailing" secondItem="Sr8-Eh-xwq" secondAttribute="trailing" constant="5" id="MrM-oN-KhT"/>
+                            <constraint firstItem="Sr8-Eh-xwq" firstAttribute="leading" secondItem="duT-TE-c0K" secondAttribute="leading" constant="5" id="Tng-BC-t9n"/>
                             <constraint firstItem="wPz-lH-fk6" firstAttribute="top" secondItem="duT-TE-c0K" secondAttribute="top" constant="30" id="UiP-Ei-Dv3"/>
-                            <constraint firstItem="xkW-34-HlT" firstAttribute="top" secondItem="SX2-py-wHu" secondAttribute="bottom" constant="20" id="epn-EW-08E"/>
-                            <constraint firstItem="SX2-py-wHu" firstAttribute="leading" secondItem="duT-TE-c0K" secondAttribute="leading" constant="20" id="gJe-fE-Pc6"/>
-                            <constraint firstItem="duT-TE-c0K" firstAttribute="trailing" secondItem="xkW-34-HlT" secondAttribute="trailing" constant="20" id="gqA-zt-Ohx"/>
                             <constraint firstItem="wPz-lH-fk6" firstAttribute="centerX" secondItem="rX9-6E-29K" secondAttribute="centerX" id="ifd-MX-7Yr"/>
-                            <constraint firstItem="duT-TE-c0K" firstAttribute="trailing" secondItem="SX2-py-wHu" secondAttribute="trailing" constant="20" id="tFK-TQ-0JR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J72-o8-hyX">
@@ -354,7 +364,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="x6N-Fv-Eln"/>
+        <segue reference="MHx-OJ-cZx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

@@ -176,6 +176,12 @@ class EventDetailViewController: UIViewController {
         }
 
     }
+    @IBAction func getTicketsBtnTapped(_ sender: Any) {
+        
+        if let url = URL(string: event!.url) {
+            UIApplication.shared.open(url)
+        }
+    }
     
     // If user taps on favorite button, save and persist. If user unfavorites, remove from persistence and from favorite list
     func handleFavoriteEvent() {

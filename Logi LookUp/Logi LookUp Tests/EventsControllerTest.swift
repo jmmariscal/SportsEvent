@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SportsEvent
+@testable import Logi_LookUp
 
 class EventsControllerTest: XCTestCase {
 
