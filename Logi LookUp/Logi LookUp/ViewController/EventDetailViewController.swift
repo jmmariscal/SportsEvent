@@ -63,10 +63,11 @@ class EventDetailViewController: UIViewController {
     func navTitleMultiLine(eventTitle: String) {
         let label = UILabel()
         label.backgroundColor = UIColor.clear
-        label.numberOfLines   = 2
+        label.numberOfLines   = 0
         label.font            = UIFont.boldSystemFont(ofSize: 15.0)
-        label.textAlignment   = .left
+        label.textAlignment   = .center
         label.text            = eventTitle
+        label.tintColor       = .black
         self.navigationItem.titleView = label
     }
         
