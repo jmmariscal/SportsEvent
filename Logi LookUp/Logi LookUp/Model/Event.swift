@@ -58,6 +58,10 @@ struct Venue: Codable {
     }
 }
 
+struct Genres: Codable {
+    let name: String
+}
+
 struct Performers: Codable {
     let name: String
     let image: String
@@ -65,7 +69,14 @@ struct Performers: Codable {
     let id: Int
     let url: String
     let numUpcomingEvents: Int
-    
+    let genres: [Genres]?
+    var genreName: String {
+        if let genre = genres?[0].name {
+            return "\(genre)"
+        } else {
+            return "No Associated Genre"
+        }
+    }
     enum CodingKeys: String, CodingKey {
         case numUpcomingEvents = "num_upcoming_events"
         case name
@@ -73,5 +84,6 @@ struct Performers: Codable {
         case type
         case id
         case url
+        case genres
     }
 }

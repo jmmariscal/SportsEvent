@@ -117,7 +117,7 @@ class EventDetailViewController: UIViewController {
     func updatePerformerDetail() {
         guard let performer = performer else { return }
         navTitleMultiLine(eventTitle: performer.name)
-        eventDateTimeLabel.text = performer.type.capitalized
+        eventDateTimeLabel.text = performer.genreName
         eventLocationLabel.text = "# Upcoming Events: \(performer.numUpcomingEvents)"
         getPerformerImage(with: performer)
         
