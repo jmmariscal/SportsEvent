@@ -42,8 +42,8 @@ class FavoriteEventsViewController: UIViewController {
     
     func setupSegmentControllerTitles() {
         favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoriteEvents, forSegmentAt: 0)
-        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoriteVenues, forSegmentAt: 1)
-        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoritePerformers, forSegmentAt: 2)
+        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoritePerformers, forSegmentAt: 1)
+        favoritesSegmentedControl.setTitle(localize.FavoriteSegmentTitleCtrl.favoriteVenues, forSegmentAt: 2)
     }
     
 }
@@ -55,9 +55,9 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
         case 0:
             return eventController.favoriteEventList.count
         case 1:
-            return eventController.favoriteVenueList.count
-        case 2:
             return eventController.favoritePerformerList.count
+        case 2:
+            return eventController.favoriteVenueList.count
         default:
             return 0
         }
@@ -73,12 +73,12 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
             cell.event = event
             return cell
         case 1:
-            let venue = eventController.favoriteVenueList[indexPath.row]
-            cell.venue = venue
-            return cell
-        case 2:
             let performer = eventController.favoritePerformerList[indexPath.row]
             cell.performer = performer
+            return cell
+        case 2:
+            let venue = eventController.favoriteVenueList[indexPath.row]
+            cell.venue = venue
             return cell
         default:
             print("Error: Could DequeReusable Cell")
@@ -91,9 +91,9 @@ extension FavoriteEventsViewController: UITableViewDataSource,UITableViewDelegat
         case 0:
             self.performSegue(withIdentifier: "showEventDetailSegue", sender: self)
         case 1:
-            self.performSegue(withIdentifier: "showVenueDetailSegue", sender: self)
-        case 2:
             self.performSegue(withIdentifier: "showPerformerDetailSegue", sender: self)
+        case 2:
+            self.performSegue(withIdentifier: "showVenueDetailSegue", sender: self)
         default:
             return
         }

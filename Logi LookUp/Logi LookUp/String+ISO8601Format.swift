@@ -16,7 +16,7 @@ extension String {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         let dateObject = formatter.date(from: self)
         
-        formatter.dateFormat = "MMM dd yyyy hh:mm a"
+        formatter.dateFormat = "MMM dd, yyyy hh:mm a"
         return dateObject.flatMap(formatter.string(from:))
     }
 }
