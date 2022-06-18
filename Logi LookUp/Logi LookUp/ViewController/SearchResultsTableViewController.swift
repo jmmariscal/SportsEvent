@@ -52,8 +52,8 @@ class SearchResultsTableViewController: UITableViewController {
     
     func setupSegmentedControllerNames() {
         segmentedController.setTitle(localize.SegmentController.eventTitle, forSegmentAt: 0)
-        segmentedController.setTitle(localize.SegmentController.venueTitle, forSegmentAt: 1)
-        segmentedController.setTitle(localize.SegmentController.performerTitle, forSegmentAt: 2)
+        segmentedController.setTitle(localize.SegmentController.performerTitle, forSegmentAt: 1)
+        segmentedController.setTitle(localize.SegmentController.venueTitle, forSegmentAt: 2)
 
     }
 
@@ -64,9 +64,9 @@ class SearchResultsTableViewController: UITableViewController {
         case 0:
             return events.count
         case 1:
-            return venues.count
-        case 2:
             return performers.count
+        case 2:
+            return venues.count
         default:
             return 0
         }
@@ -82,11 +82,11 @@ class SearchResultsTableViewController: UITableViewController {
             let event = events[indexPath.row]
             cell.event = event
         case 1:
-            let venue = venues[indexPath.row]
-            cell.venue = venue
-        case 2:
             let performer = performers[indexPath.row]
             cell.performer = performer
+        case 2:
+            let venue = venues[indexPath.row]
+            cell.venue = venue
         default:
             print("Error occured in Segmented Controller selection")
         }
@@ -104,15 +104,14 @@ class SearchResultsTableViewController: UITableViewController {
             performers = []
         case 1:
             searchBar.text = ""
-            searchBar.placeholder = localize.SearchBar.searchVenuePlaceHolder
-            events = []
-            performers = []
-        case 2:
-            searchBar.text = ""
             searchBar.placeholder = localize.SearchBar.searchPerformerPlaceHolder
             events = []
             venues = []
-            
+        case 2:
+            searchBar.text = ""
+            searchBar.placeholder = localize.SearchBar.searchVenuePlaceHolder
+            events = []
+            performers = []
         default:
             print("Error: selecting segmented tab.")
         }
@@ -132,13 +131,13 @@ class SearchResultsTableViewController: UITableViewController {
                 detailVC.event = events
                 detailVC.buttonPressed = .searchByEvent
             case 1:
-                let venues = venues[indexPath.row]
-                detailVC.venue = venues
-                detailVC.buttonPressed = .searchByVenue
-            case 2:
                 let performers = performers[indexPath.row]
                 detailVC.buttonPressed = .searchByPerformers
                 detailVC.performer = performers
+            case 2:
+                let venues = venues[indexPath.row]
+                detailVC.venue = venues
+                detailVC.buttonPressed = .searchByVenue
             default:
                 print("Error: Could not segue to DetailVC")
             }
@@ -164,11 +163,11 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
                 }
             }
         case 1:
-            eventController.searchVenue(searchTerm: searchText) { result in
+            eventController.searchPerformers(searchTerm: searchText) { result in
                 do {
-                    let venues = try result.get()
+                    let performers = try result.get()
                     DispatchQueue.main.async { [weak self] in
-                        self?.venues = venues.venues
+                        self?.performers = performers.performers
                     }
                 } catch {
                     print("\(error)")
@@ -176,11 +175,11 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
                 }
             }
         case 2:
-            eventController.searchPerformers(searchTerm: searchText) { result in
+            eventController.searchVenue(searchTerm: searchText) { result in
                 do {
-                    let performers = try result.get()
+                    let venues = try result.get()
                     DispatchQueue.main.async { [weak self] in
-                        self?.performers = performers.performers
+                        self?.venues = venues.venues
                     }
                 } catch {
                     print("\(error)")

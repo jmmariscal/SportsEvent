@@ -62,7 +62,7 @@ class EventTableViewCell: UITableViewCell {
         
         eventTitleLabel.text    = performer.name
         eventLocationLabel.text = ""
-        eventDateTimeLabel.text = performer.type.capitalized
+        eventDateTimeLabel.text = performer.genreName
         getPerformerImage(with: performer)
     }
     
